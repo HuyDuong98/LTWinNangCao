@@ -38,6 +38,7 @@ namespace QLKhoHang
         string ttkh = "Thông tin khách hàng";
         string nkh = "Nhóm khách hàng";
         string nv = "Nhân viên";
+
         private void btnHeThong_Click(object sender, EventArgs e)
         {
             deleteArrayButton();
@@ -103,17 +104,30 @@ namespace QLKhoHang
             }
             
         }
+        // Khai báo form
+        frmDangNhap frmDN = new frmDangNhap();
+        frmDoiMatKhau frmDMK = new frmDoiMatKhau();
+        frmThongTinCTy frmTTCT = new frmThongTinCTy();
+        //Bắt sự kiên click cho btn trong menu con
         private void bt_Click(object sender, EventArgs e)
         {
             SimpleButton sd = new SimpleButton();
             sd = (SimpleButton)sender;
             if (sd.Text == rdn)
             {
-                MessageBox.Show("Bạn đang nhấn nút " + sd.Tag);
+                frmDN.ShowDialog();
             }
             if (sd.Text == dmk)
             {
-                MessageBox.Show("Bạn đang nhấn nút " + sd.Tag);
+                frmDMK.ShowDialog();
+            }
+            if (sd.Text == ttct)
+            {
+                frmTTCT.TopLevel = false;
+                panelContent.Controls.Add(frmTTCT);
+                frmTTCT.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                frmTTCT.Dock = DockStyle.Fill;
+                frmTTCT.Show();
             }
         }
 
@@ -121,6 +135,36 @@ namespace QLKhoHang
         {
             pnDanhMuc.Controls.Clear();
         }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+            if (pnMenuButton.Visible == true)
+            {
+                pnMenuButton.Visible = false;
+            }
+            else { pnMenuButton.Visible = true; }
+        }
+
+        private void btnThoat_menu_Click(object sender, EventArgs e)
+        {
+            DialogResult h = MessageBox.Show("Bạn có chắc muốn thoát không?", "Thông báo", MessageBoxButtons.OKCancel);
+            if (h == DialogResult.OK)
+                Application.Exit();
+        }
+
+        private void btnDNLai_menu_Click(object sender, EventArgs e)
+        {
+            
+            frmDN.ShowDialog();
+        }
+
+        private void btnDoiMK_menu_Click(object sender, EventArgs e)
+        {
+            
+            frmDMK.ShowDialog();
+        }
+
+
 
     }
 }

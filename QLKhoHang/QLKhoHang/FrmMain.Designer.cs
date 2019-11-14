@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -44,6 +45,15 @@
             this.grMenu = new DevExpress.XtraEditors.GroupControl();
             this.btnDonHang = new DevExpress.XtraEditors.SimpleButton();
             this.btnHeThong = new DevExpress.XtraEditors.SimpleButton();
+            this.pnMenuButton = new System.Windows.Forms.Panel();
+            this.btnThoat_menu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAbout_menu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnTroGiup_menu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDoiMK_menu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDNLai_menu = new DevExpress.XtraEditors.SimpleButton();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.barManager2 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl2 = new DevExpress.XtraBars.BarDockControl();
@@ -55,27 +65,32 @@
             this.barDockControl7 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
             this.barManager4 = new DevExpress.XtraBars.BarManager(this.components);
-            this.bar2 = new DevExpress.XtraBars.Bar();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.galleryDropDown1 = new DevExpress.XtraBars.Ribbon.GalleryDropDown(this.components);
             this.barDockControl9 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl10 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl11 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl12 = new DevExpress.XtraBars.BarDockControl();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.galleryDropDown1 = new DevExpress.XtraBars.Ribbon.GalleryDropDown(this.components);
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.panelContent = new DevExpress.XtraEditors.PanelControl();
+            this.bar2 = new DevExpress.XtraBars.Bar();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDanhMuc)).BeginInit();
             this.grDanhMuc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grMenu)).BeginInit();
             this.grMenu.SuspendLayout();
+            this.pnMenuButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barManager2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.galleryDropDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelContent)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // barManager1
@@ -94,7 +109,7 @@
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 22);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Size = new System.Drawing.Size(1005, 0);
             // 
@@ -110,17 +125,17 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 22);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 502);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 524);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1005, 22);
+            this.barDockControlRight.Location = new System.Drawing.Point(1005, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 502);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 524);
             // 
             // barButtonItem1
             // 
@@ -160,9 +175,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDanhMuc.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDanhMuc.Appearance.Options.UseFont = true;
-            this.btnDanhMuc.AppearanceHovered.BackColor = System.Drawing.Color.Blue;
+            this.btnDanhMuc.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
             this.btnDanhMuc.AppearanceHovered.Options.UseBackColor = true;
-            this.btnDanhMuc.ImageOptions.Image = global::QLKhoHang.Properties.Resources.icons8_list_50;
+            this.btnDanhMuc.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnDanhMuc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDanhMuc.ImageOptions.Image")));
             this.btnDanhMuc.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnDanhMuc.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnDanhMuc.Location = new System.Drawing.Point(2, 295);
@@ -179,7 +195,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKho.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKho.Appearance.Options.UseFont = true;
-            this.btnKho.ImageOptions.Image = global::QLKhoHang.Properties.Resources.icons8_3d_farm_50;
+            this.btnKho.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
+            this.btnKho.AppearanceHovered.Options.UseBackColor = true;
+            this.btnKho.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnKho.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKho.ImageOptions.Image")));
             this.btnKho.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnKho.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnKho.Location = new System.Drawing.Point(2, 345);
@@ -196,7 +215,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTKBC.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTKBC.Appearance.Options.UseFont = true;
-            this.btnTKBC.ImageOptions.Image = global::QLKhoHang.Properties.Resources.icons8_combo_chart_50;
+            this.btnTKBC.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
+            this.btnTKBC.AppearanceHovered.Options.UseBackColor = true;
+            this.btnTKBC.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnTKBC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTKBC.ImageOptions.Image")));
             this.btnTKBC.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnTKBC.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnTKBC.Location = new System.Drawing.Point(2, 445);
@@ -211,15 +233,17 @@
             // 
             this.grMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.grMenu.Appearance.BackColor = System.Drawing.Color.PowderBlue;
+            this.grMenu.Appearance.Options.UseBackColor = true;
             this.grMenu.Controls.Add(this.btnDonHang);
             this.grMenu.Controls.Add(this.btnTKBC);
             this.grMenu.Controls.Add(this.btnKho);
             this.grMenu.Controls.Add(this.btnDanhMuc);
             this.grMenu.Controls.Add(this.btnHeThong);
             this.grMenu.Controls.Add(this.grDanhMuc);
-            this.grMenu.Location = new System.Drawing.Point(1, 22);
+            this.grMenu.Location = new System.Drawing.Point(1, 28);
             this.grMenu.Name = "grMenu";
-            this.grMenu.Size = new System.Drawing.Size(217, 502);
+            this.grMenu.Size = new System.Drawing.Size(217, 496);
             this.grMenu.TabIndex = 1;
             this.grMenu.Text = "Quản lý kho hàng";
             // 
@@ -229,7 +253,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDonHang.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDonHang.Appearance.Options.UseFont = true;
-            this.btnDonHang.ImageOptions.Image = global::QLKhoHang.Properties.Resources.icons8_shopping_cart_48;
+            this.btnDonHang.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
+            this.btnDonHang.AppearanceHovered.Options.UseBackColor = true;
+            this.btnDonHang.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnDonHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.ImageOptions.Image")));
             this.btnDonHang.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnDonHang.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnDonHang.Location = new System.Drawing.Point(2, 395);
@@ -246,9 +273,10 @@
             this.btnHeThong.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnHeThong.Appearance.Options.UseFont = true;
             this.btnHeThong.Appearance.Options.UseForeColor = true;
-            this.btnHeThong.AppearanceHovered.BackColor = System.Drawing.Color.Blue;
+            this.btnHeThong.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
             this.btnHeThong.AppearanceHovered.Options.UseBackColor = true;
-            this.btnHeThong.ImageOptions.Image = global::QLKhoHang.Properties.Resources.icons8_tune_48;
+            this.btnHeThong.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnHeThong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHeThong.ImageOptions.Image")));
             this.btnHeThong.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnHeThong.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnHeThong.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -259,6 +287,123 @@
             this.btnHeThong.TabIndex = 0;
             this.btnHeThong.Text = " Hệ Thống";
             this.btnHeThong.Click += new System.EventHandler(this.btnHeThong_Click);
+            // 
+            // pnMenuButton
+            // 
+            this.pnMenuButton.BackColor = System.Drawing.Color.PowderBlue;
+            this.pnMenuButton.Controls.Add(this.btnThoat_menu);
+            this.pnMenuButton.Controls.Add(this.btnAbout_menu);
+            this.pnMenuButton.Controls.Add(this.btnTroGiup_menu);
+            this.pnMenuButton.Controls.Add(this.btnDoiMK_menu);
+            this.pnMenuButton.Controls.Add(this.btnDNLai_menu);
+            this.pnMenuButton.Controls.Add(this.shapeContainer1);
+            this.pnMenuButton.Location = new System.Drawing.Point(6, 25);
+            this.pnMenuButton.Margin = new System.Windows.Forms.Padding(0);
+            this.pnMenuButton.Name = "pnMenuButton";
+            this.pnMenuButton.Size = new System.Drawing.Size(169, 253);
+            this.pnMenuButton.TabIndex = 1;
+            this.pnMenuButton.Visible = false;
+            // 
+            // btnThoat_menu
+            // 
+            this.btnThoat_menu.AppearanceHovered.BackColor = System.Drawing.Color.Azure;
+            this.btnThoat_menu.AppearanceHovered.Options.UseBackColor = true;
+            this.btnThoat_menu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnThoat_menu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat_menu.ImageOptions.Image")));
+            this.btnThoat_menu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnThoat_menu.Location = new System.Drawing.Point(3, 195);
+            this.btnThoat_menu.Margin = new System.Windows.Forms.Padding(0);
+            this.btnThoat_menu.Name = "btnThoat_menu";
+            this.btnThoat_menu.Size = new System.Drawing.Size(163, 45);
+            this.btnThoat_menu.TabIndex = 0;
+            this.btnThoat_menu.Text = " Thoát";
+            this.btnThoat_menu.Click += new System.EventHandler(this.btnThoat_menu_Click);
+            // 
+            // btnAbout_menu
+            // 
+            this.btnAbout_menu.AppearanceHovered.BackColor = System.Drawing.Color.Azure;
+            this.btnAbout_menu.AppearanceHovered.Options.UseBackColor = true;
+            this.btnAbout_menu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnAbout_menu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAbout_menu.ImageOptions.Image")));
+            this.btnAbout_menu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnAbout_menu.Location = new System.Drawing.Point(3, 148);
+            this.btnAbout_menu.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAbout_menu.Name = "btnAbout_menu";
+            this.btnAbout_menu.Size = new System.Drawing.Size(163, 45);
+            this.btnAbout_menu.TabIndex = 0;
+            this.btnAbout_menu.Text = " About";
+            // 
+            // btnTroGiup_menu
+            // 
+            this.btnTroGiup_menu.AppearanceHovered.BackColor = System.Drawing.Color.Azure;
+            this.btnTroGiup_menu.AppearanceHovered.Options.UseBackColor = true;
+            this.btnTroGiup_menu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnTroGiup_menu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTroGiup_menu.ImageOptions.Image")));
+            this.btnTroGiup_menu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnTroGiup_menu.Location = new System.Drawing.Point(3, 103);
+            this.btnTroGiup_menu.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTroGiup_menu.Name = "btnTroGiup_menu";
+            this.btnTroGiup_menu.Size = new System.Drawing.Size(163, 45);
+            this.btnTroGiup_menu.TabIndex = 0;
+            this.btnTroGiup_menu.Text = "Trợ giúp";
+            // 
+            // btnDoiMK_menu
+            // 
+            this.btnDoiMK_menu.AppearanceHovered.BackColor = System.Drawing.Color.Azure;
+            this.btnDoiMK_menu.AppearanceHovered.Options.UseBackColor = true;
+            this.btnDoiMK_menu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnDoiMK_menu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDoiMK_menu.ImageOptions.Image")));
+            this.btnDoiMK_menu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnDoiMK_menu.Location = new System.Drawing.Point(3, 48);
+            this.btnDoiMK_menu.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDoiMK_menu.Name = "btnDoiMK_menu";
+            this.btnDoiMK_menu.Size = new System.Drawing.Size(163, 45);
+            this.btnDoiMK_menu.TabIndex = 0;
+            this.btnDoiMK_menu.Text = "Đổi mật khẩu";
+            this.btnDoiMK_menu.Click += new System.EventHandler(this.btnDoiMK_menu_Click);
+            // 
+            // btnDNLai_menu
+            // 
+            this.btnDNLai_menu.AppearanceHovered.BackColor = System.Drawing.Color.Azure;
+            this.btnDNLai_menu.AppearanceHovered.Options.UseBackColor = true;
+            this.btnDNLai_menu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnDNLai_menu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDNLai_menu.ImageOptions.Image")));
+            this.btnDNLai_menu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnDNLai_menu.Location = new System.Drawing.Point(3, 3);
+            this.btnDNLai_menu.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDNLai_menu.Name = "btnDNLai_menu";
+            this.btnDNLai_menu.Size = new System.Drawing.Size(163, 45);
+            this.btnDNLai_menu.TabIndex = 0;
+            this.btnDNLai_menu.Text = " Đăng nhập lại";
+            this.btnDNLai_menu.Click += new System.EventHandler(this.btnDNLai_menu_Click);
+            // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape1,
+            this.lineShape3});
+            this.shapeContainer1.Size = new System.Drawing.Size(169, 253);
+            this.shapeContainer1.TabIndex = 1;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 16;
+            this.lineShape1.X2 = 153;
+            this.lineShape1.Y1 = 193;
+            this.lineShape1.Y2 = 193;
+            // 
+            // lineShape3
+            // 
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 11;
+            this.lineShape3.X2 = 153;
+            this.lineShape3.Y1 = 98;
+            this.lineShape3.Y2 = 98;
             // 
             // barManager2
             // 
@@ -273,7 +418,7 @@
             // 
             this.barDockControl1.CausesValidation = false;
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl1.Location = new System.Drawing.Point(0, 22);
+            this.barDockControl1.Location = new System.Drawing.Point(0, 0);
             this.barDockControl1.Manager = this.barManager2;
             this.barDockControl1.Size = new System.Drawing.Size(1005, 0);
             // 
@@ -289,17 +434,17 @@
             // 
             this.barDockControl3.CausesValidation = false;
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl3.Location = new System.Drawing.Point(0, 22);
+            this.barDockControl3.Location = new System.Drawing.Point(0, 0);
             this.barDockControl3.Manager = this.barManager2;
-            this.barDockControl3.Size = new System.Drawing.Size(0, 502);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 524);
             // 
             // barDockControl4
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl4.Location = new System.Drawing.Point(1005, 22);
+            this.barDockControl4.Location = new System.Drawing.Point(1005, 0);
             this.barDockControl4.Manager = this.barManager2;
-            this.barDockControl4.Size = new System.Drawing.Size(0, 502);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 524);
             // 
             // barManager3
             // 
@@ -314,7 +459,7 @@
             // 
             this.barDockControl5.CausesValidation = false;
             this.barDockControl5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl5.Location = new System.Drawing.Point(0, 22);
+            this.barDockControl5.Location = new System.Drawing.Point(0, 0);
             this.barDockControl5.Manager = this.barManager3;
             this.barDockControl5.Size = new System.Drawing.Size(1005, 0);
             // 
@@ -330,22 +475,20 @@
             // 
             this.barDockControl7.CausesValidation = false;
             this.barDockControl7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl7.Location = new System.Drawing.Point(0, 22);
+            this.barDockControl7.Location = new System.Drawing.Point(0, 0);
             this.barDockControl7.Manager = this.barManager3;
-            this.barDockControl7.Size = new System.Drawing.Size(0, 502);
+            this.barDockControl7.Size = new System.Drawing.Size(0, 524);
             // 
             // barDockControl8
             // 
             this.barDockControl8.CausesValidation = false;
             this.barDockControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl8.Location = new System.Drawing.Point(1005, 22);
+            this.barDockControl8.Location = new System.Drawing.Point(1005, 0);
             this.barDockControl8.Manager = this.barManager3;
-            this.barDockControl8.Size = new System.Drawing.Size(0, 502);
+            this.barDockControl8.Size = new System.Drawing.Size(0, 524);
             // 
             // barManager4
             // 
-            this.barManager4.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar2});
             this.barManager4.DockControls.Add(this.barDockControl9);
             this.barManager4.DockControls.Add(this.barDockControl10);
             this.barManager4.DockControls.Add(this.barDockControl11);
@@ -356,20 +499,39 @@
             this.barButtonItem4,
             this.barDockingMenuItem1,
             this.barButtonItem5});
-            this.barManager4.MainMenu = this.bar2;
             this.barManager4.MaxItemId = 4;
             // 
-            // bar2
+            // barDockControl9
             // 
-            this.bar2.BarName = "Main menu";
-            this.bar2.DockCol = 0;
-            this.bar2.DockRow = 0;
-            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3)});
-            this.bar2.OptionsBar.MultiLine = true;
-            this.bar2.OptionsBar.UseWholeRow = true;
-            this.bar2.Text = "Main menu";
+            this.barDockControl9.CausesValidation = false;
+            this.barDockControl9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControl9.Location = new System.Drawing.Point(0, 0);
+            this.barDockControl9.Manager = this.barManager4;
+            this.barDockControl9.Size = new System.Drawing.Size(1005, 0);
+            // 
+            // barDockControl10
+            // 
+            this.barDockControl10.CausesValidation = false;
+            this.barDockControl10.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControl10.Location = new System.Drawing.Point(0, 524);
+            this.barDockControl10.Manager = this.barManager4;
+            this.barDockControl10.Size = new System.Drawing.Size(1005, 0);
+            // 
+            // barDockControl11
+            // 
+            this.barDockControl11.CausesValidation = false;
+            this.barDockControl11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControl11.Location = new System.Drawing.Point(0, 0);
+            this.barDockControl11.Manager = this.barManager4;
+            this.barDockControl11.Size = new System.Drawing.Size(0, 524);
+            // 
+            // barDockControl12
+            // 
+            this.barDockControl12.CausesValidation = false;
+            this.barDockControl12.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControl12.Location = new System.Drawing.Point(1005, 0);
+            this.barDockControl12.Manager = this.barManager4;
+            this.barDockControl12.Size = new System.Drawing.Size(0, 524);
             // 
             // barButtonItem3
             // 
@@ -384,38 +546,6 @@
             // 
             this.galleryDropDown1.Manager = this.barManager4;
             this.galleryDropDown1.Name = "galleryDropDown1";
-            // 
-            // barDockControl9
-            // 
-            this.barDockControl9.CausesValidation = false;
-            this.barDockControl9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl9.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl9.Manager = this.barManager4;
-            this.barDockControl9.Size = new System.Drawing.Size(1005, 22);
-            // 
-            // barDockControl10
-            // 
-            this.barDockControl10.CausesValidation = false;
-            this.barDockControl10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl10.Location = new System.Drawing.Point(0, 524);
-            this.barDockControl10.Manager = this.barManager4;
-            this.barDockControl10.Size = new System.Drawing.Size(1005, 0);
-            // 
-            // barDockControl11
-            // 
-            this.barDockControl11.CausesValidation = false;
-            this.barDockControl11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl11.Location = new System.Drawing.Point(0, 22);
-            this.barDockControl11.Manager = this.barManager4;
-            this.barDockControl11.Size = new System.Drawing.Size(0, 502);
-            // 
-            // barDockControl12
-            // 
-            this.barDockControl12.CausesValidation = false;
-            this.barDockControl12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl12.Location = new System.Drawing.Point(1005, 22);
-            this.barDockControl12.Manager = this.barManager4;
-            this.barDockControl12.Size = new System.Drawing.Size(0, 502);
             // 
             // barButtonItem4
             // 
@@ -435,23 +565,65 @@
             this.barButtonItem5.Id = 3;
             this.barButtonItem5.Name = "barButtonItem5";
             // 
-            // panelControl1
+            // panelContent
             // 
-            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.panelControl1.Location = new System.Drawing.Point(224, 22);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(781, 499);
-            this.panelControl1.TabIndex = 18;
+            this.panelContent.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.panelContent.Location = new System.Drawing.Point(224, 28);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(781, 493);
+            this.panelContent.TabIndex = 18;
+            // 
+            // bar2
+            // 
+            this.bar2.BarName = "Main menu";
+            this.bar2.DockCol = 0;
+            this.bar2.DockRow = 0;
+            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3)});
+            this.bar2.OptionsBar.MultiLine = true;
+            this.bar2.OptionsBar.UseWholeRow = true;
+            this.bar2.Text = "Main menu";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.PowderBlue;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripLabel1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1005, 25);
+            this.toolStrip1.TabIndex = 35;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(38, 22);
+            this.toolStripLabel1.Text = "Menu";
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1005, 524);
-            this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.pnMenuButton);
+            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.panelContent);
             this.Controls.Add(this.grMenu);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -478,11 +650,14 @@
             this.grDanhMuc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grMenu)).EndInit();
             this.grMenu.ResumeLayout(false);
+            this.pnMenuButton.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.barManager2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.galleryDropDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelContent)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -516,16 +691,28 @@
         private DevExpress.XtraBars.BarDockControl barDockControl11;
         private DevExpress.XtraBars.BarManager barManager4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarDockControl barDockControl9;
         private DevExpress.XtraBars.BarDockControl barDockControl10;
         private DevExpress.XtraBars.BarDockControl barDockControl12;
         private DevExpress.XtraBars.Ribbon.GalleryDropDown galleryDropDown1;
         private DevExpress.XtraBars.BarDockingMenuItem barDockingMenuItem1;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.PanelControl panelContent;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraEditors.SimpleButton btnHeThong;
         private System.Windows.Forms.Panel pnDanhMuc;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private DevExpress.XtraBars.Bar bar2;
+        private System.Windows.Forms.Panel pnMenuButton;
+        private DevExpress.XtraEditors.SimpleButton btnDoiMK_menu;
+        private DevExpress.XtraEditors.SimpleButton btnDNLai_menu;
+        private DevExpress.XtraEditors.SimpleButton btnThoat_menu;
+        private DevExpress.XtraEditors.SimpleButton btnTroGiup_menu;
+        private DevExpress.XtraEditors.SimpleButton btnAbout_menu;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
     }
 }

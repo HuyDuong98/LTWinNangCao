@@ -10,6 +10,8 @@ namespace QLKhoHang
 {
     static class Program
     {
+        public static FrmMain mainForm = null;
+        public static frmDangNhap loginForm = null;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -22,7 +24,8 @@ namespace QLKhoHang
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new FrmMain());
+            loginForm = new frmDangNhap();
+            Application.Run(loginForm);
         }
     }
 }
