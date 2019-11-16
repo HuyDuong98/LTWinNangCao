@@ -124,14 +124,14 @@
   <data name="tsbRefresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tsbRefresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tsbExportExcel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tsbExportExcel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="filesaveas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filesaveas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tsbClose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tsbClose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-combo-chart-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-combo-chart-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -144,6 +144,9 @@
   </data>
   <data name="icons8-help-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-help-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1@2x.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,6 +181,12 @@
   <data name="filequickprint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filequickprint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="gaixinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gaixinh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warehouse (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warehouse (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-forgot-password-40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-forgot-password-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -186,9 +195,6 @@
   </data>
   <data name="icons8-password-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-password-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-list-501" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-list-501.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,22 +205,25 @@
   <data name="icons8-about-40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-about-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fileprint-11 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fileprint-11 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tsbPrint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tsbPrint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-list-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-list-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fileprint-11 (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fileprint-11 (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-3d-farm-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-3d-farm-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tsbClose" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tsbClose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tsbExportExcel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tsbExportExcel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gaixinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gaixinh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="background_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

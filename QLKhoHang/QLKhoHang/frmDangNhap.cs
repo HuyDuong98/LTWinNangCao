@@ -19,7 +19,7 @@ namespace QLKhoHang
 
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-            
+            lblTitle.BackColor = Color.Transparent;
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
@@ -76,7 +76,12 @@ namespace QLKhoHang
             }
             this.Visible = false;
             Program.mainForm.Show();
-            
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
        

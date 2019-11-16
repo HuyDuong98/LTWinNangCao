@@ -63,9 +63,29 @@ namespace QLKhoHang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1_2x {
+            get {
+                object obj = ResourceManager.GetObject("1@2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _11573231501558095979_32 {
             get {
                 object obj = ResourceManager.GetObject("11573231501558095979-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap background_button {
+            get {
+                object obj = ResourceManager.GetObject("background_button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -386,6 +406,16 @@ namespace QLKhoHang.Properties {
         internal static System.Drawing.Bitmap Untitled {
             get {
                 object obj = ResourceManager.GetObject("Untitled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warehouse__1_ {
+            get {
+                object obj = ResourceManager.GetObject("warehouse (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

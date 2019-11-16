@@ -108,7 +108,8 @@ namespace QLKhoHang
         frmDangNhap frmDN = new frmDangNhap();
         frmDoiMatKhau frmDMK = new frmDoiMatKhau();
         frmThongTinCTy frmTTCT = new frmThongTinCTy();
-        //Bắt sự kiên click cho btn trong menu con
+        frmSanPham frmSP = new frmSanPham();
+        //Bắt sự kiên click cho btn trong menu con trong form main
         private void bt_Click(object sender, EventArgs e)
         {
             SimpleButton sd = new SimpleButton();
@@ -128,6 +129,14 @@ namespace QLKhoHang
                 frmTTCT.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 frmTTCT.Dock = DockStyle.Fill;
                 frmTTCT.Show();
+            }
+            if (sd.Text == ttsp)
+            {
+                frmSP.TopLevel = false;
+                panelContent.Controls.Add(frmSP);
+                frmSP.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                frmSP.Dock = DockStyle.Fill;
+                frmSP.Show();
             }
         }
 

@@ -15,3 +15,4 @@ C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\Q
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.pdb
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\bin\Debug\DAL_BLL.dll
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\bin\Debug\DAL_BLL.pdb
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmSanPham.resources
