@@ -120,6 +120,9 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.Controls.Add(this.groupControl2);
             this.groupControl1.Location = new System.Drawing.Point(0, 30);
             this.groupControl1.Name = "groupControl1";
@@ -251,6 +254,7 @@
             // 
             // btnNhomSP
             // 
+            this.btnNhomSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNhomSP.Location = new System.Drawing.Point(676, 53);
             this.btnNhomSP.Name = "btnNhomSP";
             this.btnNhomSP.Size = new System.Drawing.Size(101, 23);
@@ -259,6 +263,7 @@
             // 
             // btnLoaiSP
             // 
+            this.btnLoaiSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLoaiSP.Location = new System.Drawing.Point(676, 82);
             this.btnLoaiSP.Name = "btnLoaiSP";
             this.btnLoaiSP.Size = new System.Drawing.Size(101, 23);
@@ -267,6 +272,7 @@
             // 
             // btnDVT
             // 
+            this.btnDVT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDVT.Location = new System.Drawing.Point(676, 111);
             this.btnDVT.Name = "btnDVT";
             this.btnDVT.Size = new System.Drawing.Size(101, 23);
@@ -275,6 +281,7 @@
             // 
             // btnNSX
             // 
+            this.btnNSX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNSX.Location = new System.Drawing.Point(676, 140);
             this.btnNSX.Name = "btnNSX";
             this.btnNSX.Size = new System.Drawing.Size(101, 23);
@@ -283,6 +290,7 @@
             // 
             // simpleButton5
             // 
+            this.simpleButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.simpleButton5.Location = new System.Drawing.Point(676, 169);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(101, 23);
@@ -291,6 +299,7 @@
             // 
             // btnTaoMaVach
             // 
+            this.btnTaoMaVach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTaoMaVach.Location = new System.Drawing.Point(676, 198);
             this.btnTaoMaVach.Name = "btnTaoMaVach";
             this.btnTaoMaVach.Size = new System.Drawing.Size(101, 23);
@@ -315,7 +324,7 @@
             this.toolStripButton9});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(259, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(228, 27);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -402,8 +411,8 @@
             // 
             // frmSanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(787, 454);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnTaoMaVach);
@@ -420,6 +429,7 @@
             this.Name = "frmSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSanPham";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

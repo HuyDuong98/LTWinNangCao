@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-
+using DAL_BLL;
 namespace QLKhoHang
 {
     public partial class FrmMain : DevExpress.XtraEditors.XtraForm
@@ -16,13 +16,14 @@ namespace QLKhoHang
         public FrmMain()
         {
             InitializeComponent();
-
+           
         }
         
+        DangNhap_DAL dn = new DangNhap_DAL();
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            btnHeThong_Click(sender, e);
-            
+            btnHeThong.PerformClick();
+            this.WindowState =System.Windows.Forms.FormWindowState.Maximized;
         }
         //các btn của hệ thống
         string rdn = "Đăng nhập lại";
@@ -38,13 +39,44 @@ namespace QLKhoHang
         string ttkh = "Thông tin khách hàng";
         string nkh = "Nhóm khách hàng";
         string nv = "Nhân viên";
-
+        // các btn của quản lý kho
+        string nk = "Nhập kho";
+        string xk = "Xuất kho";
+        string ck = "Chuyển kho";
+        string dsnk = "Danh sách nhập kho";
+        string dsxk = "Danh sách xuất kho";
+        string dsck = "Danh sách chuyển kho";
+        // các btn của quản lý đơn hàng
+        string ddh = "Đơn đặt hàng";
+        // các btn của thống kê báo cáo
+        string bcnk = "Báo cáo nhập kho";
+        string bcxk = "Báo cáo xuất kho";
+        string bctk = "Báo cáo tồn kho";
+        private void ThongBaoDangNhap() {
+            if (dn.MaNhomPer(DangNhap_DAL.UserName))
+            {
+                MessageBox.Show("Chào " + DangNhap_DAL.UserName + " .Bạn đang đăng nhập với quyền admin");
+            }
+            else { MessageBox.Show("Chào " + DangNhap_DAL.UserName + " .Bạn đang đăng nhập với quyền người dùng"); }
+            //MessageBox.Show("Xin chào "+DangNhap_DAL.UserName);
+        }
         private void btnHeThong_Click(object sender, EventArgs e)
         {
             deleteArrayButton();
             grDanhMuc.Text = "Hệ thống";
-            string[] a = new string[] { rdn, dmk, pqnv, ttct};
-            CreateArrayButton(4,a);
+            
+             //Phân quyền return 1 là admin 0 là nhân viên
+            if (dn.MaNhomPer(DangNhap_DAL.UserName))
+            {
+                string[] a = new string[] { rdn, dmk, pqnv, ttct };
+                CreateArrayButton(4, a);
+
+            }
+            else
+            {
+                string[] a = new string[] { rdn, dmk, ttct };
+                CreateArrayButton(3, a);
+            }
         }
         
 
@@ -60,7 +92,7 @@ namespace QLKhoHang
         {
             deleteArrayButton();
             grDanhMuc.Text = "Quản lý kho hàng";
-            string[] a = new string[] { "Nhập kho", "Xuất kho", "Chuyển kho", "Danh sách phiếu nhập kho", "Danh sách phiếu xuất kho", "Danh sách phiếu chuyển kho"};
+            string[] a = new string[] { nk, xk, ck, dsnk, dsxk, dsck};
             CreateArrayButton(6,a);
         }
 
@@ -68,7 +100,7 @@ namespace QLKhoHang
         {
             deleteArrayButton();
             grDanhMuc.Text = "Đơn hàng";
-            string[] a = new string[] { "Đơn đặt hàng"};
+            string[] a = new string[] { ddh};
             CreateArrayButton(1, a);
         }
 
@@ -76,10 +108,10 @@ namespace QLKhoHang
         {
             deleteArrayButton();
             grDanhMuc.Text = "Thống kê - báo cáo";
-            string[] a = new string[] { "Báo cáo nhập hàng", "Báo cáo xuất hàng", "Báo Tồn Kho"};
+            string[] a = new string[] { bcnk,bcxk,bctk};
             CreateArrayButton(3, a);
         }
-
+        // tạo mảng menu con
         public void CreateArrayButton(int soHang,string[] ar)
         {
             int cR = 35;
@@ -107,8 +139,18 @@ namespace QLKhoHang
         // Khai báo form
         frmDangNhap frmDN = new frmDangNhap();
         frmDoiMatKhau frmDMK = new frmDoiMatKhau();
-        frmThongTinCTy frmTTCT = new frmThongTinCTy();
-        frmSanPham frmSP = new frmSanPham();
+
+        // gọi các form từ menu con
+        private void GoiShow(Form frm)
+        {
+            frm.TopLevel = false;
+            panelContent.Controls.Add(frm);
+            frm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            frm.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            frm.Show();
+        }
+
         //Bắt sự kiên click cho btn trong menu con trong form main
         private void bt_Click(object sender, EventArgs e)
         {
@@ -117,26 +159,39 @@ namespace QLKhoHang
             if (sd.Text == rdn)
             {
                 frmDN.ShowDialog();
+                btnHeThong.PerformClick();
             }
+           
             if (sd.Text == dmk)
             {
                 frmDMK.ShowDialog();
+                btnHeThong.PerformClick();
+
             }
             if (sd.Text == ttct)
             {
-                frmTTCT.TopLevel = false;
-                panelContent.Controls.Add(frmTTCT);
-                frmTTCT.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-                frmTTCT.Dock = DockStyle.Fill;
-                frmTTCT.Show();
+                frmThongTinCTy frm = new frmThongTinCTy();
+                GoiShow(frm);
             }
             if (sd.Text == ttsp)
             {
-                frmSP.TopLevel = false;
-                panelContent.Controls.Add(frmSP);
-                frmSP.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-                frmSP.Dock = DockStyle.Fill;
-                frmSP.Show();
+                frmSanPham frm = new frmSanPham();
+                GoiShow(frm);
+            }
+            if (sd.Text == nk)
+            {
+                frmPhieuNhap frm = new frmPhieuNhap();
+                GoiShow(frm);
+            }
+            if (sd.Text == xk)
+            {
+                frmPhieuXuat frm = new frmPhieuXuat();
+                GoiShow(frm);
+            }
+            if (sd.Text == ck)
+            {
+                frmChuyenKho frm = new frmChuyenKho();
+                GoiShow(frm);
             }
         }
 
@@ -173,7 +228,10 @@ namespace QLKhoHang
             frmDMK.ShowDialog();
         }
 
-
+        private void PhanQuyen(object sender, EventArgs e)
+        {
+            
+        }
 
     }
 }

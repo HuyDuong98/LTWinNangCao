@@ -8,8 +8,8 @@ namespace DAL_BLL
 {
     public class SanPham_DAL
     {
-        
-        SanPhamDataContext sp = new SanPhamDataContext();
+
+        QLKhoDataContext sp = new QLKhoDataContext();
         public List<SAN_PHAM> Load_DL()
         {
             return sp.SAN_PHAMs.Select(t => t).ToList<SAN_PHAM>();

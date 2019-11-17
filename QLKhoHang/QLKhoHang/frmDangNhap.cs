@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL_BLL;
 
 namespace QLKhoHang
 {
@@ -16,7 +17,7 @@ namespace QLKhoHang
         {
             InitializeComponent();
         }
-
+        
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
             lblTitle.BackColor = Color.Transparent;
@@ -26,20 +27,21 @@ namespace QLKhoHang
         {
             if (string.IsNullOrEmpty(txtTaiKhoan.Text.Trim()))
             {
-                MessageBox.Show("Không được bỏ trống" + lblTaiKhoan.Text.ToLower());
+                MessageBox.Show("Bạn chưa nhập " + lblTaiKhoan.Text.ToLower());
                 this.txtTaiKhoan.Focus();
                 return;
             }
             if (string.IsNullOrEmpty(this.txtMatKhau.Text))
             {
-                MessageBox.Show("Không được bỏ trống" + lblMatKhau.Text.ToLower());
+                MessageBox.Show("Bạn chưa nhập " + lblMatKhau.Text.ToLower());
                 this.txtMatKhau.Focus();
                 return;
             }
             int kq = connect.Check_Config();
             if (kq == 0)
             {
-                ProcessLogin();
+                DangNhap_DAL.UserName = txtTaiKhoan.Text;
+                ProcessLogin(); 
             }
             if (kq == 1)
             {
@@ -67,21 +69,38 @@ namespace QLKhoHang
 
             else if (result == connect.LoginResult.Disabled)
             {
-                MessageBox.Show("Tài Khoản bị khóa");
+                MessageBox.Show("Tài Khoản bị khóa ");
                 return;
             }
             if (Program.mainForm == null || Program.mainForm.IsDisposed)
             {
                 Program.mainForm = new FrmMain();
+                
             }
             this.Visible = false;
+            
             Program.mainForm.Show();
-
-        }
+                  }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtTaiKhoan_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtMatKhau.Focus();
+            }
+        }
+
+        private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnDangNhap.PerformClick();
+            }
         }
 
        

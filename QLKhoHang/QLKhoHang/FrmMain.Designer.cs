@@ -154,6 +154,8 @@
             this.grDanhMuc.AllowTouchScroll = true;
             this.grDanhMuc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grDanhMuc.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.grDanhMuc.Appearance.Options.UseBackColor = true;
             this.grDanhMuc.Controls.Add(this.pnDanhMuc);
             this.grDanhMuc.Location = new System.Drawing.Point(0, 23);
             this.grDanhMuc.Name = "grDanhMuc";
@@ -173,11 +175,16 @@
             // 
             this.btnDanhMuc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDanhMuc.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnDanhMuc.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnDanhMuc.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnDanhMuc.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDanhMuc.Appearance.Options.UseBackColor = true;
+            this.btnDanhMuc.Appearance.Options.UseBorderColor = true;
             this.btnDanhMuc.Appearance.Options.UseFont = true;
             this.btnDanhMuc.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
             this.btnDanhMuc.AppearanceHovered.Options.UseBackColor = true;
-            this.btnDanhMuc.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnDanhMuc.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnDanhMuc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDanhMuc.ImageOptions.Image")));
             this.btnDanhMuc.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnDanhMuc.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
@@ -193,11 +200,16 @@
             // 
             this.btnKho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKho.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnKho.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnKho.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnKho.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKho.Appearance.Options.UseBackColor = true;
+            this.btnKho.Appearance.Options.UseBorderColor = true;
             this.btnKho.Appearance.Options.UseFont = true;
             this.btnKho.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
             this.btnKho.AppearanceHovered.Options.UseBackColor = true;
-            this.btnKho.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnKho.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnKho.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKho.ImageOptions.Image")));
             this.btnKho.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnKho.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
@@ -213,11 +225,16 @@
             // 
             this.btnTKBC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTKBC.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnTKBC.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnTKBC.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnTKBC.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTKBC.Appearance.Options.UseBackColor = true;
+            this.btnTKBC.Appearance.Options.UseBorderColor = true;
             this.btnTKBC.Appearance.Options.UseFont = true;
             this.btnTKBC.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
             this.btnTKBC.AppearanceHovered.Options.UseBackColor = true;
-            this.btnTKBC.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnTKBC.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnTKBC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTKBC.ImageOptions.Image")));
             this.btnTKBC.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnTKBC.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
@@ -233,7 +250,7 @@
             // 
             this.grMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.grMenu.Appearance.BackColor = System.Drawing.Color.PowderBlue;
+            this.grMenu.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.grMenu.Appearance.Options.UseBackColor = true;
             this.grMenu.Controls.Add(this.btnDonHang);
             this.grMenu.Controls.Add(this.btnTKBC);
@@ -251,11 +268,16 @@
             // 
             this.btnDonHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDonHang.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnDonHang.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnDonHang.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnDonHang.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDonHang.Appearance.Options.UseBackColor = true;
+            this.btnDonHang.Appearance.Options.UseBorderColor = true;
             this.btnDonHang.Appearance.Options.UseFont = true;
             this.btnDonHang.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
             this.btnDonHang.AppearanceHovered.Options.UseBackColor = true;
-            this.btnDonHang.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnDonHang.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnDonHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.ImageOptions.Image")));
             this.btnDonHang.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnDonHang.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
@@ -269,13 +291,18 @@
             // 
             // btnHeThong
             // 
+            this.btnHeThong.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnHeThong.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnHeThong.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnHeThong.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeThong.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnHeThong.Appearance.Options.UseBackColor = true;
+            this.btnHeThong.Appearance.Options.UseBorderColor = true;
             this.btnHeThong.Appearance.Options.UseFont = true;
             this.btnHeThong.Appearance.Options.UseForeColor = true;
             this.btnHeThong.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
             this.btnHeThong.AppearanceHovered.Options.UseBackColor = true;
-            this.btnHeThong.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnHeThong.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnHeThong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHeThong.ImageOptions.Image")));
             this.btnHeThong.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnHeThong.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
@@ -290,7 +317,7 @@
             // 
             // pnMenuButton
             // 
-            this.pnMenuButton.BackColor = System.Drawing.Color.PowderBlue;
+            this.pnMenuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.pnMenuButton.Controls.Add(this.btnThoat_menu);
             this.pnMenuButton.Controls.Add(this.btnAbout_menu);
             this.pnMenuButton.Controls.Add(this.btnTroGiup_menu);
@@ -570,7 +597,9 @@
             this.panelContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelContent.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.panelContent.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panelContent.Appearance.Options.UseBackColor = true;
+            this.panelContent.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.panelContent.Location = new System.Drawing.Point(224, 28);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(781, 493);
@@ -590,7 +619,7 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.PowderBlue;
+            this.toolStrip1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripLabel1});
@@ -611,15 +640,17 @@
             // 
             // toolStripLabel1
             // 
+            this.toolStripLabel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(38, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(43, 22);
             this.toolStripLabel1.Text = "Menu";
             this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1005, 524);
             this.Controls.Add(this.pnMenuButton);
             this.Controls.Add(this.toolStrip1);
@@ -641,6 +672,7 @@
             this.Controls.Add(this.barDockControl12);
             this.Controls.Add(this.barDockControl10);
             this.Controls.Add(this.barDockControl9);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMain";

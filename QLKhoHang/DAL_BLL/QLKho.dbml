@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLKHO" Class="SanPhamDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLKHO" Class="QLKhoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-IF5SHKQ\SQLEXPRESS;Initial Catalog=QLKHO;Integrated Security=True" SettingsObjectName="DAL_BLL.Properties.Settings" SettingsPropertyName="QLKHOConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CHITIETDDH" Member="CHITIETDDHs">
     <Type Name="CHITIETDDH">
@@ -7,6 +7,17 @@
       <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="DONDATHANG_CHITIETDDH" Member="DONDATHANG" ThisKey="MADDH" OtherKey="MADDH" Type="DONDATHANG" IsForeignKey="true" />
       <Association Name="SAN_PHAM_CHITIETDDH" Member="SAN_PHAM" ThisKey="MASP" OtherKey="MASP" Type="SAN_PHAM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CONG_TY" Member="CONG_Ties">
+    <Type Name="CONG_TY">
+      <Column Name="MACTY" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENCTY" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DIACHICT" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SDTCT" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="MOTACT" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="WEBSITECT" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="CONG_TY_NHAN_VIEN" Member="NHAN_VIENs" ThisKey="MACTY" OtherKey="MACTY" Type="NHAN_VIEN" />
     </Type>
   </Table>
   <Table Name="dbo.DM_MANHINH" Member="DM_MANHINHs">
@@ -83,6 +94,16 @@
       <Association Name="KHU_VUC_NHA_CUNG_CAP" Member="KHU_VUC" ThisKey="MAKV" OtherKey="MAKV" Type="KHU_VUC" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.NHA_SAN_XUAT" Member="NHA_SAN_XUATs">
+    <Type Name="NHA_SAN_XUAT">
+      <Column Name="MANSX" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENNSX" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MOTANSX" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="EMAILNSX" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="WEBSITENSX" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Association Name="NHA_SAN_XUAT_SAN_PHAM" Member="SAN_PHAMs" ThisKey="MANSX" OtherKey="MANSX" Type="SAN_PHAM" />
+    </Type>
+  </Table>
   <Table Name="dbo.NHAN_VIEN" Member="NHAN_VIENs">
     <Type Name="NHAN_VIEN">
       <Column Name="MANV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -94,18 +115,8 @@
       <Column Name="SDTNV" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
       <Association Name="NHAN_VIEN_PHIEU_NHAP" Member="PHIEU_NHAPs" ThisKey="MANV" OtherKey="MANV" Type="PHIEU_NHAP" />
       <Association Name="NHAN_VIEN_PHIEU_XUAT" Member="PHIEU_XUATs" ThisKey="MANV" OtherKey="MANV" Type="PHIEU_XUAT" />
-      <Association Name="QL_NGUOIDUNG_NHAN_VIEN" Member="QL_NGUOIDUNG" ThisKey="TENDANGNHAP" OtherKey="TENDANGNHAP" Type="QL_NGUOIDUNG" IsForeignKey="true" />
       <Association Name="CONG_TY_NHAN_VIEN" Member="CONG_TY" ThisKey="MACTY" OtherKey="MACTY" Type="CONG_TY" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.NHA_SAN_XUAT" Member="NHA_SAN_XUATs">
-    <Type Name="NHA_SAN_XUAT">
-      <Column Name="MANSX" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TENNSX" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="MOTANSX" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
-      <Column Name="EMAILNSX" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="WEBSITENSX" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
-      <Association Name="NHA_SAN_XUAT_SAN_PHAM" Member="SAN_PHAMs" ThisKey="MANSX" OtherKey="MANSX" Type="SAN_PHAM" />
+      <Association Name="QL_NGUOIDUNG_NHAN_VIEN" Member="QL_NGUOIDUNG" ThisKey="TENDANGNHAP" OtherKey="TENDANGNHAP" Type="QL_NGUOIDUNG" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.NHOM_SAN_PHAM" Member="NHOM_SAN_PHAMs">
@@ -125,15 +136,6 @@
       <Association Name="NHAN_VIEN_PHIEU_NHAP" Member="NHAN_VIEN" ThisKey="MANV" OtherKey="MANV" Type="NHAN_VIEN" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.QL_NGUOIDUNG" Member="QL_NGUOIDUNGs">
-    <Type Name="QL_NGUOIDUNG">
-      <Column Name="TENDANGNHAP" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MATKHAU" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="HOATDONG" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
-      <Association Name="QL_NGUOIDUNG_NHAN_VIEN" Member="NHAN_VIENs" ThisKey="TENDANGNHAP" OtherKey="TENDANGNHAP" Type="NHAN_VIEN" />
-      <Association Name="QL_NGUOIDUNG_QL_PHANQUYEN" Member="QL_PHANQUYENs" ThisKey="TENDANGNHAP" OtherKey="TENDANGNHAP" Type="QL_PHANQUYEN" />
-    </Type>
-  </Table>
   <Table Name="dbo.PHIEU_XUAT" Member="PHIEU_XUATs">
     <Type Name="PHIEU_XUAT">
       <Column Name="MAPX" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -144,6 +146,15 @@
       <Column Name="MOTAPHIEUXUAT" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
       <Association Name="NHAN_VIEN_PHIEU_XUAT" Member="NHAN_VIEN" ThisKey="MANV" OtherKey="MANV" Type="NHAN_VIEN" IsForeignKey="true" />
       <Association Name="HOA__ON_PHIEU_XUAT" Member="HOA__ON" ThisKey="MAHD" OtherKey="MAHD" Type="HOA__ON" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QL_NGUOIDUNG" Member="QL_NGUOIDUNGs">
+    <Type Name="QL_NGUOIDUNG">
+      <Column Name="TENDANGNHAP" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MATKHAU" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="HOATDONG" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="QL_NGUOIDUNG_NHAN_VIEN" Member="NHAN_VIENs" ThisKey="TENDANGNHAP" OtherKey="TENDANGNHAP" Type="NHAN_VIEN" />
+      <Association Name="QL_NGUOIDUNG_QL_PHANQUYEN" Member="QL_PHANQUYENs" ThisKey="TENDANGNHAP" OtherKey="TENDANGNHAP" Type="QL_PHANQUYEN" />
     </Type>
   </Table>
   <Table Name="dbo.QL_NGUOIDUNGNHOMNGUOIDUNG" Member="QL_NGUOIDUNGNHOMNGUOIDUNGs">
@@ -194,17 +205,6 @@
       <Association Name="NHA_CUNG_CAP_SAN_PHAM" Member="NHA_CUNG_CAP" ThisKey="MANCC" OtherKey="MANCC" Type="NHA_CUNG_CAP" IsForeignKey="true" />
       <Association Name="NHA_SAN_XUAT_SAN_PHAM" Member="NHA_SAN_XUAT" ThisKey="MANSX" OtherKey="MANSX" Type="NHA_SAN_XUAT" IsForeignKey="true" />
       <Association Name="HOA__ON_SAN_PHAM" Member="HOA__ON" ThisKey="MAHD" OtherKey="MAHD" Type="HOA__ON" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.CONG_TY" Member="CONG_Ties">
-    <Type Name="CONG_TY">
-      <Column Name="MACTY" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TENCTY" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="DIACHICT" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="SDTCT" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
-      <Column Name="MOTACT" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
-      <Column Name="WEBSITECT" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Association Name="CONG_TY_NHAN_VIEN" Member="NHAN_VIENs" ThisKey="MACTY" OtherKey="MACTY" Type="NHAN_VIEN" />
     </Type>
   </Table>
 </Database>
