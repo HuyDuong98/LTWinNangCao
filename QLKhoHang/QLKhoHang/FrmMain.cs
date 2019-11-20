@@ -24,6 +24,7 @@ namespace QLKhoHang
         {
             btnHeThong.PerformClick();
             this.WindowState =System.Windows.Forms.FormWindowState.Maximized;
+            lblFooter.Text = DangNhap_DAL.UserName;
         }
         //các btn của hệ thống
         string rdn = "Đăng nhập lại";
@@ -193,6 +194,7 @@ namespace QLKhoHang
                 frmChuyenKho frm = new frmChuyenKho();
                 GoiShow(frm);
             }
+            
         }
 
         public void deleteArrayButton()
@@ -231,6 +233,11 @@ namespace QLKhoHang
         private void PhanQuyen(object sender, EventArgs e)
         {
             
+        }
+
+        private void grDanhMuc_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
     }

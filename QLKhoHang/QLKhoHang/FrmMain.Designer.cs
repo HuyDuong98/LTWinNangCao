@@ -38,13 +38,13 @@
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.grDanhMuc = new DevExpress.XtraEditors.GroupControl();
-            this.pnDanhMuc = new System.Windows.Forms.Panel();
-            this.btnDanhMuc = new DevExpress.XtraEditors.SimpleButton();
-            this.btnKho = new DevExpress.XtraEditors.SimpleButton();
-            this.btnTKBC = new DevExpress.XtraEditors.SimpleButton();
-            this.grMenu = new DevExpress.XtraEditors.GroupControl();
             this.btnDonHang = new DevExpress.XtraEditors.SimpleButton();
+            this.pnDanhMuc = new System.Windows.Forms.Panel();
+            this.btnTKBC = new DevExpress.XtraEditors.SimpleButton();
             this.btnHeThong = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKho = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDanhMuc = new DevExpress.XtraEditors.SimpleButton();
+            this.grMenu = new DevExpress.XtraEditors.GroupControl();
             this.pnMenuButton = new System.Windows.Forms.Panel();
             this.btnThoat_menu = new DevExpress.XtraEditors.SimpleButton();
             this.btnAbout_menu = new DevExpress.XtraEditors.SimpleButton();
@@ -79,6 +79,8 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.lblFooter = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDanhMuc)).BeginInit();
             this.grDanhMuc.SuspendLayout();
@@ -91,6 +93,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.galleryDropDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelContent)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // barManager1
@@ -117,7 +121,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 524);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 560);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1005, 0);
             // 
@@ -127,7 +131,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 524);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 560);
             // 
             // barDockControlRight
             // 
@@ -135,7 +139,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1005, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 524);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 560);
             // 
             // barButtonItem1
             // 
@@ -152,124 +156,26 @@
             // grDanhMuc
             // 
             this.grDanhMuc.AllowTouchScroll = true;
-            this.grDanhMuc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.grDanhMuc.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.grDanhMuc.Appearance.Options.UseBackColor = true;
+            this.grDanhMuc.Controls.Add(this.btnDonHang);
             this.grDanhMuc.Controls.Add(this.pnDanhMuc);
-            this.grDanhMuc.Location = new System.Drawing.Point(0, 23);
+            this.grDanhMuc.Controls.Add(this.btnTKBC);
+            this.grDanhMuc.Controls.Add(this.btnHeThong);
+            this.grDanhMuc.Controls.Add(this.btnKho);
+            this.grDanhMuc.Controls.Add(this.btnDanhMuc);
+            this.grDanhMuc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grDanhMuc.Location = new System.Drawing.Point(2, 20);
             this.grDanhMuc.Name = "grDanhMuc";
-            this.grDanhMuc.Size = new System.Drawing.Size(217, 219);
+            this.grDanhMuc.Size = new System.Drawing.Size(213, 480);
             this.grDanhMuc.TabIndex = 0;
             this.grDanhMuc.Text = "groupControl1";
-            // 
-            // pnDanhMuc
-            // 
-            this.pnDanhMuc.AutoScroll = true;
-            this.pnDanhMuc.Location = new System.Drawing.Point(5, 23);
-            this.pnDanhMuc.Name = "pnDanhMuc";
-            this.pnDanhMuc.Size = new System.Drawing.Size(207, 196);
-            this.pnDanhMuc.TabIndex = 0;
-            // 
-            // btnDanhMuc
-            // 
-            this.btnDanhMuc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDanhMuc.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnDanhMuc.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnDanhMuc.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.btnDanhMuc.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhMuc.Appearance.Options.UseBackColor = true;
-            this.btnDanhMuc.Appearance.Options.UseBorderColor = true;
-            this.btnDanhMuc.Appearance.Options.UseFont = true;
-            this.btnDanhMuc.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
-            this.btnDanhMuc.AppearanceHovered.Options.UseBackColor = true;
-            this.btnDanhMuc.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.btnDanhMuc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDanhMuc.ImageOptions.Image")));
-            this.btnDanhMuc.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnDanhMuc.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnDanhMuc.Location = new System.Drawing.Point(2, 295);
-            this.btnDanhMuc.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDanhMuc.Name = "btnDanhMuc";
-            this.btnDanhMuc.Size = new System.Drawing.Size(213, 50);
-            this.btnDanhMuc.TabIndex = 1;
-            this.btnDanhMuc.Text = " Danh Mục";
-            this.btnDanhMuc.Click += new System.EventHandler(this.btnDanhMuc_Click);
-            // 
-            // btnKho
-            // 
-            this.btnKho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKho.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnKho.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnKho.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.btnKho.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKho.Appearance.Options.UseBackColor = true;
-            this.btnKho.Appearance.Options.UseBorderColor = true;
-            this.btnKho.Appearance.Options.UseFont = true;
-            this.btnKho.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
-            this.btnKho.AppearanceHovered.Options.UseBackColor = true;
-            this.btnKho.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.btnKho.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKho.ImageOptions.Image")));
-            this.btnKho.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnKho.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnKho.Location = new System.Drawing.Point(2, 345);
-            this.btnKho.Margin = new System.Windows.Forms.Padding(0);
-            this.btnKho.Name = "btnKho";
-            this.btnKho.Size = new System.Drawing.Size(213, 50);
-            this.btnKho.TabIndex = 2;
-            this.btnKho.Text = " Quản lý kho";
-            this.btnKho.Click += new System.EventHandler(this.btnKho_Click);
-            // 
-            // btnTKBC
-            // 
-            this.btnTKBC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTKBC.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTKBC.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnTKBC.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.btnTKBC.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTKBC.Appearance.Options.UseBackColor = true;
-            this.btnTKBC.Appearance.Options.UseBorderColor = true;
-            this.btnTKBC.Appearance.Options.UseFont = true;
-            this.btnTKBC.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
-            this.btnTKBC.AppearanceHovered.Options.UseBackColor = true;
-            this.btnTKBC.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.btnTKBC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTKBC.ImageOptions.Image")));
-            this.btnTKBC.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnTKBC.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnTKBC.Location = new System.Drawing.Point(2, 445);
-            this.btnTKBC.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTKBC.Name = "btnTKBC";
-            this.btnTKBC.Size = new System.Drawing.Size(213, 50);
-            this.btnTKBC.TabIndex = 4;
-            this.btnTKBC.Text = " Thống kê - Báo cáo";
-            this.btnTKBC.Click += new System.EventHandler(this.btnTKBC_Click);
-            // 
-            // grMenu
-            // 
-            this.grMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.grMenu.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.grMenu.Appearance.Options.UseBackColor = true;
-            this.grMenu.Controls.Add(this.btnDonHang);
-            this.grMenu.Controls.Add(this.btnTKBC);
-            this.grMenu.Controls.Add(this.btnKho);
-            this.grMenu.Controls.Add(this.btnDanhMuc);
-            this.grMenu.Controls.Add(this.btnHeThong);
-            this.grMenu.Controls.Add(this.grDanhMuc);
-            this.grMenu.Location = new System.Drawing.Point(1, 28);
-            this.grMenu.Name = "grMenu";
-            this.grMenu.Size = new System.Drawing.Size(217, 496);
-            this.grMenu.TabIndex = 1;
-            this.grMenu.Text = "Quản lý kho hàng";
+            this.grDanhMuc.Paint += new System.Windows.Forms.PaintEventHandler(this.grDanhMuc_Paint);
             // 
             // btnDonHang
             // 
-            this.btnDonHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDonHang.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnDonHang.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnDonHang.Appearance.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnDonHang.Appearance.BackColor2 = System.Drawing.Color.LightBlue;
             this.btnDonHang.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnDonHang.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDonHang.Appearance.Options.UseBackColor = true;
@@ -277,22 +183,57 @@
             this.btnDonHang.Appearance.Options.UseFont = true;
             this.btnDonHang.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
             this.btnDonHang.AppearanceHovered.Options.UseBackColor = true;
-            this.btnDonHang.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnDonHang.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnDonHang.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnDonHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.ImageOptions.Image")));
             this.btnDonHang.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnDonHang.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnDonHang.Location = new System.Drawing.Point(2, 395);
+            this.btnDonHang.Location = new System.Drawing.Point(2, 228);
             this.btnDonHang.Margin = new System.Windows.Forms.Padding(0);
             this.btnDonHang.Name = "btnDonHang";
-            this.btnDonHang.Size = new System.Drawing.Size(213, 50);
+            this.btnDonHang.Size = new System.Drawing.Size(209, 50);
             this.btnDonHang.TabIndex = 3;
             this.btnDonHang.Text = " Đơn hàng";
             this.btnDonHang.Click += new System.EventHandler(this.btnDonHang_Click);
             // 
+            // pnDanhMuc
+            // 
+            this.pnDanhMuc.AutoScroll = true;
+            this.pnDanhMuc.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.pnDanhMuc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnDanhMuc.Location = new System.Drawing.Point(2, 20);
+            this.pnDanhMuc.Name = "pnDanhMuc";
+            this.pnDanhMuc.Size = new System.Drawing.Size(209, 258);
+            this.pnDanhMuc.TabIndex = 0;
+            // 
+            // btnTKBC
+            // 
+            this.btnTKBC.Appearance.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnTKBC.Appearance.BackColor2 = System.Drawing.Color.LightBlue;
+            this.btnTKBC.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnTKBC.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTKBC.Appearance.Options.UseBackColor = true;
+            this.btnTKBC.Appearance.Options.UseBorderColor = true;
+            this.btnTKBC.Appearance.Options.UseFont = true;
+            this.btnTKBC.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
+            this.btnTKBC.AppearanceHovered.Options.UseBackColor = true;
+            this.btnTKBC.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnTKBC.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnTKBC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTKBC.ImageOptions.Image")));
+            this.btnTKBC.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnTKBC.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnTKBC.Location = new System.Drawing.Point(2, 278);
+            this.btnTKBC.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTKBC.Name = "btnTKBC";
+            this.btnTKBC.Size = new System.Drawing.Size(209, 50);
+            this.btnTKBC.TabIndex = 4;
+            this.btnTKBC.Text = " Thống kê - Báo cáo";
+            this.btnTKBC.Click += new System.EventHandler(this.btnTKBC_Click);
+            // 
             // btnHeThong
             // 
-            this.btnHeThong.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnHeThong.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnHeThong.Appearance.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnHeThong.Appearance.BackColor2 = System.Drawing.Color.LightBlue;
             this.btnHeThong.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.btnHeThong.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeThong.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -302,22 +243,85 @@
             this.btnHeThong.Appearance.Options.UseForeColor = true;
             this.btnHeThong.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
             this.btnHeThong.AppearanceHovered.Options.UseBackColor = true;
-            this.btnHeThong.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnHeThong.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnHeThong.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnHeThong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHeThong.ImageOptions.Image")));
             this.btnHeThong.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnHeThong.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnHeThong.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.btnHeThong.Location = new System.Drawing.Point(2, 245);
+            this.btnHeThong.Location = new System.Drawing.Point(2, 328);
             this.btnHeThong.Margin = new System.Windows.Forms.Padding(0);
             this.btnHeThong.Name = "btnHeThong";
-            this.btnHeThong.Size = new System.Drawing.Size(213, 50);
+            this.btnHeThong.Size = new System.Drawing.Size(209, 50);
             this.btnHeThong.TabIndex = 0;
             this.btnHeThong.Text = " Hệ Thống";
             this.btnHeThong.Click += new System.EventHandler(this.btnHeThong_Click);
             // 
+            // btnKho
+            // 
+            this.btnKho.Appearance.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnKho.Appearance.BackColor2 = System.Drawing.Color.LightBlue;
+            this.btnKho.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnKho.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKho.Appearance.Options.UseBackColor = true;
+            this.btnKho.Appearance.Options.UseBorderColor = true;
+            this.btnKho.Appearance.Options.UseFont = true;
+            this.btnKho.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
+            this.btnKho.AppearanceHovered.Options.UseBackColor = true;
+            this.btnKho.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnKho.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnKho.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKho.ImageOptions.Image")));
+            this.btnKho.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnKho.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnKho.Location = new System.Drawing.Point(2, 378);
+            this.btnKho.Margin = new System.Windows.Forms.Padding(0);
+            this.btnKho.Name = "btnKho";
+            this.btnKho.Size = new System.Drawing.Size(209, 50);
+            this.btnKho.TabIndex = 2;
+            this.btnKho.Text = " Quản lý kho";
+            this.btnKho.Click += new System.EventHandler(this.btnKho_Click);
+            // 
+            // btnDanhMuc
+            // 
+            this.btnDanhMuc.Appearance.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnDanhMuc.Appearance.BackColor2 = System.Drawing.Color.LightBlue;
+            this.btnDanhMuc.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.btnDanhMuc.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDanhMuc.Appearance.Options.UseBackColor = true;
+            this.btnDanhMuc.Appearance.Options.UseBorderColor = true;
+            this.btnDanhMuc.Appearance.Options.UseFont = true;
+            this.btnDanhMuc.AppearanceHovered.BackColor = System.Drawing.Color.Cyan;
+            this.btnDanhMuc.AppearanceHovered.Options.UseBackColor = true;
+            this.btnDanhMuc.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnDanhMuc.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnDanhMuc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDanhMuc.ImageOptions.Image")));
+            this.btnDanhMuc.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnDanhMuc.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnDanhMuc.Location = new System.Drawing.Point(2, 428);
+            this.btnDanhMuc.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDanhMuc.Name = "btnDanhMuc";
+            this.btnDanhMuc.Size = new System.Drawing.Size(209, 50);
+            this.btnDanhMuc.TabIndex = 1;
+            this.btnDanhMuc.Text = " Danh Mục";
+            this.btnDanhMuc.Click += new System.EventHandler(this.btnDanhMuc_Click);
+            // 
+            // grMenu
+            // 
+            this.grMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.grMenu.Appearance.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.grMenu.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grMenu.Appearance.Options.UseBackColor = true;
+            this.grMenu.Controls.Add(this.grDanhMuc);
+            this.grMenu.Location = new System.Drawing.Point(1, 28);
+            this.grMenu.Name = "grMenu";
+            this.grMenu.Size = new System.Drawing.Size(217, 502);
+            this.grMenu.TabIndex = 1;
+            this.grMenu.Text = "Quản lý kho hàng";
+            // 
             // pnMenuButton
             // 
-            this.pnMenuButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pnMenuButton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pnMenuButton.Controls.Add(this.btnThoat_menu);
             this.pnMenuButton.Controls.Add(this.btnAbout_menu);
             this.pnMenuButton.Controls.Add(this.btnTroGiup_menu);
@@ -453,7 +457,7 @@
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl2.Location = new System.Drawing.Point(0, 524);
+            this.barDockControl2.Location = new System.Drawing.Point(0, 560);
             this.barDockControl2.Manager = this.barManager2;
             this.barDockControl2.Size = new System.Drawing.Size(1005, 0);
             // 
@@ -463,7 +467,7 @@
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl3.Location = new System.Drawing.Point(0, 0);
             this.barDockControl3.Manager = this.barManager2;
-            this.barDockControl3.Size = new System.Drawing.Size(0, 524);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 560);
             // 
             // barDockControl4
             // 
@@ -471,7 +475,7 @@
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControl4.Location = new System.Drawing.Point(1005, 0);
             this.barDockControl4.Manager = this.barManager2;
-            this.barDockControl4.Size = new System.Drawing.Size(0, 524);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 560);
             // 
             // barManager3
             // 
@@ -494,7 +498,7 @@
             // 
             this.barDockControl6.CausesValidation = false;
             this.barDockControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl6.Location = new System.Drawing.Point(0, 524);
+            this.barDockControl6.Location = new System.Drawing.Point(0, 560);
             this.barDockControl6.Manager = this.barManager3;
             this.barDockControl6.Size = new System.Drawing.Size(1005, 0);
             // 
@@ -504,7 +508,7 @@
             this.barDockControl7.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl7.Location = new System.Drawing.Point(0, 0);
             this.barDockControl7.Manager = this.barManager3;
-            this.barDockControl7.Size = new System.Drawing.Size(0, 524);
+            this.barDockControl7.Size = new System.Drawing.Size(0, 560);
             // 
             // barDockControl8
             // 
@@ -512,7 +516,7 @@
             this.barDockControl8.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControl8.Location = new System.Drawing.Point(1005, 0);
             this.barDockControl8.Manager = this.barManager3;
-            this.barDockControl8.Size = new System.Drawing.Size(0, 524);
+            this.barDockControl8.Size = new System.Drawing.Size(0, 560);
             // 
             // barManager4
             // 
@@ -540,7 +544,7 @@
             // 
             this.barDockControl10.CausesValidation = false;
             this.barDockControl10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl10.Location = new System.Drawing.Point(0, 524);
+            this.barDockControl10.Location = new System.Drawing.Point(0, 560);
             this.barDockControl10.Manager = this.barManager4;
             this.barDockControl10.Size = new System.Drawing.Size(1005, 0);
             // 
@@ -550,7 +554,7 @@
             this.barDockControl11.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl11.Location = new System.Drawing.Point(0, 0);
             this.barDockControl11.Manager = this.barManager4;
-            this.barDockControl11.Size = new System.Drawing.Size(0, 524);
+            this.barDockControl11.Size = new System.Drawing.Size(0, 560);
             // 
             // barDockControl12
             // 
@@ -558,7 +562,7 @@
             this.barDockControl12.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControl12.Location = new System.Drawing.Point(1005, 0);
             this.barDockControl12.Manager = this.barManager4;
-            this.barDockControl12.Size = new System.Drawing.Size(0, 524);
+            this.barDockControl12.Size = new System.Drawing.Size(0, 560);
             // 
             // barButtonItem3
             // 
@@ -597,12 +601,12 @@
             this.panelContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelContent.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panelContent.Appearance.BackColor = System.Drawing.Color.Azure;
             this.panelContent.Appearance.Options.UseBackColor = true;
             this.panelContent.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.panelContent.Location = new System.Drawing.Point(224, 28);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(781, 493);
+            this.panelContent.Size = new System.Drawing.Size(781, 502);
             this.panelContent.TabIndex = 18;
             // 
             // bar2
@@ -619,7 +623,7 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripLabel1});
@@ -647,11 +651,38 @@
             this.toolStripLabel1.Text = "Menu";
             this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Appearance.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelControl1.Appearance.BackColor2 = System.Drawing.SystemColors.ActiveCaption;
+            this.panelControl1.Appearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.Appearance.Options.UseBorderColor = true;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.Controls.Add(this.lblFooter);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl1.Location = new System.Drawing.Point(0, 531);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1005, 29);
+            this.panelControl1.TabIndex = 52;
+            // 
+            // lblFooter
+            // 
+            this.lblFooter.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFooter.Appearance.Options.UseFont = true;
+            this.lblFooter.Location = new System.Drawing.Point(17, 5);
+            this.lblFooter.Name = "lblFooter";
+            this.lblFooter.Size = new System.Drawing.Size(85, 16);
+            this.lblFooter.TabIndex = 0;
+            this.lblFooter.Text = "labelControl1";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1005, 524);
+            this.ClientSize = new System.Drawing.Size(1005, 560);
+            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.pnMenuButton);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panelContent);
@@ -672,10 +703,11 @@
             this.Controls.Add(this.barDockControl12);
             this.Controls.Add(this.barDockControl10);
             this.Controls.Add(this.barDockControl9);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMain";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDanhMuc)).EndInit();
@@ -690,6 +722,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelContent)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -746,5 +781,7 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.LabelControl lblFooter;
     }
 }

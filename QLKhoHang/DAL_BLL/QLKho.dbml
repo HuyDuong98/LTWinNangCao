@@ -61,14 +61,6 @@
       <Association Name="KHACH_HANG_HOA__ON" Member="HOA__ONs" ThisKey="MAKH" OtherKey="MAKH" Type="HOA__ON" />
     </Type>
   </Table>
-  <Table Name="dbo.KHU_VUC" Member="KHU_VUCs">
-    <Type Name="KHU_VUC">
-      <Column Name="MAKV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TENKV" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="MOTA" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Association Name="KHU_VUC_NHA_CUNG_CAP" Member="NHA_CUNG_CAPs" ThisKey="MAKV" OtherKey="MAKV" Type="NHA_CUNG_CAP" />
-    </Type>
-  </Table>
   <Table Name="dbo.LOAI_SAN_PHAM" Member="LOAI_SAN_PHAMs">
     <Type Name="LOAI_SAN_PHAM">
       <Column Name="MALOAI" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -77,6 +69,14 @@
       <Column Name="MOTALSP" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
       <Association Name="LOAI_SAN_PHAM_SAN_PHAM" Member="SAN_PHAMs" ThisKey="MALOAI" OtherKey="MALOAI" Type="SAN_PHAM" />
       <Association Name="NHOM_SAN_PHAM_LOAI_SAN_PHAM" Member="NHOM_SAN_PHAM" ThisKey="MANHOMSP" OtherKey="MANHOMSP" Type="NHOM_SAN_PHAM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KHU_VUC" Member="KHU_VUCs">
+    <Type Name="KHU_VUC">
+      <Column Name="MAKV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENKV" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MOTA" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="KHU_VUC_NHA_CUNG_CAP" Member="NHA_CUNG_CAPs" ThisKey="MAKV" OtherKey="MAKV" Type="NHA_CUNG_CAP" />
     </Type>
   </Table>
   <Table Name="dbo.NHA_CUNG_CAP" Member="NHA_CUNG_CAPs">
@@ -157,15 +157,6 @@
       <Association Name="QL_NGUOIDUNG_QL_PHANQUYEN" Member="QL_PHANQUYENs" ThisKey="TENDANGNHAP" OtherKey="TENDANGNHAP" Type="QL_PHANQUYEN" />
     </Type>
   </Table>
-  <Table Name="dbo.QL_NGUOIDUNGNHOMNGUOIDUNG" Member="QL_NGUOIDUNGNHOMNGUOIDUNGs">
-    <Type Name="QL_NGUOIDUNGNHOMNGUOIDUNG">
-      <Column Name="MANHOM" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MAMANHINH" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="GHICHUNND" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Association Name="DM_MANHINH_QL_NGUOIDUNGNHOMNGUOIDUNG" Member="DM_MANHINH" ThisKey="MAMANHINH" OtherKey="MAMANHINH" Type="DM_MANHINH" IsForeignKey="true" />
-      <Association Name="QL_NHOMNGUOIDUNG_QL_NGUOIDUNGNHOMNGUOIDUNG" Member="QL_NHOMNGUOIDUNG" ThisKey="MANHOM" OtherKey="MANHOM" Type="QL_NHOMNGUOIDUNG" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.QL_NHOMNGUOIDUNG" Member="QL_NHOMNGUOIDUNGs">
     <Type Name="QL_NHOMNGUOIDUNG">
       <Column Name="MANHOM" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -173,6 +164,15 @@
       <Column Name="GHICHUNND" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
       <Association Name="QL_NHOMNGUOIDUNG_QL_NGUOIDUNGNHOMNGUOIDUNG" Member="QL_NGUOIDUNGNHOMNGUOIDUNGs" ThisKey="MANHOM" OtherKey="MANHOM" Type="QL_NGUOIDUNGNHOMNGUOIDUNG" />
       <Association Name="QL_NHOMNGUOIDUNG_QL_PHANQUYEN" Member="QL_PHANQUYENs" ThisKey="MANHOM" OtherKey="MANHOM" Type="QL_PHANQUYEN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QL_NGUOIDUNGNHOMNGUOIDUNG" Member="QL_NGUOIDUNGNHOMNGUOIDUNGs">
+    <Type Name="QL_NGUOIDUNGNHOMNGUOIDUNG">
+      <Column Name="MANHOM" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MAMANHINH" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GHICHUNND" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="DM_MANHINH_QL_NGUOIDUNGNHOMNGUOIDUNG" Member="DM_MANHINH" ThisKey="MAMANHINH" OtherKey="MAMANHINH" Type="DM_MANHINH" IsForeignKey="true" />
+      <Association Name="QL_NHOMNGUOIDUNG_QL_NGUOIDUNGNHOMNGUOIDUNG" Member="QL_NHOMNGUOIDUNG" ThisKey="MANHOM" OtherKey="MANHOM" Type="QL_NHOMNGUOIDUNG" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.QL_PHANQUYEN" Member="QL_PHANQUYENs">
@@ -200,6 +200,7 @@
       <Column Name="DVT" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="TRANGTHAI" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="MOTASP" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="MAPN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Association Name="SAN_PHAM_CHITIETDDH" Member="CHITIETDDHs" ThisKey="MASP" OtherKey="MASP" Type="CHITIETDDH" />
       <Association Name="LOAI_SAN_PHAM_SAN_PHAM" Member="LOAI_SAN_PHAM" ThisKey="MALOAI" OtherKey="MALOAI" Type="LOAI_SAN_PHAM" IsForeignKey="true" />
       <Association Name="NHA_CUNG_CAP_SAN_PHAM" Member="NHA_CUNG_CAP" ThisKey="MANCC" OtherKey="MANCC" Type="NHA_CUNG_CAP" IsForeignKey="true" />
