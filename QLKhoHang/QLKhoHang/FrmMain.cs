@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DAL_BLL;
+using DevExpress.XtraTab;
+using DevExpress.XtraTab.ViewInfo;
 namespace QLKhoHang
 {
     public partial class FrmMain : DevExpress.XtraEditors.XtraForm
@@ -20,11 +22,13 @@ namespace QLKhoHang
         }
         
         DangNhap_DAL dn = new DangNhap_DAL();
+        private static XtraTabControl tabstatic;
         private void FrmMain_Load(object sender, EventArgs e)
         {
             btnHeThong.PerformClick();
-            this.WindowState =System.Windows.Forms.FormWindowState.Maximized;
-            lblFooter.Text = DangNhap_DAL.UserName;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            
+            tabstatic = xtTabControl;
         }
         //các btn của hệ thống
         string rdn = "Đăng nhập lại";
@@ -144,14 +148,77 @@ namespace QLKhoHang
         // gọi các form từ menu con
         private void GoiShow(Form frm)
         {
+            XtraTabPage tab = new XtraTabPage();
+            tab.Text = frm.Text;
             frm.TopLevel = false;
-            panelContent.Controls.Add(frm);
-            frm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             frm.Dock = DockStyle.Fill;
             frm.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            frm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            if (KiemTraTabPage(tab.Text) == false)
+            {
+                xtTabControl.TabPages.Add(tab);
+                GoiShow(frm);
+            }
+            else
+            {
+                tab.PageVisible = true;
+            }
+            frm.Parent = xtTabControl.TabPages[ViTriTabPage(tab.Text)];
             frm.Show();
+            xtTabControl.SelectedTabPage = xtTabControl.TabPages[ViTriTabPage(tab.Text)];
+            
         }
 
+
+        // thêm tabcontrol
+        
+        
+        // kiểm tra có tồn tại tabcontrol chưa
+        public static bool KiemTraTabPage(string Ten)
+        {
+            bool ok = false;
+            foreach (XtraTabPage tabpage in tabstatic.TabPages)
+            {
+                if (tabpage.Text == Ten)
+                {
+                    return ok = true;
+                }
+            }
+            return ok;
+        }
+        //vi tri tab
+        public static int ViTriTabPage(string Ten)
+        {
+            int vitri = 0;
+            for (int i = 0; i < tabstatic.TabPages.Count; i++)
+            {
+                if (tabstatic.TabPages[i].Text == Ten)
+                    vitri = i;
+            }
+            return vitri;
+        }
+        private void xtTabControl_CloseButtonClick(object sender, EventArgs e)
+        {
+            int h = 0;
+            ClosePageButtonEventArgs arg = e as ClosePageButtonEventArgs;
+            if (xtTabControl.SelectedTabPage.Equals((arg.Page as XtraTabPage)))
+                h = xtTabControl.SelectedTabPageIndex;
+            if ((arg.Page as XtraTabPage).Text != "Bắt đầu")
+            {
+                xtTabControl.TabPages.Remove((arg.Page as XtraTabPage));
+
+                xtTabControl.SelectedTabPageIndex = h - 1;
+            }
+            else
+                XtraMessageBox.Show("Bạn không thể tắt\nTab bắt đầu này !", "Thông báo");
+
+        }
+        public static void thoattab()
+        {
+            int i = tabstatic.SelectedTabPageIndex;
+            tabstatic.TabPages.RemoveAt(i);
+            tabstatic.SelectedTabPageIndex = i - 1;
+        }
         //Bắt sự kiên click cho btn trong menu con trong form main
         private void bt_Click(object sender, EventArgs e)
         {
@@ -220,7 +287,6 @@ namespace QLKhoHang
 
         private void btnDNLai_menu_Click(object sender, EventArgs e)
         {
-            
             frmDN.ShowDialog();
         }
 
@@ -239,6 +305,14 @@ namespace QLKhoHang
         {
 
         }
+
+        private void FrmMain_LocationChanged(object sender, EventArgs e)
+        {
+            lblFooter.Text = DangNhap_DAL.UserName;
+        }
+
+       
+
 
     }
 }

@@ -74,13 +74,17 @@
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.panelContent = new DevExpress.XtraEditors.PanelControl();
+            this.pnContent = new DevExpress.XtraEditors.PanelControl();
+            this.xtTabControl = new DevExpress.XtraTab.XtraTabControl();
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.lblFooter = new DevExpress.XtraEditors.LabelControl();
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDanhMuc)).BeginInit();
             this.grDanhMuc.SuspendLayout();
@@ -91,10 +95,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.galleryDropDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelContent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnContent)).BeginInit();
+            this.pnContent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtTabControl)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            this.tabControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // barManager1
@@ -596,18 +603,29 @@
             this.barButtonItem5.Id = 3;
             this.barButtonItem5.Name = "barButtonItem5";
             // 
-            // panelContent
+            // pnContent
             // 
-            this.panelContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelContent.Appearance.BackColor = System.Drawing.Color.Azure;
-            this.panelContent.Appearance.Options.UseBackColor = true;
-            this.panelContent.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.panelContent.Location = new System.Drawing.Point(224, 28);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(781, 502);
-            this.panelContent.TabIndex = 18;
+            this.pnContent.Appearance.BackColor = System.Drawing.Color.Azure;
+            this.pnContent.Appearance.Options.UseBackColor = true;
+            this.pnContent.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.pnContent.Controls.Add(this.xtTabControl);
+            this.pnContent.Location = new System.Drawing.Point(224, 28);
+            this.pnContent.Name = "pnContent";
+            this.pnContent.Size = new System.Drawing.Size(781, 502);
+            this.pnContent.TabIndex = 18;
+            // 
+            // xtTabControl
+            // 
+            this.xtTabControl.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
+            this.xtTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtTabControl.Location = new System.Drawing.Point(2, 2);
+            this.xtTabControl.Name = "xtTabControl";
+            this.xtTabControl.Size = new System.Drawing.Size(777, 498);
+            this.xtTabControl.TabIndex = 0;
+            this.xtTabControl.CloseButtonClick += new System.EventHandler(this.xtTabControl_CloseButtonClick);
             // 
             // bar2
             // 
@@ -677,6 +695,36 @@
             this.lblFooter.TabIndex = 0;
             this.lblFooter.Text = "labelControl1";
             // 
+            // tabControl
+            // 
+            this.tabControl.Controls.Add(this.tabPage3);
+            this.tabControl.Controls.Add(this.tabPage4);
+            this.tabControl.Location = new System.Drawing.Point(260, 13);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(8, 8);
+            this.tabControl.TabIndex = 2;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(0, 0);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(0, 0);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -685,7 +733,7 @@
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.pnMenuButton);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.panelContent);
+            this.Controls.Add(this.pnContent);
             this.Controls.Add(this.grMenu);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -709,6 +757,7 @@
             this.Text = "FrmMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.LocationChanged += new System.EventHandler(this.FrmMain_LocationChanged);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDanhMuc)).EndInit();
             this.grDanhMuc.ResumeLayout(false);
@@ -719,12 +768,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.galleryDropDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelContent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnContent)).EndInit();
+            this.pnContent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xtTabControl)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            this.tabControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -764,7 +816,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControl12;
         private DevExpress.XtraBars.Ribbon.GalleryDropDown galleryDropDown1;
         private DevExpress.XtraBars.BarDockingMenuItem barDockingMenuItem1;
-        private DevExpress.XtraEditors.PanelControl panelContent;
+        private DevExpress.XtraEditors.PanelControl pnContent;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraEditors.SimpleButton btnHeThong;
         private System.Windows.Forms.Panel pnDanhMuc;
@@ -783,5 +835,9 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.LabelControl lblFooter;
+        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private DevExpress.XtraTab.XtraTabControl xtTabControl;
     }
 }

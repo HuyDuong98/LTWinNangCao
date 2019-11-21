@@ -3,4 +3,3 @@ C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\DAL_BLL\bin\Debug\DAL
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\DAL_BLL\obj\Debug\DAL_BLL.dll
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\DAL_BLL\obj\Debug\DAL_BLL.pdb
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\DAL_BLL\bin\Debug\DAL_BLL.dll.config
-C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\DAL_BLL\obj\Debug\DAL_BLL.csprojResolveAssemblyReference.cache
