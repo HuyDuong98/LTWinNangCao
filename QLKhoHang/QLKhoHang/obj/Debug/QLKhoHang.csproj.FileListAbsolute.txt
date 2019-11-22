@@ -19,3 +19,5 @@ C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\Q
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmPhieuNhap.resources
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmPhieuXuat.resources
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmChuyenKho.resources
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmLoaiSanPham.resources
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.txtChiNhapSo.resources

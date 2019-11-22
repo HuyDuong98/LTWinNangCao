@@ -34,14 +34,33 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.grThongTinSP = new DevExpress.XtraEditors.GroupControl();
+            this.txtGiaNhap = new QLKhoHang.txtChiNhapSo(this.components);
+            this.txtTenSP = new System.Windows.Forms.TextBox();
+            this.lblGhiChu = new DevExpress.XtraEditors.LabelControl();
+            this.lblGiaBanSi = new DevExpress.XtraEditors.LabelControl();
+            this.lblDVT = new DevExpress.XtraEditors.LabelControl();
+            this.lblTenSP = new DevExpress.XtraEditors.LabelControl();
+            this.lblMauSac = new DevExpress.XtraEditors.LabelControl();
+            this.lblGiaNhap = new DevExpress.XtraEditors.LabelControl();
+            this.lblGiaBanLe = new DevExpress.XtraEditors.LabelControl();
+            this.lblNSX = new DevExpress.XtraEditors.LabelControl();
+            this.lblNCC = new DevExpress.XtraEditors.LabelControl();
+            this.lblMaSP = new DevExpress.XtraEditors.LabelControl();
+            this.txtDVT = new System.Windows.Forms.TextBox();
+            this.txtGhiChu = new System.Windows.Forms.TextBox();
+            this.txtMauSac = new System.Windows.Forms.TextBox();
+            this.txtMaSP = new System.Windows.Forms.TextBox();
+            this.cboNSX = new System.Windows.Forms.ComboBox();
+            this.lblLoaiSP = new DevExpress.XtraEditors.LabelControl();
+            this.cboNCC = new System.Windows.Forms.ComboBox();
+            this.cboLoaiSP = new System.Windows.Forms.ComboBox();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.dataGV_SanPham = new System.Windows.Forms.DataGridView();
             this.MASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaNSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MauSac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KichThuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,14 +77,16 @@
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.btnTaoMaVach = new DevExpress.XtraEditors.SimpleButton();
             this.pnControl = new DevExpress.XtraEditors.PanelControl();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtGiaBanLe = new QLKhoHang.txtChiNhapSo(this.components);
+            this.txtGiaBanSi = new QLKhoHang.txtChiNhapSo(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grThongTinSP)).BeginInit();
+            this.grThongTinSP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGV_SanPham)).BeginInit();
@@ -114,26 +135,206 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 454);
             // 
-            // groupControl1
+            // grThongTinSP
             // 
-            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.grThongTinSP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl1.Controls.Add(this.groupControl2);
-            this.groupControl1.Location = new System.Drawing.Point(0, 30);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(0);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(670, 423);
-            this.groupControl1.TabIndex = 5;
-            this.groupControl1.Text = "Thông tin sản phẩm";
+            this.grThongTinSP.Controls.Add(this.txtGiaBanLe);
+            this.grThongTinSP.Controls.Add(this.txtGiaBanSi);
+            this.grThongTinSP.Controls.Add(this.txtGiaNhap);
+            this.grThongTinSP.Controls.Add(this.txtTenSP);
+            this.grThongTinSP.Controls.Add(this.lblGhiChu);
+            this.grThongTinSP.Controls.Add(this.lblGiaBanSi);
+            this.grThongTinSP.Controls.Add(this.lblDVT);
+            this.grThongTinSP.Controls.Add(this.lblTenSP);
+            this.grThongTinSP.Controls.Add(this.lblMauSac);
+            this.grThongTinSP.Controls.Add(this.lblGiaNhap);
+            this.grThongTinSP.Controls.Add(this.lblGiaBanLe);
+            this.grThongTinSP.Controls.Add(this.lblNSX);
+            this.grThongTinSP.Controls.Add(this.lblNCC);
+            this.grThongTinSP.Controls.Add(this.lblMaSP);
+            this.grThongTinSP.Controls.Add(this.txtDVT);
+            this.grThongTinSP.Controls.Add(this.txtGhiChu);
+            this.grThongTinSP.Controls.Add(this.txtMauSac);
+            this.grThongTinSP.Controls.Add(this.txtMaSP);
+            this.grThongTinSP.Controls.Add(this.cboNSX);
+            this.grThongTinSP.Controls.Add(this.lblLoaiSP);
+            this.grThongTinSP.Controls.Add(this.cboNCC);
+            this.grThongTinSP.Controls.Add(this.cboLoaiSP);
+            this.grThongTinSP.Location = new System.Drawing.Point(0, 30);
+            this.grThongTinSP.Margin = new System.Windows.Forms.Padding(0);
+            this.grThongTinSP.Name = "grThongTinSP";
+            this.grThongTinSP.Size = new System.Drawing.Size(670, 162);
+            this.grThongTinSP.TabIndex = 5;
+            this.grThongTinSP.Text = "Thông tin sản phẩm";
+            // 
+            // txtGiaNhap
+            // 
+            this.txtGiaNhap.Location = new System.Drawing.Point(86, 94);
+            this.txtGiaNhap.Name = "txtGiaNhap";
+            this.txtGiaNhap.Size = new System.Drawing.Size(129, 21);
+            this.txtGiaNhap.TabIndex = 3;
+            // 
+            // txtTenSP
+            // 
+            this.txtTenSP.Location = new System.Drawing.Point(505, 25);
+            this.txtTenSP.Name = "txtTenSP";
+            this.txtTenSP.Size = new System.Drawing.Size(146, 21);
+            this.txtTenSP.TabIndex = 2;
+            // 
+            // lblGhiChu
+            // 
+            this.lblGhiChu.Location = new System.Drawing.Point(12, 128);
+            this.lblGhiChu.Name = "lblGhiChu";
+            this.lblGhiChu.Size = new System.Drawing.Size(35, 13);
+            this.lblGhiChu.TabIndex = 1;
+            this.lblGhiChu.Text = "Ghi chú";
+            // 
+            // lblGiaBanSi
+            // 
+            this.lblGiaBanSi.Location = new System.Drawing.Point(452, 98);
+            this.lblGiaBanSi.Name = "lblGiaBanSi";
+            this.lblGiaBanSi.Size = new System.Drawing.Size(46, 13);
+            this.lblGiaBanSi.TabIndex = 1;
+            this.lblGiaBanSi.Text = "Giá bán sỉ";
+            // 
+            // lblDVT
+            // 
+            this.lblDVT.Location = new System.Drawing.Point(560, 63);
+            this.lblDVT.Name = "lblDVT";
+            this.lblDVT.Size = new System.Drawing.Size(19, 13);
+            this.lblDVT.TabIndex = 1;
+            this.lblDVT.Text = "DVT";
+            // 
+            // lblTenSP
+            // 
+            this.lblTenSP.Location = new System.Drawing.Point(431, 28);
+            this.lblTenSP.Name = "lblTenSP";
+            this.lblTenSP.Size = new System.Drawing.Size(67, 13);
+            this.lblTenSP.TabIndex = 1;
+            this.lblTenSP.Text = "Tên sản phẩm";
+            // 
+            // lblMauSac
+            // 
+            this.lblMauSac.Location = new System.Drawing.Point(431, 62);
+            this.lblMauSac.Name = "lblMauSac";
+            this.lblMauSac.Size = new System.Drawing.Size(39, 13);
+            this.lblMauSac.TabIndex = 1;
+            this.lblMauSac.Text = "Màu sắc";
+            // 
+            // lblGiaNhap
+            // 
+            this.lblGiaNhap.Location = new System.Drawing.Point(12, 98);
+            this.lblGiaNhap.Name = "lblGiaNhap";
+            this.lblGiaNhap.Size = new System.Drawing.Size(42, 13);
+            this.lblGiaNhap.TabIndex = 1;
+            this.lblGiaNhap.Text = "Giá nhập";
+            // 
+            // lblGiaBanLe
+            // 
+            this.lblGiaBanLe.Location = new System.Drawing.Point(248, 98);
+            this.lblGiaBanLe.Name = "lblGiaBanLe";
+            this.lblGiaBanLe.Size = new System.Drawing.Size(47, 13);
+            this.lblGiaBanLe.TabIndex = 1;
+            this.lblGiaBanLe.Text = "Giá bán lẻ";
+            // 
+            // lblNSX
+            // 
+            this.lblNSX.Location = new System.Drawing.Point(232, 60);
+            this.lblNSX.Name = "lblNSX";
+            this.lblNSX.Size = new System.Drawing.Size(64, 13);
+            this.lblNSX.TabIndex = 1;
+            this.lblNSX.Text = "Nhà sản xuất";
+            // 
+            // lblNCC
+            // 
+            this.lblNCC.Location = new System.Drawing.Point(12, 62);
+            this.lblNCC.Name = "lblNCC";
+            this.lblNCC.Size = new System.Drawing.Size(65, 13);
+            this.lblNCC.TabIndex = 1;
+            this.lblNCC.Text = "Nhà cung cấp";
+            // 
+            // lblMaSP
+            // 
+            this.lblMaSP.Location = new System.Drawing.Point(232, 28);
+            this.lblMaSP.Name = "lblMaSP";
+            this.lblMaSP.Size = new System.Drawing.Size(63, 13);
+            this.lblMaSP.TabIndex = 1;
+            this.lblMaSP.Text = "Mã sản phẩm";
+            // 
+            // txtDVT
+            // 
+            this.txtDVT.Location = new System.Drawing.Point(585, 60);
+            this.txtDVT.Name = "txtDVT";
+            this.txtDVT.Size = new System.Drawing.Size(66, 21);
+            this.txtDVT.TabIndex = 2;
+            // 
+            // txtGhiChu
+            // 
+            this.txtGhiChu.Location = new System.Drawing.Point(86, 128);
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(565, 21);
+            this.txtGhiChu.TabIndex = 2;
+            // 
+            // txtMauSac
+            // 
+            this.txtMauSac.Location = new System.Drawing.Point(476, 58);
+            this.txtMauSac.Name = "txtMauSac";
+            this.txtMauSac.Size = new System.Drawing.Size(65, 21);
+            this.txtMauSac.TabIndex = 2;
+            // 
+            // txtMaSP
+            // 
+            this.txtMaSP.Enabled = false;
+            this.txtMaSP.Location = new System.Drawing.Point(301, 25);
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.Size = new System.Drawing.Size(116, 21);
+            this.txtMaSP.TabIndex = 2;
+            // 
+            // cboNSX
+            // 
+            this.cboNSX.FormattingEnabled = true;
+            this.cboNSX.Location = new System.Drawing.Point(301, 58);
+            this.cboNSX.Name = "cboNSX";
+            this.cboNSX.Size = new System.Drawing.Size(116, 21);
+            this.cboNSX.TabIndex = 0;
+            this.cboNSX.DropDown += new System.EventHandler(this.cboNSX_DropDown);
+            // 
+            // lblLoaiSP
+            // 
+            this.lblLoaiSP.Location = new System.Drawing.Point(12, 28);
+            this.lblLoaiSP.Name = "lblLoaiSP";
+            this.lblLoaiSP.Size = new System.Drawing.Size(68, 13);
+            this.lblLoaiSP.TabIndex = 1;
+            this.lblLoaiSP.Text = "Loại sản phẩm";
+            // 
+            // cboNCC
+            // 
+            this.cboNCC.FormattingEnabled = true;
+            this.cboNCC.Location = new System.Drawing.Point(86, 58);
+            this.cboNCC.Name = "cboNCC";
+            this.cboNCC.Size = new System.Drawing.Size(129, 21);
+            this.cboNCC.TabIndex = 0;
+            this.cboNCC.DropDown += new System.EventHandler(this.cboNCC_DropDown);
+            // 
+            // cboLoaiSP
+            // 
+            this.cboLoaiSP.FormattingEnabled = true;
+            this.cboLoaiSP.Location = new System.Drawing.Point(86, 25);
+            this.cboLoaiSP.Name = "cboLoaiSP";
+            this.cboLoaiSP.Size = new System.Drawing.Size(129, 21);
+            this.cboLoaiSP.TabIndex = 0;
+            this.cboLoaiSP.DropDown += new System.EventHandler(this.cboLoaiSP_DropDown);
             // 
             // groupControl2
             // 
+            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.Controls.Add(this.dataGV_SanPham);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(2, 20);
+            this.groupControl2.Location = new System.Drawing.Point(0, 195);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(666, 401);
+            this.groupControl2.Size = new System.Drawing.Size(670, 256);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Danh sách sản phẩm";
             // 
@@ -145,7 +346,6 @@
             this.MaLoai,
             this.MaNCC,
             this.MaNSX,
-            this.MaHD,
             this.TenSP,
             this.MauSac,
             this.KichThuoc,
@@ -158,7 +358,7 @@
             this.dataGV_SanPham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGV_SanPham.Location = new System.Drawing.Point(2, 20);
             this.dataGV_SanPham.Name = "dataGV_SanPham";
-            this.dataGV_SanPham.Size = new System.Drawing.Size(662, 379);
+            this.dataGV_SanPham.Size = new System.Drawing.Size(666, 234);
             this.dataGV_SanPham.TabIndex = 0;
             // 
             // MASP
@@ -187,13 +387,6 @@
             this.MaNSX.HeaderText = "MNSX";
             this.MaNSX.Name = "MaNSX";
             this.MaNSX.Visible = false;
-            // 
-            // MaHD
-            // 
-            this.MaHD.DataPropertyName = "MAHD";
-            this.MaHD.HeaderText = "MaHD";
-            this.MaHD.Name = "MaHD";
-            this.MaHD.Visible = false;
             // 
             // TenSP
             // 
@@ -320,41 +513,17 @@
             this.pnControl.Size = new System.Drawing.Size(787, 30);
             this.pnControl.TabIndex = 12;
             // 
-            // button1
+            // button5
             // 
-            this.button1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.Image = global::QLKhoHang.Properties.Resources.tsbAddNew;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 30);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.Image = global::QLKhoHang.Properties.Resources.tsbSave;
-            this.button2.Location = new System.Drawing.Point(43, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(43, 30);
-            this.button2.TabIndex = 0;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button3.Image = global::QLKhoHang.Properties.Resources.tsbDelete;
-            this.button3.Location = new System.Drawing.Point(86, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(43, 30);
-            this.button3.TabIndex = 0;
-            this.button3.UseVisualStyleBackColor = false;
+            this.button5.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button5.Image = global::QLKhoHang.Properties.Resources.printer;
+            this.button5.Location = new System.Drawing.Point(172, 0);
+            this.button5.Margin = new System.Windows.Forms.Padding(0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(43, 30);
+            this.button5.TabIndex = 0;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -368,23 +537,62 @@
             this.button4.TabIndex = 0;
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // button3
             // 
-            this.button5.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button5.Image = global::QLKhoHang.Properties.Resources.printer;
-            this.button5.Location = new System.Drawing.Point(172, 0);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(43, 30);
-            this.button5.TabIndex = 0;
-            this.button5.UseVisualStyleBackColor = false;
+            this.button3.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button3.Image = global::QLKhoHang.Properties.Resources.tsbDelete;
+            this.button3.Location = new System.Drawing.Point(86, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(43, 30);
+            this.button3.TabIndex = 0;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button2.Image = global::QLKhoHang.Properties.Resources.tsbSave;
+            this.button2.Location = new System.Drawing.Point(43, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(43, 30);
+            this.button2.TabIndex = 0;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button1.Image = global::QLKhoHang.Properties.Resources.tsbAddNew;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(43, 30);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // txtGiaBanLe
+            // 
+            this.txtGiaBanLe.Location = new System.Drawing.Point(301, 94);
+            this.txtGiaBanLe.Name = "txtGiaBanLe";
+            this.txtGiaBanLe.Size = new System.Drawing.Size(116, 21);
+            this.txtGiaBanLe.TabIndex = 3;
+            // 
+            // txtGiaBanSi
+            // 
+            this.txtGiaBanSi.Location = new System.Drawing.Point(505, 94);
+            this.txtGiaBanSi.Name = "txtGiaBanSi";
+            this.txtGiaBanSi.Size = new System.Drawing.Size(146, 21);
+            this.txtGiaBanSi.TabIndex = 3;
             // 
             // frmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(787, 454);
+            this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.pnControl);
             this.Controls.Add(this.btnTaoMaVach);
             this.Controls.Add(this.simpleButton5);
@@ -392,7 +600,7 @@
             this.Controls.Add(this.btnDVT);
             this.Controls.Add(this.btnLoaiSP);
             this.Controls.Add(this.btnNhomSP);
-            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.grThongTinSP);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -403,8 +611,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grThongTinSP)).EndInit();
+            this.grThongTinSP.ResumeLayout(false);
+            this.grThongTinSP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGV_SanPham)).EndInit();
@@ -428,14 +637,29 @@
         private DevExpress.XtraEditors.SimpleButton btnDVT;
         private DevExpress.XtraEditors.SimpleButton btnLoaiSP;
         private DevExpress.XtraEditors.SimpleButton btnNhomSP;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.GroupControl grThongTinSP;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.DataGridView dataGV_SanPham;
+        private DevExpress.XtraEditors.PanelControl pnControl;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtTenSP;
+        private DevExpress.XtraEditors.LabelControl lblTenSP;
+        private DevExpress.XtraEditors.LabelControl lblMaSP;
+        private System.Windows.Forms.TextBox txtMaSP;
+        private DevExpress.XtraEditors.LabelControl lblLoaiSP;
+        private System.Windows.Forms.ComboBox cboLoaiSP;
+        private DevExpress.XtraEditors.LabelControl lblMauSac;
+        private DevExpress.XtraEditors.LabelControl lblGiaNhap;
+        private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.TextBox txtMauSac;
         private System.Windows.Forms.DataGridViewTextBoxColumn MASP;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNCC;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNSX;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn MauSac;
         private System.Windows.Forms.DataGridViewTextBoxColumn KichThuoc;
@@ -445,11 +669,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DVT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.DataGridViewTextBoxColumn MoTaSP;
-        private DevExpress.XtraEditors.PanelControl pnControl;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private DevExpress.XtraEditors.LabelControl lblGhiChu;
+        private DevExpress.XtraEditors.LabelControl lblGiaBanSi;
+        private DevExpress.XtraEditors.LabelControl lblDVT;
+        private DevExpress.XtraEditors.LabelControl lblGiaBanLe;
+        private DevExpress.XtraEditors.LabelControl lblNCC;
+        private DevExpress.XtraEditors.LabelControl lblNSX;
+        private System.Windows.Forms.ComboBox cboNSX;
+        private System.Windows.Forms.ComboBox cboNCC;
+        private System.Windows.Forms.TextBox txtDVT;
+        private txtChiNhapSo txtGiaNhap;
+        private txtChiNhapSo txtGiaBanLe;
+        private txtChiNhapSo txtGiaBanSi;
     }
 }

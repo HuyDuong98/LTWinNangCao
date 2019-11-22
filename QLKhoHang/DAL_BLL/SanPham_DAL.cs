@@ -9,15 +9,28 @@ namespace DAL_BLL
     public class SanPham_DAL
     {
         public string MaPhieuNhap() {
-            string ma= "PN"+BienK();
+            string ma= "PN"+LayChuoiNgayHT()+BienK();
+            return ma;
+        }
+        public string MaSP()
+        {
+            string ma = "SP" + LayChuoiNgayHT() + BienK();
             return ma;
         }
         public int BienK()
         {
             int k;
             Random ka = new Random();
-            k = ka.Next(1, 10000);
+            k = ka.Next(1, 1000);
             return k;
+        }
+        public string LayChuoiNgayHT()
+        {
+            int day = DateTime.Today.Day;
+            int month = DateTime.Today.Month;
+            int year = DateTime.Today.Year;
+            string ht = ""+day+month;
+            return ht;
         }
        
         QLKhoDataContext sp = new QLKhoDataContext();
@@ -95,6 +108,22 @@ namespace DAL_BLL
                 return true;
             }
             catch { return false; }
+        }
+
+        public List<LOAI_SAN_PHAM> LoadCboLoaiSP()
+        {
+            var loai = from a in sp.LOAI_SAN_PHAMs select a;
+            return loai.ToList<LOAI_SAN_PHAM>();
+        }
+        public List<NHA_CUNG_CAP> LoadCboNCC()
+        {
+            var ncc = from a in sp.NHA_CUNG_CAPs select a;
+            return ncc.ToList<NHA_CUNG_CAP>();
+        }
+        public List<NHA_SAN_XUAT> LoadCboNSX()
+        {
+            var nsx = from a in sp.NHA_SAN_XUATs select a;
+            return nsx.ToList<NHA_SAN_XUAT>();
         }
     }
 }

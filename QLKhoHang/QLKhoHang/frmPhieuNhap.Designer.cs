@@ -31,6 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboNhanVien = new System.Windows.Forms.ComboBox();
             this.cboSP = new System.Windows.Forms.ComboBox();
+            this.datePhieuNhap = new DevExpress.XtraEditors.DateEdit();
             this.txtDienGiai = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new DevExpress.XtraEditors.TextEdit();
             this.txtMaSP = new DevExpress.XtraEditors.TextEdit();
@@ -46,13 +47,6 @@
             this.lblSoPhieu = new DevExpress.XtraEditors.LabelControl();
             this.grView = new DevExpress.XtraEditors.GroupControl();
             this.dataPhieuNhap = new System.Windows.Forms.DataGridView();
-            this.pnControl = new DevExpress.XtraEditors.PanelControl();
-            this.btnIn = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.datePhieuNhap = new DevExpress.XtraEditors.DateEdit();
             this.MAPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GIABANLE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +58,15 @@
             this.TENNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnControl = new DevExpress.XtraEditors.PanelControl();
+            this.btnIn = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datePhieuNhap.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datePhieuNhap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaBan.Properties)).BeginInit();
@@ -74,8 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataPhieuNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).BeginInit();
             this.pnControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datePhieuNhap.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datePhieuNhap.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -125,6 +125,18 @@
             this.cboSP.TabIndex = 3;
             this.cboSP.DropDown += new System.EventHandler(this.cboSP_DropDown);
             this.cboSP.SelectedValueChanged += new System.EventHandler(this.cboSP_SelectedValueChanged);
+            // 
+            // datePhieuNhap
+            // 
+            this.datePhieuNhap.EditValue = null;
+            this.datePhieuNhap.Location = new System.Drawing.Point(86, 38);
+            this.datePhieuNhap.Name = "datePhieuNhap";
+            this.datePhieuNhap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.datePhieuNhap.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.datePhieuNhap.Size = new System.Drawing.Size(210, 20);
+            this.datePhieuNhap.TabIndex = 2;
             // 
             // txtDienGiai
             // 
@@ -243,7 +255,7 @@
             this.grView.Name = "grView";
             this.grView.Size = new System.Drawing.Size(826, 303);
             this.grView.TabIndex = 1;
-            this.grView.Text = "Danh sách hàng hóa";
+            this.grView.Text = "Danh sách phiếu nhập";
             // 
             // dataPhieuNhap
             // 
@@ -268,6 +280,73 @@
             this.dataPhieuNhap.Size = new System.Drawing.Size(822, 281);
             this.dataPhieuNhap.TabIndex = 0;
             this.dataPhieuNhap.DataSourceChanged += new System.EventHandler(this.dataPhieuNhap_DataSourceChanged);
+            // 
+            // MAPN
+            // 
+            this.MAPN.DataPropertyName = "MAPN";
+            this.MAPN.HeaderText = "Mã phiếu nhập hàng";
+            this.MAPN.Name = "MAPN";
+            // 
+            // TENSP
+            // 
+            this.TENSP.DataPropertyName = "TEN_SAN_1";
+            this.TENSP.HeaderText = "Tên sản phẩm";
+            this.TENSP.Name = "TENSP";
+            // 
+            // GIABANLE
+            // 
+            this.GIABANLE.DataPropertyName = "GIABANLE1";
+            this.GIABANLE.HeaderText = "Giá bán lẻ";
+            this.GIABANLE.Name = "GIABANLE";
+            // 
+            // DVT
+            // 
+            this.DVT.DataPropertyName = "DVT1";
+            this.DVT.HeaderText = "DVT";
+            this.DVT.Name = "DVT";
+            // 
+            // MAUSAC
+            // 
+            this.MAUSAC.DataPropertyName = "MAUSAC1";
+            this.MAUSAC.HeaderText = "Màu sắc";
+            this.MAUSAC.Name = "MAUSAC";
+            // 
+            // SL
+            // 
+            this.SL.DataPropertyName = "SL";
+            this.SL.HeaderText = "Số lượng";
+            this.SL.Name = "SL";
+            // 
+            // NGAYNHAP
+            // 
+            this.NGAYNHAP.DataPropertyName = "NGAYNHAP";
+            this.NGAYNHAP.HeaderText = "Ngày nhập";
+            this.NGAYNHAP.Name = "NGAYNHAP";
+            // 
+            // NhanVien
+            // 
+            this.NhanVien.DataPropertyName = "NHAN_VIEN";
+            this.NhanVien.HeaderText = "Nhân viên";
+            this.NhanVien.Name = "NhanVien";
+            // 
+            // TENNV
+            // 
+            this.TENNV.DataPropertyName = "TENNV1";
+            this.TENNV.HeaderText = "Tên nhân viên";
+            this.TENNV.Name = "TENNV";
+            // 
+            // NoiDung
+            // 
+            this.NoiDung.DataPropertyName = "NOIDUNG";
+            this.NoiDung.HeaderText = "Diễn giải";
+            this.NoiDung.Name = "NoiDung";
+            // 
+            // MANV
+            // 
+            this.MANV.DataPropertyName = "MANV";
+            this.MANV.HeaderText = "mã nhân viên";
+            this.MANV.Name = "MANV";
+            this.MANV.Visible = false;
             // 
             // pnControl
             // 
@@ -352,85 +431,6 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // datePhieuNhap
-            // 
-            this.datePhieuNhap.EditValue = null;
-            this.datePhieuNhap.Location = new System.Drawing.Point(86, 38);
-            this.datePhieuNhap.Name = "datePhieuNhap";
-            this.datePhieuNhap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.datePhieuNhap.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.datePhieuNhap.Size = new System.Drawing.Size(210, 20);
-            this.datePhieuNhap.TabIndex = 2;
-            // 
-            // MAPN
-            // 
-            this.MAPN.DataPropertyName = "MAPN";
-            this.MAPN.HeaderText = "Mã phiếu nhập hàng";
-            this.MAPN.Name = "MAPN";
-            // 
-            // TENSP
-            // 
-            this.TENSP.DataPropertyName = "TEN_SAN_1";
-            this.TENSP.HeaderText = "Tên sản phẩm";
-            this.TENSP.Name = "TENSP";
-            // 
-            // GIABANLE
-            // 
-            this.GIABANLE.DataPropertyName = "GIABANLE1";
-            this.GIABANLE.HeaderText = "Giá bán lẻ";
-            this.GIABANLE.Name = "GIABANLE";
-            // 
-            // DVT
-            // 
-            this.DVT.DataPropertyName = "DVT1";
-            this.DVT.HeaderText = "DVT";
-            this.DVT.Name = "DVT";
-            // 
-            // MAUSAC
-            // 
-            this.MAUSAC.DataPropertyName = "MAUSAC1";
-            this.MAUSAC.HeaderText = "Màu sắc";
-            this.MAUSAC.Name = "MAUSAC";
-            // 
-            // SL
-            // 
-            this.SL.DataPropertyName = "SL";
-            this.SL.HeaderText = "Số lượng";
-            this.SL.Name = "SL";
-            // 
-            // NGAYNHAP
-            // 
-            this.NGAYNHAP.DataPropertyName = "NGAYNHAP";
-            this.NGAYNHAP.HeaderText = "Ngày nhập";
-            this.NGAYNHAP.Name = "NGAYNHAP";
-            // 
-            // NhanVien
-            // 
-            this.NhanVien.DataPropertyName = "NHAN_VIEN";
-            this.NhanVien.HeaderText = "Nhân viên";
-            this.NhanVien.Name = "NhanVien";
-            // 
-            // TENNV
-            // 
-            this.TENNV.DataPropertyName = "TENNV1";
-            this.TENNV.HeaderText = "Tên nhân viên";
-            this.TENNV.Name = "TENNV";
-            // 
-            // NoiDung
-            // 
-            this.NoiDung.DataPropertyName = "NOIDUNG";
-            this.NoiDung.HeaderText = "Diễn giải";
-            this.NoiDung.Name = "NoiDung";
-            // 
-            // MANV
-            // 
-            this.MANV.DataPropertyName = "MANV";
-            this.MANV.HeaderText = "mã nhân viên";
-            this.MANV.Name = "MANV";
-            this.MANV.Visible = false;
-            // 
             // frmPhieuNhap
             // 
             this.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -447,6 +447,8 @@
             this.Load += new System.EventHandler(this.frmPhieuNhap_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datePhieuNhap.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datePhieuNhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaBan.Properties)).EndInit();
@@ -456,8 +458,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataPhieuNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).EndInit();
             this.pnControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.datePhieuNhap.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datePhieuNhap.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
