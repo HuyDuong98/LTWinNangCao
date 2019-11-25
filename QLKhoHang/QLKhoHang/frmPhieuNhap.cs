@@ -29,7 +29,7 @@ namespace QLKhoHang
 
         private void frmPhieuNhap_Load(object sender, EventArgs e)
         {
-           
+             
             dataPhieuNhap.DataSource = qlkho.LoadDLNhapKho();
             txtMaSoPhieu.Text = qlkho.KiemTraTrung();
         }
@@ -50,9 +50,17 @@ namespace QLKhoHang
 
         private void cboSP_DropDown(object sender, EventArgs e)
         {
-            cboSP.DataSource = qlkho.LoadcboSanPham();
-            cboSP.DisplayMember = "TEN_SAN_";
-            cboSP.ValueMember = "MASP";
+            try
+            {
+                cboSP.DataSource = qlkho.LoadcboSanPham();
+                cboSP.DisplayMember = "TEN_SP";
+                cboSP.ValueMember = "MASP";
+            }
+            catch
+            {
+                return;
+            }
+            
             
         }
 
@@ -122,10 +130,10 @@ namespace QLKhoHang
                 pn.NGAYNHAP = datePhieuNhap.DateTime;
                 pn.NOIDUNG = txtDienGiai.Text;
                 pn.SL = int.Parse(txtSoLuong.Text);
-                MessageBox.Show("" + pn.MAPN + pn.MANV + pn.NGAYNHAP + pn.NOIDUNG + pn.SL);
                 if (qlkho.ThemPhieuNhap(pn))
                 {
                     dataPhieuNhap.DataSource = qlkho.LoadDLNhapKho();
+                    
                     MessageBox.Show("Thêm thành công");
                 }
                 else
@@ -134,6 +142,19 @@ namespace QLKhoHang
                 }
             }
             
+        }
+
+        private void txtGiaBan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
         }
 
 

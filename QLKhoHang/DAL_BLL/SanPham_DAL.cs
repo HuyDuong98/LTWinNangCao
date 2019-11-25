@@ -12,10 +12,33 @@ namespace DAL_BLL
             string ma= "PN"+LayChuoiNgayHT()+BienK();
             return ma;
         }
+        public string MaLoaiSP()
+        {
+            int k = BienK();
+            string ma = "LSP" +k;
+            var p = sp.LOAI_SAN_PHAMs.Where(t => t.MALOAI == ma).FirstOrDefault();
+            if (p == null)
+            {
+                return ma;
+            }
+            else
+            {
+                return MaLoaiSP();
+            }
+        }
         public string MaSP()
         {
+            int k = BienK();
             string ma = "SP" + LayChuoiNgayHT() + BienK();
-            return ma;
+            var p = sp.SAN_PHAMs.Where(t => t.MASP == ma).FirstOrDefault();
+            if (p == null)
+            {
+                return ma;
+            }
+            else
+            {
+                return MaSP();
+            }
         }
         public int BienK()
         {
@@ -41,7 +64,7 @@ namespace DAL_BLL
         public List<PHIEU_NHAP> LoadDLNhapKho()
         {
             var PhieuNhaps = (from pn in sp.PHIEU_NHAPs
-                              join k in sp.SAN_PHAMs on pn.MAPN equals k.MAPN 
+                              join k in sp.SAN_PHAMs on pn.MASP equals k.MASP
                               join q in sp.NHAN_VIENs on pn.MANV equals q.MANV
                               select new
                               {
@@ -50,7 +73,7 @@ namespace DAL_BLL
                                   NoiDung = pn.NOIDUNG,
                                   DVT = k.DVT,
                                   GiaBan = k.GIABANLE,
-                                  TenSanPham = k.TEN_SAN_,
+                                  TenSanPham = k.TEN_SP,
                                   MauSac = k.MAUSAC,
                                   NhanVien =q.TENNV,
                                   SL= pn.SL
@@ -124,6 +147,75 @@ namespace DAL_BLL
         {
             var nsx = from a in sp.NHA_SAN_XUATs select a;
             return nsx.ToList<NHA_SAN_XUAT>();
+        }
+        public bool ThemLoaiSP(LOAI_SAN_PHAM loai)
+        {
+            try
+            {
+                sp.LOAI_SAN_PHAMs.InsertOnSubmit(loai);
+                sp.SubmitChanges();
+                return true;
+            }
+            catch {
+                return false;
+            }
+        }
+        public List<LOAI_SAN_PHAM> LoadDLLoaiSP()
+        {
+            return sp.LOAI_SAN_PHAMs.Select(t => t).ToList<LOAI_SAN_PHAM>();
+        }
+        public bool KTKhoaLoaiSP(string ma)
+        {
+            LOAI_SAN_PHAM loai = sp.LOAI_SAN_PHAMs.Where(t => t.MALOAI == ma).FirstOrDefault();
+            if (loai == null)
+            {
+                return true;
+            }
+            else { return false; }
+        }
+        public bool KTMaSP(string ma)
+        {
+            SAN_PHAM sanpham = sp.SAN_PHAMs.Where(t => t.MASP == ma).FirstOrDefault();
+            if (sanpham == null)
+            {
+                return true;
+            }
+            else { return false; }
+        }
+
+        public bool XoaLoaiSP(string ma)
+        {
+            try
+            {
+                LOAI_SAN_PHAM p = sp.LOAI_SAN_PHAMs.Where(t => t.MALOAI == ma).FirstOrDefault();
+                sp.LOAI_SAN_PHAMs.DeleteOnSubmit(p);
+                sp.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+        }
+
+
+        public bool ThemSanPham(SAN_PHAM a)
+        {
+            try
+            {
+                sp.SAN_PHAMs.InsertOnSubmit(a);
+                sp.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+        }
+        public bool XoaSanPham(string ma)
+        {
+            try
+            {
+                SAN_PHAM p = sp.SAN_PHAMs.Where(t => t.MASP == ma).FirstOrDefault();
+                sp.SAN_PHAMs.DeleteOnSubmit(p);
+                sp.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
         }
     }
 }

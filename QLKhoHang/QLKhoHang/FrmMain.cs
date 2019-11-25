@@ -38,11 +38,9 @@ namespace QLKhoHang
         // các btn của danh mục
         string ttsp = "Thông tin sản phẩm";
         string lsp = "Loại sản phẩm";
-        string nsp = "Nhóm sản phẩm";
         string nsx = "Nhà sản xuất";
         string ncc = "Nhà cung cấp";
         string ttkh = "Thông tin khách hàng";
-        string nkh = "Nhóm khách hàng";
         string nv = "Nhân viên";
         // các btn của quản lý kho
         string nk = "Nhập kho";
@@ -89,8 +87,8 @@ namespace QLKhoHang
         {
             deleteArrayButton();
             grDanhMuc.Text = "Danh mục";
-            string[] a = new string[] { ttsp, lsp, nsp, nsx, ncc, ttkh, nkh, nv };
-            CreateArrayButton(8,a);
+            string[] a = new string[] { ttsp, lsp, nsx, ncc, ttkh, nv };
+            CreateArrayButton(6,a);
         }
 
         private void btnKho_Click(object sender, EventArgs e)
@@ -261,7 +259,31 @@ namespace QLKhoHang
                 frmChuyenKho frm = new frmChuyenKho();
                 GoiShow(frm);
             }
-            
+            if (sd.Text == lsp)
+            {
+                frmLoaiSanPham frm = new frmLoaiSanPham();
+                GoiShow(frm);
+            }
+            if (sd.Text == nsx)
+            {
+                frmNhaSanXuat frm = new frmNhaSanXuat();
+                GoiShow(frm);
+            }
+            if (sd.Text == ncc)
+            {
+                frmNhaCungCap frm = new frmNhaCungCap();
+                GoiShow(frm);
+            }
+            if (sd.Text == ttkh)
+            {
+                frmKhachHang frm = new frmKhachHang();
+                GoiShow(frm);
+            }
+            if (sd.Text == nv)
+            {
+                frmNhanVien frm = new frmNhanVien();
+                GoiShow(frm);
+            }
         }
 
         public void deleteArrayButton()

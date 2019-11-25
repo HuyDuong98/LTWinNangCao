@@ -179,6 +179,7 @@
             this.txtGiaBan.Size = new System.Drawing.Size(435, 20);
             this.txtGiaBan.TabIndex = 1;
             this.txtGiaBan.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            this.txtGiaBan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaBan_KeyPress);
             // 
             // txtMaSoPhieu
             // 
@@ -260,6 +261,7 @@
             // dataPhieuNhap
             // 
             this.dataPhieuNhap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataPhieuNhap.BackgroundColor = System.Drawing.Color.White;
             this.dataPhieuNhap.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MAPN,
@@ -362,7 +364,7 @@
             this.pnControl.Location = new System.Drawing.Point(0, 0);
             this.pnControl.Margin = new System.Windows.Forms.Padding(0);
             this.pnControl.Name = "pnControl";
-            this.pnControl.Size = new System.Drawing.Size(826, 30);
+            this.pnControl.Size = new System.Drawing.Size(826, 45);
             this.pnControl.TabIndex = 13;
             // 
             // btnIn
@@ -374,7 +376,7 @@
             this.btnIn.Location = new System.Drawing.Point(172, 0);
             this.btnIn.Margin = new System.Windows.Forms.Padding(0);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(43, 30);
+            this.btnIn.Size = new System.Drawing.Size(43, 45);
             this.btnIn.TabIndex = 10;
             this.btnIn.UseVisualStyleBackColor = false;
             // 
@@ -387,7 +389,7 @@
             this.btnSua.Location = new System.Drawing.Point(129, 0);
             this.btnSua.Margin = new System.Windows.Forms.Padding(0);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(43, 30);
+            this.btnSua.Size = new System.Drawing.Size(43, 45);
             this.btnSua.TabIndex = 9;
             this.btnSua.UseVisualStyleBackColor = false;
             // 
@@ -400,9 +402,10 @@
             this.btnXoa.Location = new System.Drawing.Point(86, 0);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(0);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(43, 30);
+            this.btnXoa.Size = new System.Drawing.Size(43, 45);
             this.btnXoa.TabIndex = 8;
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
@@ -413,7 +416,7 @@
             this.btnLuu.Location = new System.Drawing.Point(43, 0);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(0);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(43, 30);
+            this.btnLuu.Size = new System.Drawing.Size(43, 45);
             this.btnLuu.TabIndex = 7;
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -426,7 +429,7 @@
             this.btnThem.Location = new System.Drawing.Point(0, 0);
             this.btnThem.Margin = new System.Windows.Forms.Padding(0);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(43, 30);
+            this.btnThem.Size = new System.Drawing.Size(43, 45);
             this.btnThem.TabIndex = 6;
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);

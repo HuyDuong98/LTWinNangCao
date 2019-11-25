@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCNS = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             // 
-            // txtCNS
+            // textBox1
             // 
-            this.txtCNS.Location = new System.Drawing.Point(0, 0);
-            this.txtCNS.Name = "txtCNS";
-            this.txtCNS.Size = new System.Drawing.Size(100, 20);
-            this.txtCNS.TabIndex = 0;
-            this.txtCNS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtCNS;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
