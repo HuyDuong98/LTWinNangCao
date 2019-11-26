@@ -36,7 +36,6 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panelNCC = new System.Windows.Forms.Panel();
-            this.txtSDT = new QLKhoHang.txtChiNhapSo(this.components);
             this.cboKhuVuc = new System.Windows.Forms.ComboBox();
             this.txtWebsite = new DevExpress.XtraEditors.TextEdit();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
@@ -56,6 +55,7 @@
             this.lblMaNCC = new DevExpress.XtraEditors.LabelControl();
             this.grDanhSachNCC = new DevExpress.XtraEditors.GroupControl();
             this.dataGridViewNCC = new QLKhoHang.dataGridViewSTT(this.components);
+            this.txtSDT = new QLKhoHang.txtChiNhapSo(this.components);
             this.MANCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KHU_VUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MAKV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -122,6 +122,7 @@
             this.btnSua.Size = new System.Drawing.Size(43, 45);
             this.btnSua.TabIndex = 9;
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -190,14 +191,6 @@
             this.panelNCC.Name = "panelNCC";
             this.panelNCC.Size = new System.Drawing.Size(847, 209);
             this.panelNCC.TabIndex = 19;
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(531, 77);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(279, 21);
-            this.txtSDT.TabIndex = 4;
-            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
             // cboKhuVuc
             // 
@@ -364,12 +357,21 @@
             this.dataGridViewNCC.DataSourceChanged += new System.EventHandler(this.dataGridViewNCC_DataSourceChanged);
             this.dataGridViewNCC.SelectionChanged += new System.EventHandler(this.dataGridViewNCC_SelectionChanged);
             // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(531, 77);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(279, 21);
+            this.txtSDT.TabIndex = 4;
+            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
+            // 
             // MANCC
             // 
             this.MANCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.MANCC.DataPropertyName = "MANCC";
             this.MANCC.HeaderText = "Mã nhà cung cấp";
             this.MANCC.Name = "MANCC";
+            this.MANCC.ReadOnly = true;
             // 
             // KHU_VUC
             // 
@@ -384,6 +386,7 @@
             this.MAKV.DataPropertyName = "MAKV";
             this.MAKV.HeaderText = "Mã khu vực";
             this.MAKV.Name = "MAKV";
+            this.MAKV.ReadOnly = true;
             // 
             // TENNCC
             // 

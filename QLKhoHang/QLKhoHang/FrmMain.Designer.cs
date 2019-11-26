@@ -756,6 +756,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.LocationChanged += new System.EventHandler(this.FrmMain_LocationChanged);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

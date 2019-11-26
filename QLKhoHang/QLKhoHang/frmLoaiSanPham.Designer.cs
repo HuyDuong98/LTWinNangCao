@@ -99,6 +99,7 @@
             this.btnSua.Size = new System.Drawing.Size(43, 45);
             this.btnSua.TabIndex = 9;
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -241,6 +242,7 @@
             this.MALOAI.DataPropertyName = "MALOAI";
             this.MALOAI.HeaderText = "Mã loại sản phẩm";
             this.MALOAI.Name = "MALOAI";
+            this.MALOAI.ReadOnly = true;
             // 
             // TENLOAI
             // 

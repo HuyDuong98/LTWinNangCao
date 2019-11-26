@@ -133,9 +133,24 @@ namespace QLKhoHang
         private void dataGridViewNSX_SelectionChanged(object sender, EventArgs e)
         {
             btnXoa.Enabled = true;
+            btnSua.Enabled = true;
         }
 
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            NHA_SAN_XUAT p = new NHA_SAN_XUAT();
+            int index = dataGridViewNSX.CurrentCell.RowIndex;
 
+            if (nsx.SuaTTNhaSanXuat(p))
+            {
+                MessageBox.Show("Cập nhật thông tin thành công");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thông tin thất bại");
+            }
+            dataGridViewNSX.DataSource = nsx.LoadDLNSX();
 
+        }
     }
 }

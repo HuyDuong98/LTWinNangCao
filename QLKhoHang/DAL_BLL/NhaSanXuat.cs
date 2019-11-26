@@ -57,5 +57,16 @@ namespace DAL_BLL
             }
             catch { return false; }
         }
+        public bool SuaTTNhaSanXuat(NHA_SAN_XUAT p)
+        {
+            try
+            {
+                NHA_SAN_XUAT k = qlkho.NHA_SAN_XUATs.Where(t => t.MANSX == p.MANSX).FirstOrDefault();
+                k = p;
+                qlkho.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+        }
     }
 }

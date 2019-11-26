@@ -72,19 +72,22 @@ namespace QLKhoHang
                 MessageBox.Show("Thêm thất bại");
             }
         }
-
-        private void dataGridViewNV_DataSourceChanged(object sender, EventArgs e)
+        public void LoadSTTDataGirdView()
         {
             for (int i = 0; i < dataGridViewNV.Rows.Count; i++)
             {
                 dataGridViewNV.Rows[i].HeaderCell.Value = (i + 1).ToString();
-
             }
+        }
+        private void dataGridViewNV_DataSourceChanged(object sender, EventArgs e)
+        {
+           // LoadSTTDataGirdView();
         }
 
         private void dataGridViewNV_SelectionChanged(object sender, EventArgs e)
         {
             btnXoa.Enabled = true;
+            btnSua.Enabled = true;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -93,7 +96,7 @@ namespace QLKhoHang
             if (dlr == DialogResult.Yes)
             {
                 int index = dataGridViewNV.CurrentCell.RowIndex;
-                string ma = dataGridViewNV.Rows[index].Cells[1].Value.ToString().Trim();
+                string ma = dataGridViewNV.Rows[index].Cells[0].Value.ToString().Trim();
                 nv.XoaNhanVien(ma);
                 dataGridViewNV.DataSource = nv.LoadDLNhanVien();
                 MessageBox.Show("Xóa thành công");
@@ -103,6 +106,21 @@ namespace QLKhoHang
                 MessageBox.Show("Xóa thất bại");
                 return;
             }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            NHAN_VIEN p = new NHAN_VIEN();
+            int index = dataGridViewNV.CurrentCell.RowIndex;
+            if (nv.SuaTTNhanVien(p))
+            {
+                MessageBox.Show("Cập nhật thông tin thành công");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thông tin thất bại");
+            }
+            dataGridViewNV.DataSource = nv.LoadDLNhanVien();
         }
 
 

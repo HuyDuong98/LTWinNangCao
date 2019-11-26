@@ -23,6 +23,6 @@ C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\Q
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.dataGridViewSTT.resources
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmNhaSanXuat.resources
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmNhaCungCap.resources
-C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.csprojResolveAssemblyReference.cache
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmNhanVien.resources
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmKhachHang.resources
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.csprojResolveAssemblyReference.cache

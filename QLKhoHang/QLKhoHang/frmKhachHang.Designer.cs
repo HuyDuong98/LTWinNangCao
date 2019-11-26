@@ -36,30 +36,38 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtTenKH = new DevExpress.XtraEditors.TextEdit();
+            this.txtDiaChi = new DevExpress.XtraEditors.TextEdit();
+            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
+            this.txtSDT = new DevExpress.XtraEditors.TextEdit();
+            this.txtMaKH = new DevExpress.XtraEditors.TextEdit();
+            this.lblDiaChi = new DevExpress.XtraEditors.LabelControl();
+            this.lblEmail = new DevExpress.XtraEditors.LabelControl();
+            this.lblTenKH = new DevExpress.XtraEditors.LabelControl();
+            this.lblSDT = new DevExpress.XtraEditors.LabelControl();
+            this.lblMaKH = new DevExpress.XtraEditors.LabelControl();
+            this.grDSKH = new DevExpress.XtraEditors.GroupControl();
             this.dataGridViewKH = new QLKhoHang.dataGridViewSTT(this.components);
+            this.MAKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDTKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EMAILKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIACHIKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTimKiem = new DevExpress.XtraEditors.TextEdit();
+            this.btnTiemKiem = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).BeginInit();
             this.pnControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenKH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaKH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grDSKH)).BeginInit();
+            this.grDSKH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiem.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pnControl
@@ -67,6 +75,8 @@
             this.pnControl.Appearance.BackColor = System.Drawing.Color.PaleTurquoise;
             this.pnControl.Appearance.Options.UseBackColor = true;
             this.pnControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnControl.Controls.Add(this.btnTiemKiem);
+            this.pnControl.Controls.Add(this.txtTimKiem);
             this.pnControl.Controls.Add(this.btnIn);
             this.pnControl.Controls.Add(this.btnSua);
             this.pnControl.Controls.Add(this.btnXoa);
@@ -104,6 +114,7 @@
             this.btnSua.Size = new System.Drawing.Size(43, 45);
             this.btnSua.TabIndex = 9;
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -117,6 +128,7 @@
             this.btnXoa.Size = new System.Drawing.Size(43, 45);
             this.btnXoa.TabIndex = 8;
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
@@ -130,6 +142,7 @@
             this.btnLuu.Size = new System.Drawing.Size(43, 45);
             this.btnLuu.TabIndex = 7;
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
@@ -142,133 +155,191 @@
             this.btnThem.Size = new System.Drawing.Size(43, 45);
             this.btnThem.TabIndex = 6;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.textEdit2);
-            this.panelControl1.Controls.Add(this.textEdit5);
-            this.panelControl1.Controls.Add(this.textEdit4);
-            this.panelControl1.Controls.Add(this.textEdit3);
-            this.panelControl1.Controls.Add(this.textEdit1);
-            this.panelControl1.Controls.Add(this.labelControl3);
-            this.panelControl1.Controls.Add(this.labelControl5);
-            this.panelControl1.Controls.Add(this.labelControl4);
-            this.panelControl1.Controls.Add(this.labelControl2);
-            this.panelControl1.Controls.Add(this.labelControl1);
+            this.panelControl1.Controls.Add(this.txtTenKH);
+            this.panelControl1.Controls.Add(this.txtDiaChi);
+            this.panelControl1.Controls.Add(this.txtEmail);
+            this.panelControl1.Controls.Add(this.txtSDT);
+            this.panelControl1.Controls.Add(this.txtMaKH);
+            this.panelControl1.Controls.Add(this.lblDiaChi);
+            this.panelControl1.Controls.Add(this.lblEmail);
+            this.panelControl1.Controls.Add(this.lblTenKH);
+            this.panelControl1.Controls.Add(this.lblSDT);
+            this.panelControl1.Controls.Add(this.lblMaKH);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Enabled = false;
             this.panelControl1.Location = new System.Drawing.Point(0, 45);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(774, 148);
             this.panelControl1.TabIndex = 16;
             // 
-            // textEdit2
+            // txtTenKH
             // 
-            this.textEdit2.Location = new System.Drawing.Point(495, 18);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(241, 20);
-            this.textEdit2.TabIndex = 1;
-            this.textEdit2.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            this.txtTenKH.Location = new System.Drawing.Point(495, 18);
+            this.txtTenKH.Name = "txtTenKH";
+            this.txtTenKH.Size = new System.Drawing.Size(241, 20);
+            this.txtTenKH.TabIndex = 1;
             // 
-            // textEdit5
+            // txtDiaChi
             // 
-            this.textEdit5.Location = new System.Drawing.Point(113, 104);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(623, 20);
-            this.textEdit5.TabIndex = 1;
-            this.textEdit5.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            this.txtDiaChi.Location = new System.Drawing.Point(113, 104);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(623, 20);
+            this.txtDiaChi.TabIndex = 1;
             // 
-            // textEdit4
+            // txtEmail
             // 
-            this.textEdit4.Location = new System.Drawing.Point(495, 61);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(241, 20);
-            this.textEdit4.TabIndex = 1;
-            this.textEdit4.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            this.txtEmail.Location = new System.Drawing.Point(495, 61);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(241, 20);
+            this.txtEmail.TabIndex = 1;
             // 
-            // textEdit3
+            // txtSDT
             // 
-            this.textEdit3.Location = new System.Drawing.Point(113, 61);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(241, 20);
-            this.textEdit3.TabIndex = 1;
-            this.textEdit3.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            this.txtSDT.Location = new System.Drawing.Point(113, 61);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(241, 20);
+            this.txtSDT.TabIndex = 1;
+            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
-            // textEdit1
+            // txtMaKH
             // 
-            this.textEdit1.Location = new System.Drawing.Point(113, 18);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(241, 20);
-            this.textEdit1.TabIndex = 1;
-            this.textEdit1.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            this.txtMaKH.Enabled = false;
+            this.txtMaKH.Location = new System.Drawing.Point(113, 18);
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(241, 20);
+            this.txtMaKH.TabIndex = 1;
             // 
-            // labelControl3
+            // lblDiaChi
             // 
-            this.labelControl3.Location = new System.Drawing.Point(23, 107);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(63, 13);
-            this.labelControl3.TabIndex = 0;
-            this.labelControl3.Text = "labelControl1";
+            this.lblDiaChi.Location = new System.Drawing.Point(75, 107);
+            this.lblDiaChi.Name = "lblDiaChi";
+            this.lblDiaChi.Size = new System.Drawing.Size(32, 13);
+            this.lblDiaChi.TabIndex = 0;
+            this.lblDiaChi.Text = "Địa chỉ";
             // 
-            // labelControl5
+            // lblEmail
             // 
-            this.labelControl5.Location = new System.Drawing.Point(426, 64);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(63, 13);
-            this.labelControl5.TabIndex = 0;
-            this.labelControl5.Text = "labelControl1";
-            this.labelControl5.Click += new System.EventHandler(this.labelControl4_Click);
+            this.lblEmail.Location = new System.Drawing.Point(465, 64);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(24, 13);
+            this.lblEmail.TabIndex = 0;
+            this.lblEmail.Text = "Email";
             // 
-            // labelControl4
+            // lblTenKH
             // 
-            this.labelControl4.Location = new System.Drawing.Point(426, 21);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(63, 13);
-            this.labelControl4.TabIndex = 0;
-            this.labelControl4.Text = "labelControl1";
-            this.labelControl4.Click += new System.EventHandler(this.labelControl4_Click);
+            this.lblTenKH.Location = new System.Drawing.Point(413, 21);
+            this.lblTenKH.Name = "lblTenKH";
+            this.lblTenKH.Size = new System.Drawing.Size(76, 13);
+            this.lblTenKH.TabIndex = 0;
+            this.lblTenKH.Text = "Tên khách hàng";
             // 
-            // labelControl2
+            // lblSDT
             // 
-            this.labelControl2.Location = new System.Drawing.Point(23, 64);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(63, 13);
-            this.labelControl2.TabIndex = 0;
-            this.labelControl2.Text = "labelControl1";
+            this.lblSDT.Location = new System.Drawing.Point(45, 64);
+            this.lblSDT.Name = "lblSDT";
+            this.lblSDT.Size = new System.Drawing.Size(62, 13);
+            this.lblSDT.TabIndex = 0;
+            this.lblSDT.Text = "Số điện thoại";
             // 
-            // labelControl1
+            // lblMaKH
             // 
-            this.labelControl1.Location = new System.Drawing.Point(23, 21);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(63, 13);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "labelControl1";
+            this.lblMaKH.Location = new System.Drawing.Point(35, 21);
+            this.lblMaKH.Name = "lblMaKH";
+            this.lblMaKH.Size = new System.Drawing.Size(72, 13);
+            this.lblMaKH.TabIndex = 0;
+            this.lblMaKH.Text = "Mã khách hàng";
             // 
-            // groupControl1
+            // grDSKH
             // 
-            this.groupControl1.Controls.Add(this.dataGridViewKH);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(0, 193);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(774, 276);
-            this.groupControl1.TabIndex = 17;
-            this.groupControl1.Text = "groupControl1";
+            this.grDSKH.Controls.Add(this.dataGridViewKH);
+            this.grDSKH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grDSKH.Location = new System.Drawing.Point(0, 193);
+            this.grDSKH.Name = "grDSKH";
+            this.grDSKH.Size = new System.Drawing.Size(774, 276);
+            this.grDSKH.TabIndex = 17;
+            this.grDSKH.Text = "Danh sách khách hàng";
             // 
             // dataGridViewKH
             // 
             this.dataGridViewKH.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewKH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MAKH,
+            this.TENKH,
+            this.SDTKH,
+            this.EMAILKH,
+            this.DIACHIKH});
             this.dataGridViewKH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewKH.Location = new System.Drawing.Point(2, 20);
             this.dataGridViewKH.Name = "dataGridViewKH";
             this.dataGridViewKH.Size = new System.Drawing.Size(770, 254);
             this.dataGridViewKH.TabIndex = 0;
+            this.dataGridViewKH.DataSourceChanged += new System.EventHandler(this.dataGridViewKH_DataSourceChanged);
+            this.dataGridViewKH.SelectionChanged += new System.EventHandler(this.dataGridViewKH_SelectionChanged);
+            // 
+            // MAKH
+            // 
+            this.MAKH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MAKH.DataPropertyName = "MAKH";
+            this.MAKH.HeaderText = "Mã khách hàng";
+            this.MAKH.Name = "MAKH";
+            this.MAKH.ReadOnly = true;
+            // 
+            // TENKH
+            // 
+            this.TENKH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TENKH.DataPropertyName = "TENKH";
+            this.TENKH.HeaderText = "Tên khách hàng";
+            this.TENKH.Name = "TENKH";
+            // 
+            // SDTKH
+            // 
+            this.SDTKH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SDTKH.DataPropertyName = "SDTKH";
+            this.SDTKH.HeaderText = "Số điện thoại";
+            this.SDTKH.Name = "SDTKH";
+            // 
+            // EMAILKH
+            // 
+            this.EMAILKH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EMAILKH.DataPropertyName = "EMAILKH";
+            this.EMAILKH.HeaderText = "Email";
+            this.EMAILKH.Name = "EMAILKH";
+            // 
+            // DIACHIKH
+            // 
+            this.DIACHIKH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DIACHIKH.DataPropertyName = "DIACHIKH";
+            this.DIACHIKH.HeaderText = "Địa chỉ";
+            this.DIACHIKH.Name = "DIACHIKH";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTimKiem.Location = new System.Drawing.Point(583, 13);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(179, 20);
+            this.txtTimKiem.TabIndex = 11;
+            // 
+            // btnTiemKiem
+            // 
+            this.btnTiemKiem.Location = new System.Drawing.Point(495, 11);
+            this.btnTiemKiem.Name = "btnTiemKiem";
+            this.btnTiemKiem.Size = new System.Drawing.Size(75, 23);
+            this.btnTiemKiem.TabIndex = 12;
+            this.btnTiemKiem.Text = "simpleButton1";
+            this.btnTiemKiem.Click += new System.EventHandler(this.btnTiemKiem_Click);
             // 
             // frmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 469);
-            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.grDSKH);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.pnControl);
             this.Name = "frmKhachHang";
@@ -279,14 +350,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenKH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaKH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grDSKH)).EndInit();
+            this.grDSKH.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiem.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -300,17 +372,24 @@
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnThem;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.LabelControl lblDiaChi;
+        private DevExpress.XtraEditors.LabelControl lblTenKH;
+        private DevExpress.XtraEditors.LabelControl lblSDT;
+        private DevExpress.XtraEditors.LabelControl lblMaKH;
+        private DevExpress.XtraEditors.GroupControl grDSKH;
         private dataGridViewSTT dataGridViewKH;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtMaKH;
+        private DevExpress.XtraEditors.LabelControl lblEmail;
+        private DevExpress.XtraEditors.TextEdit txtTenKH;
+        private DevExpress.XtraEditors.TextEdit txtDiaChi;
+        private DevExpress.XtraEditors.TextEdit txtEmail;
+        private DevExpress.XtraEditors.TextEdit txtSDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDTKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EMAILKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DIACHIKH;
+        private DevExpress.XtraEditors.SimpleButton btnTiemKiem;
+        private DevExpress.XtraEditors.TextEdit txtTimKiem;
     }
 }

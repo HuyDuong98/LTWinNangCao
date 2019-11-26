@@ -107,6 +107,7 @@
             this.btnSua.Size = new System.Drawing.Size(43, 45);
             this.btnSua.TabIndex = 9;
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -279,6 +280,7 @@
             this.MANSX.DataPropertyName = "MANSX";
             this.MANSX.HeaderText = "Mã nhà sản xuất";
             this.MANSX.Name = "MANSX";
+            this.MANSX.ReadOnly = true;
             // 
             // TENNSX
             // 

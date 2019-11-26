@@ -56,5 +56,16 @@ namespace DAL_BLL
             }
             catch { return false; }
         }
+        public bool SuaTTNhaCungCap(NHA_CUNG_CAP p)
+        {
+            try
+            {
+                NHA_CUNG_CAP ncc = qlkho.NHA_CUNG_CAPs.Where(t => t.MANCC == p.MANCC).FirstOrDefault();
+                ncc = p;
+                qlkho.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+        }
     }
 }

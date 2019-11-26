@@ -217,5 +217,28 @@ namespace DAL_BLL
             }
             catch { return false; }
         }
+        public bool SuaTTSanPham(SAN_PHAM p)
+        {
+            try
+            {
+                SAN_PHAM k = sp.SAN_PHAMs.Where(t => t.MASP == p.MASP).FirstOrDefault();
+                k = p;
+                sp.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+        }
+        public bool SuaTTLoaiSanPham(LOAI_SAN_PHAM p)
+        {
+            try
+            {
+                LOAI_SAN_PHAM k = sp.LOAI_SAN_PHAMs.Where(t => t.MALOAI == p.MALOAI).FirstOrDefault();
+                k = p;
+                sp.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+        }
+
     }
 }

@@ -13,6 +13,7 @@ namespace DAL_BLL
         public List<NHAN_VIEN> LoadDLNhanVien()
         {
             return qlkho.NHAN_VIENs.Select(t => t).ToList<NHAN_VIEN>();
+            //LoadSTTDataGirdView();
         }
         public string MaNhanVien()
         {
@@ -44,6 +45,17 @@ namespace DAL_BLL
             {
                 NHAN_VIEN p = qlkho.NHAN_VIENs.Where(t => t.MANV == ma).FirstOrDefault();
                 qlkho.NHAN_VIENs.DeleteOnSubmit(p);
+                qlkho.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+        }
+        public bool SuaTTNhanVien(NHAN_VIEN p)
+        {
+            try
+            {
+                NHAN_VIEN k = qlkho.NHAN_VIENs.Where(t => t.MANV == p.MANV).FirstOrDefault();
+                k = p;
                 qlkho.SubmitChanges();
                 return true;
             }

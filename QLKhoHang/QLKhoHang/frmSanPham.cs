@@ -191,6 +191,21 @@ namespace QLKhoHang
             frmNhaCungCap frm = new frmNhaCungCap();
             frm.ShowDialog();        }
 
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            SAN_PHAM p = new SAN_PHAM();
+            int index = dataGV_SanPham.CurrentCell.RowIndex;
+            if (spdal.SuaTTSanPham(p))
+            {
+                MessageBox.Show("Cập nhật thông tin thành công");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thông tin thất bại");
+            }
+            dataGV_SanPham.DataSource = spdal.Load_DL();
+        }
+
   
     }
 }

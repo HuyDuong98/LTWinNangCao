@@ -75,5 +75,24 @@ namespace QLKhoHang
             Properties.Settings.Default.Conn = "Data Sourece" + pSever + ";Initial Catalog=" + pDBname + ";Integrated Security=True";
             Properties.Settings.Default.Save();
         }
+
+        public DataTable GetServerName()
+        {
+            DataTable dt = new DataTable();
+            dt = SqlDataSourceEnumerator.Instance.GetDataSources();
+            return dt;
+        }
+        public DataTable GetDBName(string pServer)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("select name from sys.Databases", "Data Source=" + pServer + ";Initial Catalog=master; Integrated Security=True");
+            da.Fill(dt);
+            return dt;
+        }
+        public void SaveConfig(string pServer, string pDBName)
+        {
+            QLKhoHang.Properties.Settings.Default.Conn = "Data Sourece" + pServer + ";Initial Catalog=" + pDBName + ";Integrated Security=True";
+            QLKhoHang.Properties.Settings.Default.Save();
+        }
     }
 }

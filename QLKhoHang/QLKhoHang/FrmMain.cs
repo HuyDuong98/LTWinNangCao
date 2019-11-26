@@ -333,6 +333,11 @@ namespace QLKhoHang
             lblFooter.Text = DangNhap_DAL.UserName;
         }
 
+        private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.loginForm.Show();
+        }
+
        
 
 

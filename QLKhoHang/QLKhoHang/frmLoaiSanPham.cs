@@ -99,6 +99,24 @@ namespace QLKhoHang
         private void dataLoaiSP_SelectionChanged(object sender, EventArgs e)
         {
             btnXoa.Enabled = true;
+            btnSua.Enabled = true;
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            LOAI_SAN_PHAM p = new LOAI_SAN_PHAM();
+            int index = dataLoaiSP.CurrentCell.RowIndex;
+            //if (kh.IsNumber(p.SDTKH))
+            //{
+            if (qlkho.SuaTTLoaiSanPham(p))
+            {
+                MessageBox.Show("Cập nhật thông tin thành công");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thông tin thất bại");
+            }
+            dataLoaiSP.DataSource = qlkho.LoadDLLoaiSP(); ;
         }
 
     }

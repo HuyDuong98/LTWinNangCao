@@ -23,6 +23,8 @@ namespace QLKhoHang
         private void frmNhaCungCap_Load(object sender, EventArgs e)
         {
             dataGridViewNCC.DataSource = ncc.LoadDLNCC();
+            //LoadSTTDataGirdView();
+         
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -104,13 +106,16 @@ namespace QLKhoHang
 
         private void dataGridViewNCC_DataSourceChanged(object sender, EventArgs e)
         {
+            //LoadSTTDataGirdView();
+        }
+        public void LoadSTTDataGirdView()
+        {
             for (int i = 0; i < dataGridViewNCC.Rows.Count; i++)
             {
                 dataGridViewNCC.Rows[i].HeaderCell.Value = (i + 1).ToString();
 
-            }
+            } 
         }
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
             DialogResult dlr = MessageBox.Show("Bạn có muốn xóa dữ liệu không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -119,7 +124,7 @@ namespace QLKhoHang
                 int index = dataGridViewNCC.CurrentCell.RowIndex;
                 string ma = dataGridViewNCC.Rows[index].Cells[0].Value.ToString().Trim();
                 ncc.XoaNhaCC(ma);
-                dataGridViewNCC.DataSource = ncc.LoadDLNCC(); ;
+                dataGridViewNCC.DataSource = ncc.LoadDLNCC(); 
                 MessageBox.Show("Xóa thành công");
             }
             else
@@ -132,6 +137,7 @@ namespace QLKhoHang
         private void dataGridViewNCC_SelectionChanged(object sender, EventArgs e)
         {
             btnXoa.Enabled = true;
+            btnSua.Enabled = true;
         }
 
         private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
@@ -140,6 +146,23 @@ namespace QLKhoHang
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            NHA_CUNG_CAP p = new NHA_CUNG_CAP();
+            int index = dataGridViewNCC.CurrentCell.RowIndex;
+            //if (kh.IsNumber(p.SDTKH))
+            //{
+            if (ncc.SuaTTNhaCungCap(p))
+            {
+                MessageBox.Show("Cập nhật thông tin thành công");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thông tin thất bại");
+            }
+            dataGridViewNCC.DataSource = ncc.LoadDLNCC();
         }
     }
 }
