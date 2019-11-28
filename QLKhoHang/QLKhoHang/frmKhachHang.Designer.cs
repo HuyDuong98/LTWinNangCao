@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnControl = new DevExpress.XtraEditors.PanelControl();
+            this.btnTiemKiem = new DevExpress.XtraEditors.SimpleButton();
+            this.txtTimKiem = new DevExpress.XtraEditors.TextEdit();
             this.btnIn = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -53,10 +55,9 @@
             this.SDTKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EMAILKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIACHIKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTimKiem = new DevExpress.XtraEditors.TextEdit();
-            this.btnTiemKiem = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).BeginInit();
             this.pnControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenKH.Properties)).BeginInit();
@@ -67,7 +68,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.grDSKH)).BeginInit();
             this.grDSKH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiem.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pnControl
@@ -89,11 +89,27 @@
             this.pnControl.Size = new System.Drawing.Size(774, 45);
             this.pnControl.TabIndex = 15;
             // 
+            // btnTiemKiem
+            // 
+            this.btnTiemKiem.Location = new System.Drawing.Point(495, 11);
+            this.btnTiemKiem.Name = "btnTiemKiem";
+            this.btnTiemKiem.Size = new System.Drawing.Size(75, 23);
+            this.btnTiemKiem.TabIndex = 12;
+            this.btnTiemKiem.Text = "simpleButton1";
+            this.btnTiemKiem.Click += new System.EventHandler(this.btnTiemKiem_Click);
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTimKiem.Location = new System.Drawing.Point(583, 13);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(179, 20);
+            this.txtTimKiem.TabIndex = 11;
+            // 
             // btnIn
             // 
             this.btnIn.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnIn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnIn.Enabled = false;
             this.btnIn.Image = global::QLKhoHang.Properties.Resources.printer;
             this.btnIn.Location = new System.Drawing.Point(172, 0);
             this.btnIn.Margin = new System.Windows.Forms.Padding(0);
@@ -101,6 +117,7 @@
             this.btnIn.Size = new System.Drawing.Size(43, 45);
             this.btnIn.TabIndex = 10;
             this.btnIn.UseVisualStyleBackColor = false;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnSua
             // 
@@ -317,23 +334,6 @@
             this.DIACHIKH.HeaderText = "Địa chỉ";
             this.DIACHIKH.Name = "DIACHIKH";
             // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTimKiem.Location = new System.Drawing.Point(583, 13);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(179, 20);
-            this.txtTimKiem.TabIndex = 11;
-            // 
-            // btnTiemKiem
-            // 
-            this.btnTiemKiem.Location = new System.Drawing.Point(495, 11);
-            this.btnTiemKiem.Name = "btnTiemKiem";
-            this.btnTiemKiem.Size = new System.Drawing.Size(75, 23);
-            this.btnTiemKiem.TabIndex = 12;
-            this.btnTiemKiem.Text = "simpleButton1";
-            this.btnTiemKiem.Click += new System.EventHandler(this.btnTiemKiem_Click);
-            // 
             // frmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,6 +347,7 @@
             this.Load += new System.EventHandler(this.frmKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).EndInit();
             this.pnControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -358,7 +359,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.grDSKH)).EndInit();
             this.grDSKH.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTimKiem.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

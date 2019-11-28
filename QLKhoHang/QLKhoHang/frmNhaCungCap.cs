@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DAL_BLL;
 
+
 namespace QLKhoHang
 {
     public partial class frmNhaCungCap : DevExpress.XtraEditors.XtraForm
@@ -26,7 +27,7 @@ namespace QLKhoHang
             //LoadSTTDataGirdView();
          
         }
-
+        
         private void btnThem_Click(object sender, EventArgs e)
         {
             panelNCC.Enabled = true;
@@ -163,6 +164,12 @@ namespace QLKhoHang
                 MessageBox.Show("Cập nhật thông tin thất bại");
             }
             dataGridViewNCC.DataSource = ncc.LoadDLNCC();
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            ExportToExcel p = new ExportToExcel();
+            p.export2Excel(dataGridViewNCC, @"D:\", "NhaCungCap");
         }
     }
 }

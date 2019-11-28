@@ -694,6 +694,7 @@
             this.lblFooter.Size = new System.Drawing.Size(85, 16);
             this.lblFooter.TabIndex = 0;
             this.lblFooter.Text = "labelControl1";
+            this.lblFooter.BindingContextChanged += new System.EventHandler(this.lblFooter_BindingContextChanged);
             // 
             // tabControl
             // 

@@ -186,6 +186,7 @@
             this.btnIn.Size = new System.Drawing.Size(43, 45);
             this.btnIn.TabIndex = 0;
             this.btnIn.UseVisualStyleBackColor = false;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnSua
             // 

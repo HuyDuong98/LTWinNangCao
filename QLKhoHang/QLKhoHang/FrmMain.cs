@@ -338,6 +338,11 @@ namespace QLKhoHang
             Program.loginForm.Show();
         }
 
+        private void lblFooter_BindingContextChanged(object sender, EventArgs e)
+        {
+
+        }
+
        
 
 

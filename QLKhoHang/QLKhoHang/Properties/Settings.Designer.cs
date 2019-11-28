@@ -35,5 +35,16 @@ namespace QLKhoHang.Properties {
                 this["Conn"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-IF5SHKQ\\SQLEXPRESS;Initial Catalog=QLKHO;Integrated Security=" +
+            "True")]
+        public string QLKHOConnectionString {
+            get {
+                return ((string)(this["QLKHOConnectionString"]));
+            }
+        }
     }
 }

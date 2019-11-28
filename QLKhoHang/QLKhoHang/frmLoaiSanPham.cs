@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DAL_BLL;
+
+using Microsoft.Office.Interop.Excel;
+using app = Microsoft.Office.Interop.Excel.Application;
 namespace QLKhoHang
 {
     public partial class frmLoaiSanPham : DevExpress.XtraEditors.XtraForm
@@ -116,7 +119,13 @@ namespace QLKhoHang
             {
                 MessageBox.Show("Cập nhật thông tin thất bại");
             }
-            dataLoaiSP.DataSource = qlkho.LoadDLLoaiSP(); ;
+            dataLoaiSP.DataSource = qlkho.LoadDLLoaiSP(); 
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            ExportToExcel p = new ExportToExcel();
+            p.export2Excel(dataLoaiSP, @"D:\", "xuatfileExcel");
         }
 
     }

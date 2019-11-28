@@ -206,6 +206,12 @@ namespace QLKhoHang
             dataGV_SanPham.DataSource = spdal.Load_DL();
         }
 
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            ExportToExcel p = new ExportToExcel();
+            p.export2Excel(dataGV_SanPham, @"D:\", "SanPham");
+        }
+
   
     }
 }

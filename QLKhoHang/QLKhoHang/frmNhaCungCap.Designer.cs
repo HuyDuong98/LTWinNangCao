@@ -101,7 +101,6 @@
             // 
             this.btnIn.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnIn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnIn.Enabled = false;
             this.btnIn.Image = global::QLKhoHang.Properties.Resources.printer;
             this.btnIn.Location = new System.Drawing.Point(172, 0);
             this.btnIn.Margin = new System.Windows.Forms.Padding(0);
@@ -109,6 +108,7 @@
             this.btnIn.Size = new System.Drawing.Size(43, 45);
             this.btnIn.TabIndex = 10;
             this.btnIn.UseVisualStyleBackColor = false;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnSua
             // 
@@ -372,6 +372,7 @@
             this.MANCC.HeaderText = "Mã nhà cung cấp";
             this.MANCC.Name = "MANCC";
             this.MANCC.ReadOnly = true;
+            this.MANCC.Visible = false;
             // 
             // KHU_VUC
             // 
@@ -387,6 +388,7 @@
             this.MAKV.HeaderText = "Mã khu vực";
             this.MAKV.Name = "MAKV";
             this.MAKV.ReadOnly = true;
+            this.MAKV.Visible = false;
             // 
             // TENNCC
             // 

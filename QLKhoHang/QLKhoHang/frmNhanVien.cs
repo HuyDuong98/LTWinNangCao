@@ -123,6 +123,12 @@ namespace QLKhoHang
             dataGridViewNV.DataSource = nv.LoadDLNhanVien();
         }
 
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            ExportToExcel p = new ExportToExcel();
+            p.export2Excel(dataGridViewNV, @"D:\", "NhanVien");
+        }
+
 
 
 

@@ -63,23 +63,16 @@ namespace DAL_BLL
         }
         public List<PHIEU_NHAP> LoadDLNhapKho()
         {
-            var PhieuNhaps = (from pn in sp.PHIEU_NHAPs
-                              join k in sp.SAN_PHAMs on pn.MASP equals k.MASP
-                              join q in sp.NHAN_VIENs on pn.MANV equals q.MANV
-                              select new
-                              {
-                                  MaPhieuNhap = pn.MAPN,
-                                  NgayNhap = pn.NGAYNHAP,
-                                  NoiDung = pn.NOIDUNG,
-                                  DVT = k.DVT,
-                                  GiaBan = k.GIABANLE,
-                                  TenSanPham = k.TEN_SP,
-                                  MauSac = k.MAUSAC,
-                                  NhanVien =q.TENNV,
-                                  SL= pn.SL
-                              });
+            //var PhieuNhaps = (from pn in sp.PHIEU_NHAPs
+            //                  join q in sp.NHAN_VIENs on pn.MANV equals q.MANV
+            //                  select new
+            //                  {
+            //                      MaPhieuNhap = pn.MAPN,
+            //                      NgayNhap = pn.NGAYNHAP,
+            //                      NoiDung = pn.NOIDUNG,
+            //                      NhanVien = q.TENNV,
+            //                  });
             return sp.PHIEU_NHAPs.Select(t => t).ToList<PHIEU_NHAP>();
-            //return sp.PHIEU_NHAPs.Select(t => t).ToList<PHIEU_NHAP>();
         }
         public List<SAN_PHAM> LoadcboSanPham()
         {
@@ -239,6 +232,10 @@ namespace DAL_BLL
             }
             catch { return false; }
         }
-
+        public List<SAN_PHAM> AddSanPham(string ma,List<SAN_PHAM> q)
+        {
+            return sp.SAN_PHAMs.Where(t => t.MASP == ma).ToList<SAN_PHAM>();
+            
+        }
     }
 }

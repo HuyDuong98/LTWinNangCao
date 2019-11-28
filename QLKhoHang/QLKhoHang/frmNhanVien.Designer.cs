@@ -37,6 +37,11 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.grDanhSachNV = new DevExpress.XtraEditors.GroupControl();
             this.dataGridViewNV = new QLKhoHang.dataGridViewSTT(this.components);
+            this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIOITINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIACHINV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDTNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblMaNV = new DevExpress.XtraEditors.LabelControl();
             this.lblTenNV = new DevExpress.XtraEditors.LabelControl();
             this.lblSDT = new DevExpress.XtraEditors.LabelControl();
@@ -46,15 +51,10 @@
             this.txtSDT = new DevExpress.XtraEditors.TextEdit();
             this.txtDiaChi = new DevExpress.XtraEditors.TextEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.radioButtonNu = new System.Windows.Forms.RadioButton();
-            this.radioButtonNam = new System.Windows.Forms.RadioButton();
             this.lblGioiTinh = new DevExpress.XtraEditors.LabelControl();
+            this.radioButtonNam = new System.Windows.Forms.RadioButton();
+            this.radioButtonNu = new System.Windows.Forms.RadioButton();
             this.panelNhanVien = new DevExpress.XtraEditors.PanelControl();
-            this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIOITINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DIACHINV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDTNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).BeginInit();
             this.pnControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grDanhSachNV)).BeginInit();
@@ -91,7 +91,6 @@
             // 
             this.btnIn.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnIn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnIn.Enabled = false;
             this.btnIn.Image = global::QLKhoHang.Properties.Resources.printer;
             this.btnIn.Location = new System.Drawing.Point(172, 0);
             this.btnIn.Margin = new System.Windows.Forms.Padding(0);
@@ -99,6 +98,7 @@
             this.btnIn.Size = new System.Drawing.Size(43, 45);
             this.btnIn.TabIndex = 10;
             this.btnIn.UseVisualStyleBackColor = false;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnSua
             // 
@@ -184,6 +184,42 @@
             this.dataGridViewNV.DataSourceChanged += new System.EventHandler(this.dataGridViewNV_DataSourceChanged);
             this.dataGridViewNV.SelectionChanged += new System.EventHandler(this.dataGridViewNV_SelectionChanged);
             // 
+            // MANV
+            // 
+            this.MANV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MANV.DataPropertyName = "MANV";
+            this.MANV.HeaderText = "Mã nhân viên";
+            this.MANV.Name = "MANV";
+            this.MANV.ReadOnly = true;
+            // 
+            // TENNV
+            // 
+            this.TENNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TENNV.DataPropertyName = "TENNV";
+            this.TENNV.HeaderText = "Tên nhân viên";
+            this.TENNV.Name = "TENNV";
+            // 
+            // GIOITINH
+            // 
+            this.GIOITINH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GIOITINH.DataPropertyName = "GIOITINH";
+            this.GIOITINH.HeaderText = "Giới tính";
+            this.GIOITINH.Name = "GIOITINH";
+            // 
+            // DIACHINV
+            // 
+            this.DIACHINV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DIACHINV.DataPropertyName = "DIACHINV";
+            this.DIACHINV.HeaderText = "Địa chỉ";
+            this.DIACHINV.Name = "DIACHINV";
+            // 
+            // SDTNV
+            // 
+            this.SDTNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SDTNV.DataPropertyName = "SDTNV";
+            this.SDTNV.HeaderText = "Số điện thoại";
+            this.SDTNV.Name = "SDTNV";
+            // 
             // lblMaNV
             // 
             this.lblMaNV.Location = new System.Drawing.Point(23, 23);
@@ -257,16 +293,13 @@
             this.panelControl1.Size = new System.Drawing.Size(183, 38);
             this.panelControl1.TabIndex = 3;
             // 
-            // radioButtonNu
+            // lblGioiTinh
             // 
-            this.radioButtonNu.AutoSize = true;
-            this.radioButtonNu.Location = new System.Drawing.Point(139, 7);
-            this.radioButtonNu.Name = "radioButtonNu";
-            this.radioButtonNu.Size = new System.Drawing.Size(39, 17);
-            this.radioButtonNu.TabIndex = 2;
-            this.radioButtonNu.TabStop = true;
-            this.radioButtonNu.Text = "Nữ";
-            this.radioButtonNu.UseVisualStyleBackColor = true;
+            this.lblGioiTinh.Location = new System.Drawing.Point(16, 9);
+            this.lblGioiTinh.Name = "lblGioiTinh";
+            this.lblGioiTinh.Size = new System.Drawing.Size(42, 13);
+            this.lblGioiTinh.TabIndex = 3;
+            this.lblGioiTinh.Text = "Giới tính:";
             // 
             // radioButtonNam
             // 
@@ -280,13 +313,16 @@
             this.radioButtonNam.Text = "Nam";
             this.radioButtonNam.UseVisualStyleBackColor = true;
             // 
-            // lblGioiTinh
+            // radioButtonNu
             // 
-            this.lblGioiTinh.Location = new System.Drawing.Point(16, 9);
-            this.lblGioiTinh.Name = "lblGioiTinh";
-            this.lblGioiTinh.Size = new System.Drawing.Size(42, 13);
-            this.lblGioiTinh.TabIndex = 3;
-            this.lblGioiTinh.Text = "Giới tính:";
+            this.radioButtonNu.AutoSize = true;
+            this.radioButtonNu.Location = new System.Drawing.Point(139, 7);
+            this.radioButtonNu.Name = "radioButtonNu";
+            this.radioButtonNu.Size = new System.Drawing.Size(39, 17);
+            this.radioButtonNu.TabIndex = 2;
+            this.radioButtonNu.TabStop = true;
+            this.radioButtonNu.Text = "Nữ";
+            this.radioButtonNu.UseVisualStyleBackColor = true;
             // 
             // panelNhanVien
             // 
@@ -305,42 +341,6 @@
             this.panelNhanVien.Name = "panelNhanVien";
             this.panelNhanVien.Size = new System.Drawing.Size(908, 113);
             this.panelNhanVien.TabIndex = 16;
-            // 
-            // MANV
-            // 
-            this.MANV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MANV.DataPropertyName = "MANV";
-            this.MANV.HeaderText = "Mã nhân viên";
-            this.MANV.Name = "MANV";
-            this.MANV.ReadOnly = true;
-            // 
-            // TENNV
-            // 
-            this.TENNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TENNV.DataPropertyName = "TENNV";
-            this.TENNV.HeaderText = "Tên nhân viên";
-            this.TENNV.Name = "TENNV";
-            // 
-            // GIOITINH
-            // 
-            this.GIOITINH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GIOITINH.DataPropertyName = "GIOITINH";
-            this.GIOITINH.HeaderText = "Giới tính";
-            this.GIOITINH.Name = "GIOITINH";
-            // 
-            // DIACHINV
-            // 
-            this.DIACHINV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DIACHINV.DataPropertyName = "DIACHINV";
-            this.DIACHINV.HeaderText = "Địa chỉ";
-            this.DIACHINV.Name = "DIACHINV";
-            // 
-            // SDTNV
-            // 
-            this.SDTNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SDTNV.DataPropertyName = "SDTNV";
-            this.SDTNV.HeaderText = "Số điện thoại";
-            this.SDTNV.Name = "SDTNV";
             // 
             // frmNhanVien
             // 

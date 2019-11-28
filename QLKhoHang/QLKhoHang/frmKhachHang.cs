@@ -132,5 +132,11 @@ namespace QLKhoHang
             string k = txtTimKiem.Text.Trim();
         }
 
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            ExportToExcel p = new ExportToExcel();
+            p.export2Excel(dataGridViewKH, @"D:\", "KhachHang");
+        }
+
     }
 }

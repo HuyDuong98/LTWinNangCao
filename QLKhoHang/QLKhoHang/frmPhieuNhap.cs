@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DAL_BLL;
+using System.Data.SqlClient;
 
 namespace QLKhoHang
 {
@@ -29,9 +30,15 @@ namespace QLKhoHang
 
         private void frmPhieuNhap_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qLKHODataSet.SAN_PHAM' table. You can move, or remove it, as needed.
+            this.sAN_PHAMTableAdapter.Fill(this.qLKHODataSet.SAN_PHAM);
+            // TODO: This line of code loads data into the 'qLKHODataSet.QL_PHANQUYEN' table. You can move, or remove it, as needed.
+            this.qL_PHANQUYENTableAdapter.Fill(this.qLKHODataSet.QL_PHANQUYEN);
              
-            dataPhieuNhap.DataSource = qlkho.LoadDLNhapKho();
+            dataGridViewSP.DataSource = qlkho.LoadDLNhapKho();
             txtMaSoPhieu.Text = qlkho.KiemTraTrung();
+
+            
         }
 
         private void lblMST_Click(object sender, EventArgs e)
@@ -41,9 +48,9 @@ namespace QLKhoHang
 
         private void dataPhieuNhap_DataSourceChanged(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataPhieuNhap.Rows.Count; i++)
+            for (int i = 0; i < dataGridViewSP.Rows.Count; i++)
             {
-                dataPhieuNhap.Rows[i].HeaderCell.Value = (i + 1).ToString();
+                dataGridViewSP.Rows[i].HeaderCell.Value = (i + 1).ToString();
 
             }
         }
@@ -61,16 +68,8 @@ namespace QLKhoHang
                 return;
             }
             
-            
         }
 
-        private void cboSP_SelectedValueChanged(object sender, EventArgs e)
-        {
-            string masp = cboSP.SelectedValue.ToString().Trim();
-            txtMaSP.Text = masp;
-            txtGiaBan.Text = qlkho.LayGiaBanSP(masp);
-
-        }
 
         private void cboNhanVien_DropDown(object sender, EventArgs e)
         {
@@ -104,12 +103,6 @@ namespace QLKhoHang
                 cboSP.Focus();
                 return;
             }
-            if (txtSoLuong.Text == "")
-            {
-                MessageBox.Show("Bạn chưa chọn số lượng");
-                txtSoLuong.Focus();
-                return;
-            }
             if (datePhieuNhap.Text == "")
             {
                 MessageBox.Show("Bạn chưa chọn ngày");
@@ -129,10 +122,10 @@ namespace QLKhoHang
                 pn.MANV = cboNhanVien.SelectedValue.ToString().Trim();
                 pn.NGAYNHAP = datePhieuNhap.DateTime;
                 pn.NOIDUNG = txtDienGiai.Text;
-                pn.SL = int.Parse(txtSoLuong.Text);
+                //pn.SL = int.Parse(txtSoLuong.Text);
                 if (qlkho.ThemPhieuNhap(pn))
                 {
-                    dataPhieuNhap.DataSource = qlkho.LoadDLNhapKho();
+                    dataGridViewSP.DataSource = qlkho.LoadDLNhapKho();
                     
                     MessageBox.Show("Thêm thành công");
                 }
@@ -143,6 +136,7 @@ namespace QLKhoHang
             }
             
         }
+
 
         private void txtGiaBan_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -157,8 +151,37 @@ namespace QLKhoHang
 
         }
 
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            ExportToExcel p = new ExportToExcel();
+            p.export2Excel(dataGridViewSP, @"D:\", "fileExcelPhieuNhap");
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cboSanPham_DropDown(object sender, EventArgs e)
+        {
+            cboSP.DataSource = qlkho.LoadcboSanPham();
+            cboSP.DisplayMember = "TEN_SP";
+            cboSP.ValueMember = "MASP";
+        }
+
+        private void btnThemSP_Click(object sender, EventArgs e)
+        {
+            string ma = cboSP.SelectedValue.ToString().Trim();
+            dataGridViewSP.
+        }
 
 
+        
 
     }
 }
