@@ -224,8 +224,8 @@ namespace QLKhoHang
             sd = (SimpleButton)sender;
             if (sd.Text == rdn)
             {
-                frmDN.ShowDialog();
-                btnHeThong.PerformClick();
+                this.Close();
+                frmDN.Show();
             }
            
             if (sd.Text == dmk)

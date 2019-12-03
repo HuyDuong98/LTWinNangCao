@@ -34,8 +34,8 @@ namespace QLKhoHang
             this.sAN_PHAMTableAdapter.Fill(this.qLKHODataSet.SAN_PHAM);
             // TODO: This line of code loads data into the 'qLKHODataSet.QL_PHANQUYEN' table. You can move, or remove it, as needed.
             this.qL_PHANQUYENTableAdapter.Fill(this.qLKHODataSet.QL_PHANQUYEN);
-             
-            dataGridViewSP.DataSource = qlkho.LoadDLNhapKho();
+
+            dataGridViewSP.DataSource = qlkho.LoadDTDSHangNhap();
             txtMaSoPhieu.Text = qlkho.KiemTraTrung();
 
             
@@ -176,8 +176,8 @@ namespace QLKhoHang
 
         private void btnThemSP_Click(object sender, EventArgs e)
         {
-            string ma = cboSP.SelectedValue.ToString().Trim();
-            dataGridViewSP.
+            //string ma = cboSP.SelectedValue.ToString().Trim();
+            dataGridViewSP.DataSource = qlkho.LoadDTDSHangNhap();
         }
 
 

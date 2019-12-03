@@ -1,0 +1,11 @@
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\DAL.dll
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\DAL.pdb
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\GUI.csproj.GenerateResource.Cache
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

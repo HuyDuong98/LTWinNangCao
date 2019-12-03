@@ -237,5 +237,21 @@ namespace DAL_BLL
             return sp.SAN_PHAMs.Where(t => t.MASP == ma).ToList<SAN_PHAM>();
             
         }
+        public List<DSHANGNHAP> LoadDTDSHangNhap()
+        {
+           // return sp.DSHANGNHAPs.Select(t => t).ToList<DSHANGNHAP>();
+            var ds = (from pn in sp.DSHANGNHAPs
+                              join q in sp.SAN_PHAMs on pn.MASP equals q.MASP
+                              select new
+                              {
+                                  TenSP = q.TEN_SP,
+                                  MauSac = q.MAUSAC,
+                                  GiaNhap = q.GIANHAP,
+                                  DVT = q.DVT,
+                                  SoLuong = pn.SL,
+                                  ThanhTien = pn.ThanhTien
+                              });
+            return sp.DSHANGNHAPs.Select(t => t).ToList<DSHANGNHAP>();
+        }
     }
 }

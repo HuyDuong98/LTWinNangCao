@@ -52,16 +52,21 @@
             this.qL_PHANQUYENTableAdapter = new QLKhoHang.QLKHODataSetTableAdapters.QL_PHANQUYENTableAdapter();
             this.sAN_PHAMTableAdapter = new QLKhoHang.QLKHODataSetTableAdapters.SAN_PHAMTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnXoaSP = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThemSP = new DevExpress.XtraEditors.SimpleButton();
+            this.lblSanPham = new DevExpress.XtraEditors.LabelControl();
             this.grView = new DevExpress.XtraEditors.GroupControl();
             this.dataGridViewSP = new System.Windows.Forms.DataGridView();
-            this.lblSanPham = new DevExpress.XtraEditors.LabelControl();
-            this.btnThemSP = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXoaSP = new DevExpress.XtraEditors.SimpleButton();
+            this.MAPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TEN_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MAUSAC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GIANHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PHIEU_NHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SAN_PHAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MOTASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.datePhieuNhap.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePhieuNhap.Properties)).BeginInit();
@@ -302,6 +307,31 @@
             this.panel1.Size = new System.Drawing.Size(826, 37);
             this.panel1.TabIndex = 15;
             // 
+            // btnXoaSP
+            // 
+            this.btnXoaSP.Location = new System.Drawing.Point(397, 4);
+            this.btnXoaSP.Name = "btnXoaSP";
+            this.btnXoaSP.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaSP.TabIndex = 2;
+            this.btnXoaSP.Text = "Xóa";
+            // 
+            // btnThemSP
+            // 
+            this.btnThemSP.Location = new System.Drawing.Point(316, 4);
+            this.btnThemSP.Name = "btnThemSP";
+            this.btnThemSP.Size = new System.Drawing.Size(75, 23);
+            this.btnThemSP.TabIndex = 2;
+            this.btnThemSP.Text = "Thêm";
+            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
+            // 
+            // lblSanPham
+            // 
+            this.lblSanPham.Location = new System.Drawing.Point(6, 9);
+            this.lblSanPham.Name = "lblSanPham";
+            this.lblSanPham.Size = new System.Drawing.Size(47, 13);
+            this.lblSanPham.TabIndex = 1;
+            this.lblSanPham.Text = "Sản phẩm";
+            // 
             // grView
             // 
             this.grView.Controls.Add(this.dataGridViewSP);
@@ -318,11 +348,16 @@
             this.dataGridViewSP.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewSP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewSP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MAPN,
             this.MASP,
             this.TEN_SP,
             this.MAUSAC,
             this.DVT,
             this.GIANHAP,
+            this.SoLuong,
+            this.ThanhTien,
+            this.PHIEU_NHAP,
+            this.SAN_PHAM,
             this.MOTASP});
             this.dataGridViewSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewSP.Enabled = false;
@@ -331,61 +366,75 @@
             this.dataGridViewSP.Size = new System.Drawing.Size(822, 266);
             this.dataGridViewSP.TabIndex = 0;
             // 
-            // lblSanPham
+            // MAPN
             // 
-            this.lblSanPham.Location = new System.Drawing.Point(6, 9);
-            this.lblSanPham.Name = "lblSanPham";
-            this.lblSanPham.Size = new System.Drawing.Size(47, 13);
-            this.lblSanPham.TabIndex = 1;
-            this.lblSanPham.Text = "Sản phẩm";
-            // 
-            // btnThemSP
-            // 
-            this.btnThemSP.Location = new System.Drawing.Point(316, 4);
-            this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.Size = new System.Drawing.Size(75, 23);
-            this.btnThemSP.TabIndex = 2;
-            this.btnThemSP.Text = "Thêm";
-            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
-            // 
-            // btnXoaSP
-            // 
-            this.btnXoaSP.Location = new System.Drawing.Point(397, 4);
-            this.btnXoaSP.Name = "btnXoaSP";
-            this.btnXoaSP.Size = new System.Drawing.Size(75, 23);
-            this.btnXoaSP.TabIndex = 2;
-            this.btnXoaSP.Text = "Xóa";
+            this.MAPN.DataPropertyName = "MAPN";
+            this.MAPN.HeaderText = "Mã phiếu nhập";
+            this.MAPN.Name = "MAPN";
+            this.MAPN.Visible = false;
             // 
             // MASP
             // 
+            this.MASP.DataPropertyName = "MASP";
             this.MASP.HeaderText = "Mã sản phẩm";
             this.MASP.Name = "MASP";
+            this.MASP.Visible = false;
             // 
             // TEN_SP
             // 
             this.TEN_SP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TEN_SP.DataPropertyName = "TEN_SP";
+            this.TEN_SP.DataPropertyName = "TenSP";
             this.TEN_SP.HeaderText = "Tên sản phẩm";
             this.TEN_SP.Name = "TEN_SP";
             this.TEN_SP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // MAUSAC
             // 
+            this.MAUSAC.DataPropertyName = "MauSac";
             this.MAUSAC.HeaderText = "Màu sắc";
             this.MAUSAC.Name = "MAUSAC";
             // 
             // DVT
             // 
+            this.DVT.DataPropertyName = "DVT";
             this.DVT.HeaderText = "Đơn vị tính";
             this.DVT.Name = "DVT";
             // 
             // GIANHAP
             // 
+            this.GIANHAP.DataPropertyName = "GiaNhap";
             this.GIANHAP.HeaderText = "Giá nhập";
             this.GIANHAP.Name = "GIANHAP";
             // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SL";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            // 
+            // PHIEU_NHAP
+            // 
+            this.PHIEU_NHAP.DataPropertyName = "PHIEU_NHAP";
+            this.PHIEU_NHAP.HeaderText = "Phiếu nhập";
+            this.PHIEU_NHAP.Name = "PHIEU_NHAP";
+            this.PHIEU_NHAP.Visible = false;
+            // 
+            // SAN_PHAM
+            // 
+            this.SAN_PHAM.DataPropertyName = "SAN_PHAM";
+            this.SAN_PHAM.HeaderText = "Sản phẩm";
+            this.SAN_PHAM.Name = "SAN_PHAM";
+            this.SAN_PHAM.Visible = false;
+            // 
             // MOTASP
             // 
+            this.MOTASP.DataPropertyName = "MoTa";
             this.MOTASP.HeaderText = "Mô tả";
             this.MOTASP.Name = "MOTASP";
             // 
@@ -454,11 +503,16 @@
         private DevExpress.XtraEditors.LabelControl lblSanPham;
         private DevExpress.XtraEditors.GroupControl grView;
         private System.Windows.Forms.DataGridView dataGridViewSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAPN;
         private System.Windows.Forms.DataGridViewTextBoxColumn MASP;
         private System.Windows.Forms.DataGridViewTextBoxColumn TEN_SP;
         private System.Windows.Forms.DataGridViewTextBoxColumn MAUSAC;
         private System.Windows.Forms.DataGridViewTextBoxColumn DVT;
         private System.Windows.Forms.DataGridViewTextBoxColumn GIANHAP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PHIEU_NHAP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SAN_PHAM;
         private System.Windows.Forms.DataGridViewTextBoxColumn MOTASP;
     }
 }
