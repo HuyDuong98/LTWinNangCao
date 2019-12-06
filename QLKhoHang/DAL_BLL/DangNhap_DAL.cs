@@ -11,6 +11,7 @@ namespace DAL_BLL
 
         QLKhoDataContext qlkho = new QLKhoDataContext();
         public static string UserName = string.Empty;
+        public static string Pass = string.Empty;
         public bool MaNhomPer(string id_per)
         {
             

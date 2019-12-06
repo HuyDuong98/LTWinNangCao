@@ -40,6 +40,7 @@
     <Reference Include="DevExpress.Data.v17.1" />
     <Reference Include="DevExpress.ExpressApp.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Persistent.Base.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.SpellChecker.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v17.1" />
     <Reference Include="DevExpress.Sparkline.v17.1.Core" />
     <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -51,6 +52,7 @@
     <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpellChecker.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -90,12 +92,6 @@
       <DependentUpon>dataGridViewSTT.cs</DependentUpon>
     </Compile>
     <Compile Include="ExportToExcel.cs" />
-    <Compile Include="frmCauHinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCauHinh.Designer.cs">
-      <DependentUpon>frmCauHinh.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmChuyenKho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +109,24 @@
     </Compile>
     <Compile Include="frmDoiMatKhau.Designer.cs">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSPhieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSPhieuChuyen.Designer.cs">
+      <DependentUpon>frmDSPhieuChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSPhieuNhap.Designer.cs">
+      <DependentUpon>frmDSPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSPhieuXuat.Designer.cs">
+      <DependentUpon>frmDSPhieuXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="frmKhachHang.cs">
       <SubType>Form</SubType>
@@ -168,6 +182,12 @@
     <Compile Include="frmSanPham.Designer.cs">
       <DependentUpon>frmSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThemNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemNguoiDung.Designer.cs">
+      <DependentUpon>frmThemNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThongTinCTy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,9 +216,6 @@
     <EmbeddedResource Include="dataGridViewSTT.resx">
       <DependentUpon>dataGridViewSTT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCauHinh.resx">
-      <DependentUpon>frmCauHinh.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmChuyenKho.resx">
       <DependentUpon>frmChuyenKho.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +224,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSPhieuChuyen.resx">
+      <DependentUpon>frmDSPhieuChuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSPhieuNhap.resx">
+      <DependentUpon>frmDSPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSPhieuXuat.resx">
+      <DependentUpon>frmDSPhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
@@ -234,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSanPham.resx">
       <DependentUpon>frmSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemNguoiDung.resx">
+      <DependentUpon>frmThemNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThongTinCTy.resx">
       <DependentUpon>frmThongTinCTy.cs</DependentUpon>

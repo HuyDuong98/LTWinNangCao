@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.cboNhanVien = new System.Windows.Forms.ComboBox();
             this.cboSP = new System.Windows.Forms.ComboBox();
-            this.datePhieuNhap = new DevExpress.XtraEditors.DateEdit();
             this.txtDienGiai = new System.Windows.Forms.TextBox();
             this.txtMaSoPhieu = new DevExpress.XtraEditors.TextEdit();
             this.lblDienGiai = new DevExpress.XtraEditors.LabelControl();
@@ -47,7 +46,9 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panelPhieuNhap = new System.Windows.Forms.GroupBox();
+            this.btnThemPhieuNhap = new DevExpress.XtraEditors.SimpleButton();
+            this.datePhieuNhap = new System.Windows.Forms.DateTimePicker();
             this.qLPHANQUYENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qL_PHANQUYENTableAdapter = new QLKhoHang.QLKHODataSetTableAdapters.QL_PHANQUYENTableAdapter();
             this.sAN_PHAMTableAdapter = new QLKhoHang.QLKHODataSetTableAdapters.SAN_PHAMTableAdapter();
@@ -68,15 +69,13 @@
             this.PHIEU_NHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SAN_PHAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MOTASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.datePhieuNhap.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datePhieuNhap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSoPhieu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLKHODataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLKHODataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).BeginInit();
             this.pnControl.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.panelPhieuNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qLPHANQUYENBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grView)).BeginInit();
@@ -87,9 +86,9 @@
             // cboNhanVien
             // 
             this.cboNhanVien.FormattingEnabled = true;
-            this.cboNhanVien.Location = new System.Drawing.Point(610, 24);
+            this.cboNhanVien.Location = new System.Drawing.Point(462, 20);
             this.cboNhanVien.Name = "cboNhanVien";
-            this.cboNhanVien.Size = new System.Drawing.Size(151, 21);
+            this.cboNhanVien.Size = new System.Drawing.Size(230, 21);
             this.cboNhanVien.TabIndex = 4;
             this.cboNhanVien.DropDown += new System.EventHandler(this.cboNhanVien_DropDown);
             // 
@@ -102,24 +101,12 @@
             this.cboSP.TabIndex = 3;
             this.cboSP.DropDown += new System.EventHandler(this.cboSP_DropDown);
             // 
-            // datePhieuNhap
-            // 
-            this.datePhieuNhap.EditValue = null;
-            this.datePhieuNhap.Location = new System.Drawing.Point(338, 20);
-            this.datePhieuNhap.Name = "datePhieuNhap";
-            this.datePhieuNhap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.datePhieuNhap.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.datePhieuNhap.Size = new System.Drawing.Size(151, 20);
-            this.datePhieuNhap.TabIndex = 2;
-            // 
             // txtDienGiai
             // 
             this.txtDienGiai.Location = new System.Drawing.Point(86, 61);
             this.txtDienGiai.Multiline = true;
             this.txtDienGiai.Name = "txtDienGiai";
-            this.txtDienGiai.Size = new System.Drawing.Size(734, 39);
+            this.txtDienGiai.Size = new System.Drawing.Size(860, 39);
             this.txtDienGiai.TabIndex = 5;
             // 
             // txtMaSoPhieu
@@ -127,13 +114,12 @@
             this.txtMaSoPhieu.Enabled = false;
             this.txtMaSoPhieu.Location = new System.Drawing.Point(86, 20);
             this.txtMaSoPhieu.Name = "txtMaSoPhieu";
-            this.txtMaSoPhieu.Size = new System.Drawing.Size(148, 20);
+            this.txtMaSoPhieu.Size = new System.Drawing.Size(192, 20);
             this.txtMaSoPhieu.TabIndex = 0;
-            this.txtMaSoPhieu.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
             // 
             // lblDienGiai
             // 
-            this.lblDienGiai.Location = new System.Drawing.Point(39, 61);
+            this.lblDienGiai.Location = new System.Drawing.Point(12, 61);
             this.lblDienGiai.Name = "lblDienGiai";
             this.lblDienGiai.Size = new System.Drawing.Size(40, 13);
             this.lblDienGiai.TabIndex = 0;
@@ -141,15 +127,15 @@
             // 
             // lblNhanVien
             // 
-            this.lblNhanVien.Location = new System.Drawing.Point(545, 27);
+            this.lblNhanVien.Location = new System.Drawing.Point(397, 23);
             this.lblNhanVien.Name = "lblNhanVien";
-            this.lblNhanVien.Size = new System.Drawing.Size(59, 13);
+            this.lblNhanVien.Size = new System.Drawing.Size(45, 13);
             this.lblNhanVien.TabIndex = 0;
-            this.lblNhanVien.Text = "NV liên quan";
+            this.lblNhanVien.Text = "Người lập";
             // 
             // lblNgay
             // 
-            this.lblNgay.Location = new System.Drawing.Point(307, 23);
+            this.lblNgay.Location = new System.Drawing.Point(725, 23);
             this.lblNgay.Name = "lblNgay";
             this.lblNgay.Size = new System.Drawing.Size(25, 13);
             this.lblNgay.TabIndex = 0;
@@ -157,7 +143,7 @@
             // 
             // lblSoPhieu
             // 
-            this.lblSoPhieu.Location = new System.Drawing.Point(39, 23);
+            this.lblSoPhieu.Location = new System.Drawing.Point(12, 20);
             this.lblSoPhieu.Name = "lblSoPhieu";
             this.lblSoPhieu.Size = new System.Drawing.Size(41, 13);
             this.lblSoPhieu.TabIndex = 0;
@@ -192,7 +178,7 @@
             this.pnControl.Location = new System.Drawing.Point(0, 0);
             this.pnControl.Margin = new System.Windows.Forms.Padding(0);
             this.pnControl.Name = "pnControl";
-            this.pnControl.Size = new System.Drawing.Size(826, 45);
+            this.pnControl.Size = new System.Drawing.Size(969, 45);
             this.pnControl.TabIndex = 13;
             // 
             // btnIn
@@ -264,23 +250,42 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // groupBox1
+            // panelPhieuNhap
             // 
-            this.groupBox1.Controls.Add(this.cboNhanVien);
-            this.groupBox1.Controls.Add(this.txtMaSoPhieu);
-            this.groupBox1.Controls.Add(this.lblSoPhieu);
-            this.groupBox1.Controls.Add(this.datePhieuNhap);
-            this.groupBox1.Controls.Add(this.lblNgay);
-            this.groupBox1.Controls.Add(this.txtDienGiai);
-            this.groupBox1.Controls.Add(this.lblNhanVien);
-            this.groupBox1.Controls.Add(this.lblDienGiai);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 45);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(826, 112);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Phiếu nhập";
+            this.panelPhieuNhap.Controls.Add(this.btnThemPhieuNhap);
+            this.panelPhieuNhap.Controls.Add(this.datePhieuNhap);
+            this.panelPhieuNhap.Controls.Add(this.cboNhanVien);
+            this.panelPhieuNhap.Controls.Add(this.txtMaSoPhieu);
+            this.panelPhieuNhap.Controls.Add(this.lblSoPhieu);
+            this.panelPhieuNhap.Controls.Add(this.lblNgay);
+            this.panelPhieuNhap.Controls.Add(this.txtDienGiai);
+            this.panelPhieuNhap.Controls.Add(this.lblNhanVien);
+            this.panelPhieuNhap.Controls.Add(this.lblDienGiai);
+            this.panelPhieuNhap.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelPhieuNhap.Location = new System.Drawing.Point(0, 45);
+            this.panelPhieuNhap.Name = "panelPhieuNhap";
+            this.panelPhieuNhap.Size = new System.Drawing.Size(969, 112);
+            this.panelPhieuNhap.TabIndex = 14;
+            this.panelPhieuNhap.TabStop = false;
+            this.panelPhieuNhap.Text = "Phiếu nhập";
+            // 
+            // btnThemPhieuNhap
+            // 
+            this.btnThemPhieuNhap.Enabled = false;
+            this.btnThemPhieuNhap.Location = new System.Drawing.Point(284, 18);
+            this.btnThemPhieuNhap.Name = "btnThemPhieuNhap";
+            this.btnThemPhieuNhap.Size = new System.Drawing.Size(75, 23);
+            this.btnThemPhieuNhap.TabIndex = 7;
+            this.btnThemPhieuNhap.Text = "Thêm phiếu";
+            this.btnThemPhieuNhap.Click += new System.EventHandler(this.btnThemPhieuNhap_Click);
+            // 
+            // datePhieuNhap
+            // 
+            this.datePhieuNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datePhieuNhap.Location = new System.Drawing.Point(767, 17);
+            this.datePhieuNhap.Name = "datePhieuNhap";
+            this.datePhieuNhap.Size = new System.Drawing.Size(179, 21);
+            this.datePhieuNhap.TabIndex = 6;
             // 
             // qLPHANQUYENBindingSource
             // 
@@ -304,11 +309,12 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 157);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(826, 37);
+            this.panel1.Size = new System.Drawing.Size(969, 37);
             this.panel1.TabIndex = 15;
             // 
             // btnXoaSP
             // 
+            this.btnXoaSP.Enabled = false;
             this.btnXoaSP.Location = new System.Drawing.Point(397, 4);
             this.btnXoaSP.Name = "btnXoaSP";
             this.btnXoaSP.Size = new System.Drawing.Size(75, 23);
@@ -317,6 +323,7 @@
             // 
             // btnThemSP
             // 
+            this.btnThemSP.Enabled = false;
             this.btnThemSP.Location = new System.Drawing.Point(316, 4);
             this.btnThemSP.Name = "btnThemSP";
             this.btnThemSP.Size = new System.Drawing.Size(75, 23);
@@ -326,7 +333,7 @@
             // 
             // lblSanPham
             // 
-            this.lblSanPham.Location = new System.Drawing.Point(6, 9);
+            this.lblSanPham.Location = new System.Drawing.Point(12, 14);
             this.lblSanPham.Name = "lblSanPham";
             this.lblSanPham.Size = new System.Drawing.Size(47, 13);
             this.lblSanPham.TabIndex = 1;
@@ -338,7 +345,7 @@
             this.grView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grView.Location = new System.Drawing.Point(0, 194);
             this.grView.Name = "grView";
-            this.grView.Size = new System.Drawing.Size(826, 288);
+            this.grView.Size = new System.Drawing.Size(969, 288);
             this.grView.TabIndex = 16;
             this.grView.Text = "Danh sách hàng hóa";
             // 
@@ -363,34 +370,33 @@
             this.dataGridViewSP.Enabled = false;
             this.dataGridViewSP.Location = new System.Drawing.Point(2, 20);
             this.dataGridViewSP.Name = "dataGridViewSP";
-            this.dataGridViewSP.Size = new System.Drawing.Size(822, 266);
+            this.dataGridViewSP.Size = new System.Drawing.Size(965, 266);
             this.dataGridViewSP.TabIndex = 0;
+            this.dataGridViewSP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridViewSP_KeyDown);
             // 
             // MAPN
             // 
             this.MAPN.DataPropertyName = "MAPN";
             this.MAPN.HeaderText = "Mã phiếu nhập";
             this.MAPN.Name = "MAPN";
-            this.MAPN.Visible = false;
             // 
             // MASP
             // 
             this.MASP.DataPropertyName = "MASP";
             this.MASP.HeaderText = "Mã sản phẩm";
             this.MASP.Name = "MASP";
-            this.MASP.Visible = false;
             // 
             // TEN_SP
             // 
             this.TEN_SP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TEN_SP.DataPropertyName = "TenSP";
+            this.TEN_SP.DataPropertyName = "TEN_SP";
             this.TEN_SP.HeaderText = "Tên sản phẩm";
             this.TEN_SP.Name = "TEN_SP";
             this.TEN_SP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // MAUSAC
             // 
-            this.MAUSAC.DataPropertyName = "MauSac";
+            this.MAUSAC.DataPropertyName = "MAUSAC";
             this.MAUSAC.HeaderText = "Màu sắc";
             this.MAUSAC.Name = "MAUSAC";
             // 
@@ -402,7 +408,7 @@
             // 
             // GIANHAP
             // 
-            this.GIANHAP.DataPropertyName = "GiaNhap";
+            this.GIANHAP.DataPropertyName = "GIANHAP";
             this.GIANHAP.HeaderText = "Giá nhập";
             this.GIANHAP.Name = "GIANHAP";
             // 
@@ -434,7 +440,7 @@
             // 
             // MOTASP
             // 
-            this.MOTASP.DataPropertyName = "MoTa";
+            this.MOTASP.DataPropertyName = "MoTaSP";
             this.MOTASP.HeaderText = "Mô tả";
             this.MOTASP.Name = "MOTASP";
             // 
@@ -444,25 +450,23 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 482);
+            this.ClientSize = new System.Drawing.Size(969, 482);
             this.Controls.Add(this.grView);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panelPhieuNhap);
             this.Controls.Add(this.pnControl);
             this.Name = "frmPhieuNhap";
-            this.Text = "frmPhieuNhap";
+            this.Text = "Phiếu nhập";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPhieuNhap_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.datePhieuNhap.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datePhieuNhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSoPhieu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLKHODataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLKHODataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).EndInit();
             this.pnControl.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.panelPhieuNhap.ResumeLayout(false);
+            this.panelPhieuNhap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qLPHANQUYENBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -489,8 +493,7 @@
         private System.Windows.Forms.TextBox txtDienGiai;
         private System.Windows.Forms.ComboBox cboSP;
         private System.Windows.Forms.ComboBox cboNhanVien;
-        private DevExpress.XtraEditors.DateEdit datePhieuNhap;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox panelPhieuNhap;
         private QLKHODataSet qLKHODataSet;
         private System.Windows.Forms.BindingSource qLKHODataSetBindingSource;
         private System.Windows.Forms.BindingSource qLPHANQUYENBindingSource;
@@ -503,6 +506,8 @@
         private DevExpress.XtraEditors.LabelControl lblSanPham;
         private DevExpress.XtraEditors.GroupControl grView;
         private System.Windows.Forms.DataGridView dataGridViewSP;
+        private System.Windows.Forms.DateTimePicker datePhieuNhap;
+        private DevExpress.XtraEditors.SimpleButton btnThemPhieuNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn MAPN;
         private System.Windows.Forms.DataGridViewTextBoxColumn MASP;
         private System.Windows.Forms.DataGridViewTextBoxColumn TEN_SP;

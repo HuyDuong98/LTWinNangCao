@@ -13,38 +13,19 @@ using System.Data.SqlClient;
 
 namespace QLKhoHang
 {
-
     public partial class frmPhieuNhap : DevExpress.XtraEditors.XtraForm
     {
         SanPham_DAL qlkho = new SanPham_DAL();
+        PhieuNhap pn = new PhieuNhap();
         public frmPhieuNhap()
         {
             InitializeComponent();
         }
-
-        private void textEdit1_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void frmPhieuNhap_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLKHODataSet.SAN_PHAM' table. You can move, or remove it, as needed.
-            this.sAN_PHAMTableAdapter.Fill(this.qLKHODataSet.SAN_PHAM);
-            // TODO: This line of code loads data into the 'qLKHODataSet.QL_PHANQUYEN' table. You can move, or remove it, as needed.
-            this.qL_PHANQUYENTableAdapter.Fill(this.qLKHODataSet.QL_PHANQUYEN);
-
-            dataGridViewSP.DataSource = qlkho.LoadDTDSHangNhap();
-            txtMaSoPhieu.Text = qlkho.KiemTraTrung();
-
-            
+           
         }
 
-        private void lblMST_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void dataPhieuNhap_DataSourceChanged(object sender, EventArgs e)
         {
@@ -54,37 +35,29 @@ namespace QLKhoHang
 
             }
         }
-
+        // Load combo box sản phẩm
         private void cboSP_DropDown(object sender, EventArgs e)
         {
-            try
-            {
-                cboSP.DataSource = qlkho.LoadcboSanPham();
-                cboSP.DisplayMember = "TEN_SP";
-                cboSP.ValueMember = "MASP";
-            }
-            catch
-            {
-                return;
-            }
-            
+            cboSP.DataSource = qlkho.LoadcboSanPham();
+            cboSP.DisplayMember = "TEN_SP";
+            cboSP.ValueMember = "MASP";
         }
 
-
+        // Load combo box nhân viên
         private void cboNhanVien_DropDown(object sender, EventArgs e)
         {
             cboNhanVien.DataSource = qlkho.LoadcboNhanVien();
             cboNhanVien.DisplayMember = "TENNV";
             cboNhanVien.ValueMember = "MANV";
         }
-
+        
         private void btnThem_Click(object sender, EventArgs e)
         {
-            groupBox1.Enabled = true;
+            panelPhieuNhap.Enabled = true;
             btnLuu.Enabled = true;
             btnSua.Enabled = true;
-            
-
+            btnThemPhieuNhap.Enabled = true;
+            txtMaSoPhieu.Text = qlkho.KiemTraTrung();
         }
 
         private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
@@ -103,10 +76,10 @@ namespace QLKhoHang
                 cboSP.Focus();
                 return;
             }
-            if (datePhieuNhap.Text == "")
+            if (panelPhieuNhap.Text == "")
             {
                 MessageBox.Show("Bạn chưa chọn ngày");
-                datePhieuNhap.Focus();
+                panelPhieuNhap.Focus();
                 return;
             }
             if(cboNhanVien.SelectedItem == null)
@@ -114,35 +87,6 @@ namespace QLKhoHang
                 MessageBox.Show("Bạn chưa chọn nhân viên");
                 cboNhanVien.Focus();
                 return;
-            }
-            PHIEU_NHAP pn = new PHIEU_NHAP();
-            if(qlkho.KTKhoaPhieuNhap(txtMaSoPhieu.Text))
-            {
-                pn.MAPN = txtMaSoPhieu.Text;
-                pn.MANV = cboNhanVien.SelectedValue.ToString().Trim();
-                pn.NGAYNHAP = datePhieuNhap.DateTime;
-                pn.NOIDUNG = txtDienGiai.Text;
-                //pn.SL = int.Parse(txtSoLuong.Text);
-                if (qlkho.ThemPhieuNhap(pn))
-                {
-                    dataGridViewSP.DataSource = qlkho.LoadDLNhapKho();
-                    
-                    MessageBox.Show("Thêm thành công");
-                }
-                else
-                {
-                    MessageBox.Show("Thêm thất bại");
-                }
-            }
-            
-        }
-
-
-        private void txtGiaBan_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
             }
         }
 
@@ -161,27 +105,77 @@ namespace QLKhoHang
         {
 
         }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void btnThemPhieuNhap_Click(object sender, EventArgs e)
         {
-            
+            if (cboNhanVien.SelectedValue == null)
+            {
+                MessageBox.Show("Bạn chưa chọn người lập phiếu");
+                return;
+            }
+            else
+            {
+                PHIEU_NHAP p = new PHIEU_NHAP();
+                p.MAPN = txtMaSoPhieu.Text.Trim();
+                p.MANV = cboNhanVien.SelectedValue.ToString();
+                p.NGAYNHAP = datePhieuNhap.Value;
+                p.NOIDUNG = txtDienGiai.Text;
+                if (pn.ThemPhieuNhap(p))
+                {
+                    btnThemSP.Enabled = true;
+                    btnThemPhieuNhap.Enabled = false;
+                    MessageBox.Show("Bạn đã thêm phiếu "+p.MAPN);
+                }
+                else 
+                { 
+                    MessageBox.Show("Thêm thất bại");
+                }
+                return;
+            }  
         }
-
-        private void cboSanPham_DropDown(object sender, EventArgs e)
-        {
-            cboSP.DataSource = qlkho.LoadcboSanPham();
-            cboSP.DisplayMember = "TEN_SP";
-            cboSP.ValueMember = "MASP";
-        }
-
         private void btnThemSP_Click(object sender, EventArgs e)
         {
-            //string ma = cboSP.SelectedValue.ToString().Trim();
-            dataGridViewSP.DataSource = qlkho.LoadDTDSHangNhap();
+            //Thêm ds phiếu nhập vào table ds phiếu nhập
+            if (cboSP.SelectedValue == null)
+            {
+                MessageBox.Show("Bạn chưa chọn sản phẩm");
+                return;
+            }
+            else
+            {
+                DSHANGNHAP ds = new DSHANGNHAP();
+                ds.MAPN = txtMaSoPhieu.Text.Trim();
+                ds.MASP = cboSP.SelectedValue.ToString().Trim();
+                ds.ThanhTien = pn.ThanhTien(1, ds.MASP);
+                if (pn.KTTonTaiSPTrongPhieuNhap(txtMaSoPhieu.Text.Trim(), cboSP.SelectedValue.ToString()))
+                {
+                    ds.SL = 1;
+                    if (pn.ThemDSHangNhapKho(ds))
+                    {
+                        dataGridViewSP.DataSource = pn.LoadDSHangNhap(txtMaSoPhieu.Text.Trim());
+                    }
+                    else { return; }
+                }
+                else
+                {
+                    if (pn.SuaTTDSPhieuNhap(ds))
+                    {
+                        dataGridViewSP.DataSource = pn.LoadDSHangNhap(txtMaSoPhieu.Text.Trim());
+                    }
+                    else { return; }
+                }
+                
+            }
         }
 
-
-        
-
+        private void dataGridViewSP_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Tab && dataGridViewSP.CurrentCell.ColumnIndex == 1)
+            {
+                e.Handled = true;
+                DataGridViewCell cell = dataGridViewSP.Rows[0].Cells[0];
+                dataGridViewSP.CurrentCell = cell;
+                dataGridViewSP.BeginEdit(true);
+            }
+        }
     }
 }

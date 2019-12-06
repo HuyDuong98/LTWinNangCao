@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.txtXacNhanMK = new DevExpress.XtraEditors.TextEdit();
@@ -36,9 +37,11 @@
             this.lblXacNhanMK = new DevExpress.XtraEditors.LabelControl();
             this.lblMatKhauMoi = new DevExpress.XtraEditors.LabelControl();
             this.lblMatKhauCu = new DevExpress.XtraEditors.LabelControl();
+            this.dxValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtXacNhanMK.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhauMoi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhauCu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -53,7 +56,7 @@
             this.btnCancel.Location = new System.Drawing.Point(404, 158);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(94, 35);
-            this.btnCancel.TabIndex = 12;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Bỏ qua";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -69,29 +72,30 @@
             this.btnSave.Location = new System.Drawing.Point(305, 158);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(93, 35);
-            this.btnSave.TabIndex = 11;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtXacNhanMK
             // 
             this.txtXacNhanMK.Location = new System.Drawing.Point(179, 111);
             this.txtXacNhanMK.Name = "txtXacNhanMK";
             this.txtXacNhanMK.Size = new System.Drawing.Size(319, 20);
-            this.txtXacNhanMK.TabIndex = 9;
+            this.txtXacNhanMK.TabIndex = 2;
             // 
             // txtMatKhauMoi
             // 
             this.txtMatKhauMoi.Location = new System.Drawing.Point(179, 79);
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.Size = new System.Drawing.Size(319, 20);
-            this.txtMatKhauMoi.TabIndex = 10;
+            this.txtMatKhauMoi.TabIndex = 1;
             // 
             // txtMatKhauCu
             // 
             this.txtMatKhauCu.Location = new System.Drawing.Point(179, 47);
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.Size = new System.Drawing.Size(319, 20);
-            this.txtMatKhauCu.TabIndex = 5;
+            this.txtMatKhauCu.TabIndex = 0;
             // 
             // lblXacNhanMK
             // 
@@ -148,9 +152,11 @@
             this.Name = "frmDoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDoiMatKhau";
+            this.Enter += new System.EventHandler(this.btnSave_Click);
             ((System.ComponentModel.ISupportInitialize)(this.txtXacNhanMK.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhauMoi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhauCu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +172,6 @@
         private DevExpress.XtraEditors.LabelControl lblXacNhanMK;
         private DevExpress.XtraEditors.LabelControl lblMatKhauMoi;
         private DevExpress.XtraEditors.LabelControl lblMatKhauCu;
+        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider;
     }
 }

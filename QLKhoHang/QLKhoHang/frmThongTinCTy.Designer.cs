@@ -48,8 +48,8 @@
             this.lblTenCongTy = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pnAvata = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pnAvata = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.grGhiChu)).BeginInit();
             this.grGhiChu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtWebsite.Properties)).BeginInit();
@@ -74,7 +74,7 @@
             this.grGhiChu.Location = new System.Drawing.Point(13, 277);
             this.grGhiChu.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
             this.grGhiChu.Name = "grGhiChu";
-            this.grGhiChu.Size = new System.Drawing.Size(864, 162);
+            this.grGhiChu.Size = new System.Drawing.Size(866, 162);
             this.grGhiChu.TabIndex = 21;
             this.grGhiChu.Text = "Ghi chú";
             // 
@@ -84,7 +84,7 @@
             this.txtGhiChu.Location = new System.Drawing.Point(2, 20);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(860, 140);
+            this.txtGhiChu.Size = new System.Drawing.Size(862, 140);
             this.txtGhiChu.TabIndex = 0;
             // 
             // txtWebsite
@@ -266,14 +266,6 @@
             this.panel2.Size = new System.Drawing.Size(864, 262);
             this.panel2.TabIndex = 23;
             // 
-            // pnAvata
-            // 
-            this.pnAvata.BackgroundImage = global::QLKhoHang.Properties.Resources.Untitled;
-            this.pnAvata.Location = new System.Drawing.Point(6, 3);
-            this.pnAvata.Name = "pnAvata";
-            this.pnAvata.Size = new System.Drawing.Size(150, 150);
-            this.pnAvata.TabIndex = 23;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.pnAvata);
@@ -282,6 +274,14 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(161, 262);
             this.panel3.TabIndex = 24;
+            // 
+            // pnAvata
+            // 
+            this.pnAvata.BackgroundImage = global::QLKhoHang.Properties.Resources.Untitled;
+            this.pnAvata.Location = new System.Drawing.Point(6, 3);
+            this.pnAvata.Name = "pnAvata";
+            this.pnAvata.Size = new System.Drawing.Size(150, 150);
+            this.pnAvata.TabIndex = 23;
             // 
             // frmThongTinCTy
             // 
@@ -293,7 +293,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.grGhiChu);
             this.Name = "frmThongTinCTy";
-            this.Text = "frmThongTinCTy";
+            this.Text = "Thông tin công ty";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmThongTinCTy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grGhiChu)).EndInit();

@@ -38,15 +38,6 @@
       <Association Name="DM_MANHINH_QL_NGUOIDUNGNHOMNGUOIDUNG" Member="QL_NGUOIDUNGNHOMNGUOIDUNGs" ThisKey="MAMANHINH" OtherKey="MAMANHINH" Type="QL_NGUOIDUNGNHOMNGUOIDUNG" />
     </Type>
   </Table>
-  <Table Name="dbo.DSHANGCHUYENKHO" Member="DSHANGCHUYENKHOs">
-    <Type Name="DSHANGCHUYENKHO">
-      <Column Name="MAPC" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MASP" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="SL" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="PHIEU_CHUYEN_DSHANGCHUYENKHO" Member="PHIEU_CHUYEN" ThisKey="MAPC" OtherKey="MAPC" Type="PHIEU_CHUYEN" IsForeignKey="true" />
-      <Association Name="SAN_PHAM_DSHANGCHUYENKHO" Member="SAN_PHAM" ThisKey="MASP" OtherKey="MASP" Type="SAN_PHAM" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.DONDATHANG" Member="DONDATHANGs">
     <Type Name="DONDATHANG">
       <Column Name="MADDH" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -56,6 +47,15 @@
       <Column Name="GHICHUNND" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="DIACHINHANHANG" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Association Name="KHACH_HANG_DONDATHANG" Member="KHACH_HANG" ThisKey="MAKH" OtherKey="MAKH" Type="KHACH_HANG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DSHANGCHUYENKHO" Member="DSHANGCHUYENKHOs">
+    <Type Name="DSHANGCHUYENKHO">
+      <Column Name="MAPC" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MASP" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PHIEU_CHUYEN_DSHANGCHUYENKHO" Member="PHIEU_CHUYEN" ThisKey="MAPC" OtherKey="MAPC" Type="PHIEU_CHUYEN" IsForeignKey="true" />
+      <Association Name="SAN_PHAM_DSHANGCHUYENKHO" Member="SAN_PHAM" ThisKey="MASP" OtherKey="MASP" Type="SAN_PHAM" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DSHANGNHAP" Member="DSHANGNHAPs">

@@ -55,6 +55,9 @@
     <Compile Include="Class1.cs" />
     <Compile Include="CongTycs.cs" />
     <Compile Include="DangNhap_DAL.cs" />
+    <Compile Include="DoiMatKhau.cs" />
+    <Compile Include="DSDANGNHAP.cs" />
+    <Compile Include="DSHANGNHAP.cs" />
     <Compile Include="ExportToExcel.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="NhaCungCap.cs" />
@@ -72,6 +75,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLKho.dbml</DependentUpon>
     </Compile>
+    <Compile Include="QLNguoiDung.cs" />
+    <Compile Include="QL_NGUOIDUNG.cs" />
     <Compile Include="SanPham_DAL.cs" />
   </ItemGroup>
   <ItemGroup>

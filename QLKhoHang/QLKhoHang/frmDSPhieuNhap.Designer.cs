@@ -1,6 +1,6 @@
 ﻿namespace QLKhoHang
 {
-    partial class frmChuyenKho
+    partial class frmDSPhieuNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // frmChuyenKho
+            // frmDSPhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 501);
-            this.Name = "frmChuyenKho";
-            this.Text = "Chuyển kho";
+            this.ClientSize = new System.Drawing.Size(887, 462);
+            this.Name = "frmDSPhieuNhap";
+            this.Text = "frmDSPhieuNhap";
             this.ResumeLayout(false);
 
         }

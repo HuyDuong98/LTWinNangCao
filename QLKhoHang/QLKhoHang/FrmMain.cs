@@ -27,13 +27,12 @@ namespace QLKhoHang
         {
             btnHeThong.PerformClick();
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            
             tabstatic = xtTabControl;
         }
         //các btn của hệ thống
         string rdn = "Đăng nhập lại";
         string dmk = "Đổi mật khẩu";
-        string pqnv = "Phân quyền nhân viên";
+        string ttkm = "Thêm tài khoản mới";
         string ttct = "Thông tin công ty";
         // các btn của danh mục
         string ttsp = "Thông tin sản phẩm";
@@ -68,10 +67,10 @@ namespace QLKhoHang
             deleteArrayButton();
             grDanhMuc.Text = "Hệ thống";
             
-             //Phân quyền return 1 là admin 0 là nhân viên
+             //Phân quyền return true là admin false là nhân viên
             if (dn.MaNhomPer(DangNhap_DAL.UserName))
             {
-                string[] a = new string[] { rdn, dmk, pqnv, ttct };
+                string[] a = new string[] { rdn, dmk, ttkm, ttct };
                 CreateArrayButton(4, a);
 
             }
@@ -284,22 +283,17 @@ namespace QLKhoHang
                 frmNhanVien frm = new frmNhanVien();
                 GoiShow(frm);
             }
+            if (sd.Text == ttkm)
+            {
+                frmThemNguoiDung frm = new frmThemNguoiDung();
+                GoiShow(frm);
+            }
         }
 
         public void deleteArrayButton()
         {
             pnDanhMuc.Controls.Clear();
         }
-
-        private void toolStripLabel1_Click(object sender, EventArgs e)
-        {
-            if (pnMenuButton.Visible == true)
-            {
-                pnMenuButton.Visible = false;
-            }
-            else { pnMenuButton.Visible = true; }
-        }
-
         private void btnThoat_menu_Click(object sender, EventArgs e)
         {
             DialogResult h = MessageBox.Show("Bạn có chắc muốn thoát không?", "Thông báo", MessageBoxButtons.OKCancel);
@@ -338,13 +332,39 @@ namespace QLKhoHang
             Program.loginForm.Show();
         }
 
-        private void lblFooter_BindingContextChanged(object sender, EventArgs e)
+        private void đăngNhậpLạiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDN.ShowDialog();
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDMK.ShowDialog();
+        }
+
+        private void trởGiúpToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-       
+        private void thôngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //DialogResult h = MessageBox.Show("Bạn có chắc muốn thoát không?", "Thông báo", MessageBoxButtons.OKCancel);
+            //if (h == DialogResult.OK)
+            //{
+            //    return;
+            //}
+            //else { this.Close(); }
+        }
     }
 }

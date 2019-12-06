@@ -268,7 +268,7 @@
             this.Controls.Add(this.pnControl);
             this.Name = "frmLoaiSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmLoaiSanPham";
+            this.Text = "Loại sản phẩm";
             this.Load += new System.EventHandler(this.frmLoaiSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).EndInit();
             this.pnControl.ResumeLayout(false);

@@ -322,7 +322,7 @@
             this.Controls.Add(this.pnControl);
             this.Name = "frmNhaSanXuat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmNhaSanXuat";
+            this.Text = "Nhà sản xuất";
             this.Load += new System.EventHandler(this.frmNhaSanXuat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).EndInit();
             this.pnControl.ResumeLayout(false);

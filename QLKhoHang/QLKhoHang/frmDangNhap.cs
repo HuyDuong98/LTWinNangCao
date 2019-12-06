@@ -40,19 +40,20 @@ namespace QLKhoHang
             int kq = connect.Check_Config();
             if (kq == 0)
             {
+                DangNhap_DAL.Pass = txtMatKhau.Text.Trim();
                 DangNhap_DAL.UserName = txtTaiKhoan.Text;
                 ProcessLogin(); 
             }
             if (kq == 1)
             {
                 MessageBox.Show("Chuỗi cấu hình không tồn tại");
-                frmCauHinh f = new frmCauHinh();
+                frnCauHinh f = new frnCauHinh();
                 f.Show();
             }
             if (kq == 2)
             {
                 MessageBox.Show("Chuỗi cấu hình không phù hợp");
-                frmCauHinh f = new frmCauHinh();
+                frnCauHinh f = new frnCauHinh();
                 f.Show();
             }
         }

@@ -351,7 +351,7 @@
             this.Controls.Add(this.panelNhanVien);
             this.Controls.Add(this.pnControl);
             this.Name = "frmNhanVien";
-            this.Text = "frmNhanVien";
+            this.Text = "Nhân viên";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).EndInit();
             this.pnControl.ResumeLayout(false);

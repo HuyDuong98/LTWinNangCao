@@ -38,9 +38,9 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(229, 103);
+            this.btnHuy.Location = new System.Drawing.Point(252, 117);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(95, 26);
+            this.btnHuy.Size = new System.Drawing.Size(102, 33);
             this.btnHuy.TabIndex = 15;
             this.btnHuy.Text = "Hủy bỏ";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -48,9 +48,9 @@
             // 
             // btnLuuLai
             // 
-            this.btnLuuLai.Location = new System.Drawing.Point(128, 103);
+            this.btnLuuLai.Location = new System.Drawing.Point(144, 117);
             this.btnLuuLai.Name = "btnLuuLai";
-            this.btnLuuLai.Size = new System.Drawing.Size(95, 26);
+            this.btnLuuLai.Size = new System.Drawing.Size(102, 33);
             this.btnLuuLai.TabIndex = 14;
             this.btnLuuLai.Tag = "";
             this.btnLuuLai.Text = "Lưu lại";
@@ -60,25 +60,25 @@
             // cbDatabase
             // 
             this.cbDatabase.FormattingEnabled = true;
-            this.cbDatabase.Location = new System.Drawing.Point(128, 57);
+            this.cbDatabase.Location = new System.Drawing.Point(144, 71);
             this.cbDatabase.Name = "cbDatabase";
-            this.cbDatabase.Size = new System.Drawing.Size(285, 21);
+            this.cbDatabase.Size = new System.Drawing.Size(292, 21);
             this.cbDatabase.TabIndex = 13;
             this.cbDatabase.DropDown += new System.EventHandler(this.cbDatabase_DropDown);
             // 
             // cbSeverName
             // 
             this.cbSeverName.FormattingEnabled = true;
-            this.cbSeverName.Location = new System.Drawing.Point(128, 24);
+            this.cbSeverName.Location = new System.Drawing.Point(144, 38);
             this.cbSeverName.Name = "cbSeverName";
-            this.cbSeverName.Size = new System.Drawing.Size(285, 21);
+            this.cbSeverName.Size = new System.Drawing.Size(292, 21);
             this.cbSeverName.TabIndex = 6;
             this.cbSeverName.DropDown += new System.EventHandler(this.cbSeverName_DropDown);
             // 
             // lblDatabase
             // 
             this.lblDatabase.AutoSize = true;
-            this.lblDatabase.Location = new System.Drawing.Point(50, 60);
+            this.lblDatabase.Location = new System.Drawing.Point(66, 74);
             this.lblDatabase.Name = "lblDatabase";
             this.lblDatabase.Size = new System.Drawing.Size(53, 13);
             this.lblDatabase.TabIndex = 7;
@@ -87,7 +87,7 @@
             // lblSeverName
             // 
             this.lblSeverName.AutoSize = true;
-            this.lblSeverName.Location = new System.Drawing.Point(39, 27);
+            this.lblSeverName.Location = new System.Drawing.Point(55, 41);
             this.lblSeverName.Name = "lblSeverName";
             this.lblSeverName.Size = new System.Drawing.Size(64, 13);
             this.lblSeverName.TabIndex = 10;
@@ -97,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 148);
+            this.ClientSize = new System.Drawing.Size(507, 187);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuuLai);
             this.Controls.Add(this.cbDatabase);
@@ -105,7 +105,7 @@
             this.Controls.Add(this.lblDatabase);
             this.Controls.Add(this.lblSeverName);
             this.Name = "frnCauHinh";
-            this.Text = "frnCauHinh";
+            this.Text = "Cấu hình";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frnCauHinh_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

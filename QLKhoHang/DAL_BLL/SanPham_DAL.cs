@@ -115,16 +115,7 @@ namespace DAL_BLL
             else { return false; }
         }
 
-        public bool ThemPhieuNhap(PHIEU_NHAP pn)
-        {
-            try
-            {
-                sp.PHIEU_NHAPs.InsertOnSubmit(pn);
-                sp.SubmitChanges();
-                return true;
-            }
-            catch { return false; }
-        }
+       
 
         public List<LOAI_SAN_PHAM> LoadCboLoaiSP()
         {

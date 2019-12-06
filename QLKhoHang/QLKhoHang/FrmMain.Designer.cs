@@ -45,15 +45,7 @@
             this.btnKho = new DevExpress.XtraEditors.SimpleButton();
             this.btnDanhMuc = new DevExpress.XtraEditors.SimpleButton();
             this.grMenu = new DevExpress.XtraEditors.GroupControl();
-            this.pnMenuButton = new System.Windows.Forms.Panel();
-            this.btnThoat_menu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnAbout_menu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnTroGiup_menu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDoiMK_menu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDNLai_menu = new DevExpress.XtraEditors.SimpleButton();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.barManager2 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl2 = new DevExpress.XtraBars.BarDockControl();
@@ -78,8 +70,12 @@
             this.xtTabControl = new DevExpress.XtraTab.XtraTabControl();
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.đăngNhậpLạiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trởGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thôngTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.lblFooter = new DevExpress.XtraEditors.LabelControl();
             this.tabControl = new System.Windows.Forms.TabControl();
@@ -90,7 +86,6 @@
             this.grDanhMuc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grMenu)).BeginInit();
             this.grMenu.SuspendLayout();
-            this.pnMenuButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barManager2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager4)).BeginInit();
@@ -326,122 +321,14 @@
             this.grMenu.TabIndex = 1;
             this.grMenu.Text = "Quản lý kho hàng";
             // 
-            // pnMenuButton
-            // 
-            this.pnMenuButton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.pnMenuButton.Controls.Add(this.btnThoat_menu);
-            this.pnMenuButton.Controls.Add(this.btnAbout_menu);
-            this.pnMenuButton.Controls.Add(this.btnTroGiup_menu);
-            this.pnMenuButton.Controls.Add(this.btnDoiMK_menu);
-            this.pnMenuButton.Controls.Add(this.btnDNLai_menu);
-            this.pnMenuButton.Controls.Add(this.shapeContainer1);
-            this.pnMenuButton.Location = new System.Drawing.Point(6, 25);
-            this.pnMenuButton.Margin = new System.Windows.Forms.Padding(0);
-            this.pnMenuButton.Name = "pnMenuButton";
-            this.pnMenuButton.Size = new System.Drawing.Size(169, 253);
-            this.pnMenuButton.TabIndex = 1;
-            this.pnMenuButton.Visible = false;
-            // 
-            // btnThoat_menu
-            // 
-            this.btnThoat_menu.AppearanceHovered.BackColor = System.Drawing.Color.Azure;
-            this.btnThoat_menu.AppearanceHovered.Options.UseBackColor = true;
-            this.btnThoat_menu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnThoat_menu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat_menu.ImageOptions.Image")));
-            this.btnThoat_menu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnThoat_menu.Location = new System.Drawing.Point(3, 195);
-            this.btnThoat_menu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnThoat_menu.Name = "btnThoat_menu";
-            this.btnThoat_menu.Size = new System.Drawing.Size(163, 45);
-            this.btnThoat_menu.TabIndex = 0;
-            this.btnThoat_menu.Text = " Thoát";
-            this.btnThoat_menu.Click += new System.EventHandler(this.btnThoat_menu_Click);
-            // 
-            // btnAbout_menu
-            // 
-            this.btnAbout_menu.AppearanceHovered.BackColor = System.Drawing.Color.Azure;
-            this.btnAbout_menu.AppearanceHovered.Options.UseBackColor = true;
-            this.btnAbout_menu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnAbout_menu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAbout_menu.ImageOptions.Image")));
-            this.btnAbout_menu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnAbout_menu.Location = new System.Drawing.Point(3, 148);
-            this.btnAbout_menu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAbout_menu.Name = "btnAbout_menu";
-            this.btnAbout_menu.Size = new System.Drawing.Size(163, 45);
-            this.btnAbout_menu.TabIndex = 0;
-            this.btnAbout_menu.Text = " About";
-            // 
-            // btnTroGiup_menu
-            // 
-            this.btnTroGiup_menu.AppearanceHovered.BackColor = System.Drawing.Color.Azure;
-            this.btnTroGiup_menu.AppearanceHovered.Options.UseBackColor = true;
-            this.btnTroGiup_menu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnTroGiup_menu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTroGiup_menu.ImageOptions.Image")));
-            this.btnTroGiup_menu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnTroGiup_menu.Location = new System.Drawing.Point(3, 103);
-            this.btnTroGiup_menu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTroGiup_menu.Name = "btnTroGiup_menu";
-            this.btnTroGiup_menu.Size = new System.Drawing.Size(163, 45);
-            this.btnTroGiup_menu.TabIndex = 0;
-            this.btnTroGiup_menu.Text = "Trợ giúp";
-            // 
-            // btnDoiMK_menu
-            // 
-            this.btnDoiMK_menu.AppearanceHovered.BackColor = System.Drawing.Color.Azure;
-            this.btnDoiMK_menu.AppearanceHovered.Options.UseBackColor = true;
-            this.btnDoiMK_menu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnDoiMK_menu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDoiMK_menu.ImageOptions.Image")));
-            this.btnDoiMK_menu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnDoiMK_menu.Location = new System.Drawing.Point(3, 48);
-            this.btnDoiMK_menu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDoiMK_menu.Name = "btnDoiMK_menu";
-            this.btnDoiMK_menu.Size = new System.Drawing.Size(163, 45);
-            this.btnDoiMK_menu.TabIndex = 0;
-            this.btnDoiMK_menu.Text = "Đổi mật khẩu";
-            this.btnDoiMK_menu.Click += new System.EventHandler(this.btnDoiMK_menu_Click);
-            // 
-            // btnDNLai_menu
-            // 
-            this.btnDNLai_menu.AppearanceHovered.BackColor = System.Drawing.Color.Azure;
-            this.btnDNLai_menu.AppearanceHovered.Options.UseBackColor = true;
-            this.btnDNLai_menu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnDNLai_menu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDNLai_menu.ImageOptions.Image")));
-            this.btnDNLai_menu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnDNLai_menu.Location = new System.Drawing.Point(3, 3);
-            this.btnDNLai_menu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDNLai_menu.Name = "btnDNLai_menu";
-            this.btnDNLai_menu.Size = new System.Drawing.Size(163, 45);
-            this.btnDNLai_menu.TabIndex = 0;
-            this.btnDNLai_menu.Text = " Đăng nhập lại";
-            this.btnDNLai_menu.Click += new System.EventHandler(this.btnDNLai_menu_Click);
-            // 
             // shapeContainer1
             // 
             this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1,
-            this.lineShape3});
             this.shapeContainer1.Size = new System.Drawing.Size(169, 253);
             this.shapeContainer1.TabIndex = 1;
             this.shapeContainer1.TabStop = false;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 16;
-            this.lineShape1.X2 = 153;
-            this.lineShape1.Y1 = 193;
-            this.lineShape1.Y2 = 193;
-            // 
-            // lineShape3
-            // 
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 11;
-            this.lineShape3.X2 = 153;
-            this.lineShape3.Y1 = 98;
-            this.lineShape3.Y2 = 98;
             // 
             // barManager2
             // 
@@ -643,31 +530,86 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripLabel1});
+            this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1005, 25);
             this.toolStrip1.TabIndex = 35;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // toolStripDropDownButton1
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.đăngNhậpLạiToolStripMenuItem,
+            this.đổiMậtKhẩuToolStripMenuItem,
+            this.trởGiúpToolStripMenuItem,
+            this.thôngTinToolStripMenuItem,
+            this.thoátToolStripMenuItem});
+            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripDropDownButton1.ForeColor = System.Drawing.Color.White;
+            this.toolStripDropDownButton1.Image = global::QLKhoHang.Properties.Resources.icons8_tune_48;
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Margin = new System.Windows.Forms.Padding(2, 1, 0, 2);
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(68, 22);
+            this.toolStripDropDownButton1.Text = "Menu";
             // 
-            // toolStripLabel1
+            // đăngNhậpLạiToolStripMenuItem
             // 
-            this.toolStripLabel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(43, 22);
-            this.toolStripLabel1.Text = "Menu";
-            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
+            this.đăngNhậpLạiToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.đăngNhậpLạiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.đăngNhậpLạiToolStripMenuItem.Image = global::QLKhoHang.Properties.Resources.tsbRefresh;
+            this.đăngNhậpLạiToolStripMenuItem.Name = "đăngNhậpLạiToolStripMenuItem";
+            this.đăngNhậpLạiToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.đăngNhậpLạiToolStripMenuItem.Size = new System.Drawing.Size(173, 30);
+            this.đăngNhậpLạiToolStripMenuItem.Text = "Đăng nhập lại";
+            this.đăngNhậpLạiToolStripMenuItem.Click += new System.EventHandler(this.đăngNhậpLạiToolStripMenuItem_Click);
+            // 
+            // đổiMậtKhẩuToolStripMenuItem
+            // 
+            this.đổiMậtKhẩuToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.đổiMậtKhẩuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.đổiMậtKhẩuToolStripMenuItem.Image = global::QLKhoHang.Properties.Resources.tsbProcess;
+            this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
+            this.đổiMậtKhẩuToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(173, 30);
+            this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
+            this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
+            // 
+            // trởGiúpToolStripMenuItem
+            // 
+            this.trởGiúpToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.trởGiúpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trởGiúpToolStripMenuItem.Image = global::QLKhoHang.Properties.Resources.icons8_help_32;
+            this.trởGiúpToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.trởGiúpToolStripMenuItem.Name = "trởGiúpToolStripMenuItem";
+            this.trởGiúpToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.trởGiúpToolStripMenuItem.Size = new System.Drawing.Size(173, 30);
+            this.trởGiúpToolStripMenuItem.Text = "Trợ giúp";
+            this.trởGiúpToolStripMenuItem.Click += new System.EventHandler(this.trởGiúpToolStripMenuItem_Click);
+            // 
+            // thôngTinToolStripMenuItem
+            // 
+            this.thôngTinToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.thôngTinToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thôngTinToolStripMenuItem.Image = global::QLKhoHang.Properties.Resources.icons8_about_40;
+            this.thôngTinToolStripMenuItem.Name = "thôngTinToolStripMenuItem";
+            this.thôngTinToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.thôngTinToolStripMenuItem.Size = new System.Drawing.Size(173, 30);
+            this.thôngTinToolStripMenuItem.Text = "Thông tin";
+            this.thôngTinToolStripMenuItem.Click += new System.EventHandler(this.thôngTinToolStripMenuItem_Click);
+            // 
+            // thoátToolStripMenuItem
+            // 
+            this.thoátToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.thoátToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thoátToolStripMenuItem.Image = global::QLKhoHang.Properties.Resources.tsbClose;
+            this.thoátToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            this.thoátToolStripMenuItem.Padding = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(173, 30);
+            this.thoátToolStripMenuItem.Text = "Thoát";
+            this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
             // panelControl1
             // 
@@ -694,7 +636,6 @@
             this.lblFooter.Size = new System.Drawing.Size(85, 16);
             this.lblFooter.TabIndex = 0;
             this.lblFooter.Text = "labelControl1";
-            this.lblFooter.BindingContextChanged += new System.EventHandler(this.lblFooter_BindingContextChanged);
             // 
             // tabControl
             // 
@@ -732,7 +673,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1005, 560);
             this.Controls.Add(this.panelControl1);
-            this.Controls.Add(this.pnMenuButton);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pnContent);
             this.Controls.Add(this.grMenu);
@@ -752,11 +692,12 @@
             this.Controls.Add(this.barDockControl12);
             this.Controls.Add(this.barDockControl10);
             this.Controls.Add(this.barDockControl9);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMain";
+            this.Text = "Quản lý kho hàng";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.LocationChanged += new System.EventHandler(this.FrmMain_LocationChanged);
@@ -765,7 +706,6 @@
             this.grDanhMuc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grMenu)).EndInit();
             this.grMenu.ResumeLayout(false);
-            this.pnMenuButton.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.barManager2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager4)).EndInit();
@@ -823,23 +763,19 @@
         private DevExpress.XtraEditors.SimpleButton btnHeThong;
         private System.Windows.Forms.Panel pnDanhMuc;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private DevExpress.XtraBars.Bar bar2;
-        private System.Windows.Forms.Panel pnMenuButton;
-        private DevExpress.XtraEditors.SimpleButton btnDoiMK_menu;
-        private DevExpress.XtraEditors.SimpleButton btnDNLai_menu;
-        private DevExpress.XtraEditors.SimpleButton btnThoat_menu;
-        private DevExpress.XtraEditors.SimpleButton btnTroGiup_menu;
-        private DevExpress.XtraEditors.SimpleButton btnAbout_menu;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.LabelControl lblFooter;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private DevExpress.XtraTab.XtraTabControl xtTabControl;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem đăngNhậpLạiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trởGiúpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thôngTinToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
     }
 }

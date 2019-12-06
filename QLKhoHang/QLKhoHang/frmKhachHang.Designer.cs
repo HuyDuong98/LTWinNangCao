@@ -91,7 +91,7 @@
             // 
             // btnTiemKiem
             // 
-            this.btnTiemKiem.Location = new System.Drawing.Point(495, 11);
+            this.btnTiemKiem.Location = new System.Drawing.Point(476, 11);
             this.btnTiemKiem.Name = "btnTiemKiem";
             this.btnTiemKiem.Size = new System.Drawing.Size(75, 23);
             this.btnTiemKiem.TabIndex = 12;
@@ -101,7 +101,7 @@
             // txtTimKiem
             // 
             this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTimKiem.Location = new System.Drawing.Point(583, 13);
+            this.txtTimKiem.Location = new System.Drawing.Point(557, 13);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(179, 20);
             this.txtTimKiem.TabIndex = 11;
@@ -343,7 +343,7 @@
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.pnControl);
             this.Name = "frmKhachHang";
-            this.Text = "frmKhachHang";
+            this.Text = "Khách hàng";
             this.Load += new System.EventHandler(this.frmKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).EndInit();
             this.pnControl.ResumeLayout(false);
