@@ -25,15 +25,6 @@ namespace QLKhoHang
             dataGV_SanPham.DataSource = spdal.Load_DL();
            
         }
-        private void dataGV_SanPham_DataSourceChanged(object sender, EventArgs e)
-        {
-            for (int i = 0; i < dataGV_SanPham.Rows.Count; i++)
-            {
-                dataGV_SanPham.Rows[i].HeaderCell.Value = (i + 1).ToString();
-
-            }
-        }
-
         private void btnThem_Click(object sender, EventArgs e)
         {
             btnLuu.Enabled = true;
@@ -80,6 +71,12 @@ namespace QLKhoHang
                 MessageBox.Show("Bạn chưa nhập giá bán sỉ của sản phẩm");
                 return;
             }
+            if (cboKho.SelectedValue == null)
+            {
+                cboKho.Focus();
+                MessageBox.Show("Bạn chưa chọn kho hàng");
+                return;
+            }
             SAN_PHAM p = new SAN_PHAM();
             p.MASP = txtMaSP.Text.Trim();
             p.TEN_SP = txtTenSP.Text;
@@ -92,6 +89,7 @@ namespace QLKhoHang
             p.GIABANSI = double.Parse(txtGiaBanSi.Text.Trim());
             p.GIABANLE = double.Parse(txtGiaBanLe.Text.Trim());
             p.MOTASP = txtGhiChu.Text;
+            p.MAKHO = cboKho.SelectedValue.ToString().Trim();
             if (spdal.ThemSanPham(p))
             {
                 dataGV_SanPham.DataSource = spdal.Load_DL();
@@ -117,14 +115,16 @@ namespace QLKhoHang
             if (dlr == DialogResult.Yes)
             {
                 int index = dataGV_SanPham.CurrentCell.RowIndex;
-                string ma = dataGV_SanPham.Rows[index].Cells[1].Value.ToString().Trim();
-                spdal.XoaSanPham(ma);
-                dataGV_SanPham.DataSource = spdal.Load_DL();
-                MessageBox.Show("Xóa thành công ");
+                string ma = dataGV_SanPham.Rows[index].Cells[0].Value.ToString().Trim();
+                if (spdal.XoaSanPham(ma))
+                {
+                    dataGV_SanPham.DataSource = spdal.Load_DL();
+                    MessageBox.Show("Xóa thành công ");
+                }
+                else { MessageBox.Show("Sản phẩm không được xóa"); }
             }
             else
             {
-                MessageBox.Show("Xóa thất bại");
                 return;
             }
         }
@@ -210,6 +210,23 @@ namespace QLKhoHang
         {
             ExportToExcel p = new ExportToExcel();
             p.export2Excel(dataGV_SanPham, @"D:\", "SanPham");
+        }
+
+        private void cboKho_DropDown(object sender, EventArgs e)
+        {
+            cboKho.DataSource = spdal.LoadcboKhoHang();
+            cboKho.DisplayMember = "TENKHO";
+            cboKho.ValueMember = "MAKHO";
+        }
+
+        private void dataGV_SanPham_DataSourceChanged_1(object sender, EventArgs e)
+        {
+            btnSua.Enabled = true;
+            for (int i = 0; i < dataGV_SanPham.Rows.Count; i++)
+            {
+                dataGV_SanPham.Rows[i].HeaderCell.Value = (i + 1).ToString();
+
+            }
         }
 
   

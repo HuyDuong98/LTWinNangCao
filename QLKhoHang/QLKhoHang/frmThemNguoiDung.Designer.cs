@@ -34,10 +34,10 @@
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.groupControlThem = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.groupControlDanhSach = new DevExpress.XtraEditors.GroupControl();
             this.dataGridViewNguoiDung = new System.Windows.Forms.DataGridView();
             this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,31 +102,32 @@
             this.radioGroup1.Size = new System.Drawing.Size(341, 31);
             this.radioGroup1.TabIndex = 3;
             // 
-            // simpleButton1
+            // btnThem
             // 
-            this.simpleButton1.ImageOptions.Image = global::QLKhoHang.Properties.Resources.tsbAddNew;
-            this.simpleButton1.Location = new System.Drawing.Point(459, 166);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 37);
-            this.simpleButton1.TabIndex = 4;
-            this.simpleButton1.Text = "Thêm";
+            this.btnThem.ImageOptions.Image = global::QLKhoHang.Properties.Resources.tsbAddNew;
+            this.btnThem.Location = new System.Drawing.Point(459, 166);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 37);
+            this.btnThem.TabIndex = 4;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
             // 
-            this.simpleButton2.ImageOptions.Image = global::QLKhoHang.Properties.Resources.tsbClose;
+            this.simpleButton2.ImageOptions.Image = global::QLKhoHang.Properties.Resources.tsbRefresh;
             this.simpleButton2.Location = new System.Drawing.Point(621, 166);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 37);
             this.simpleButton2.TabIndex = 6;
-            this.simpleButton2.Text = "Thoát";
+            this.simpleButton2.Text = "Sửa";
             // 
             // groupControlThem
             // 
             this.groupControlThem.Controls.Add(this.textEdit1);
-            this.groupControlThem.Controls.Add(this.simpleButton3);
+            this.groupControlThem.Controls.Add(this.btnXoa);
             this.groupControlThem.Controls.Add(this.simpleButton2);
             this.groupControlThem.Controls.Add(this.labelControl1);
-            this.groupControlThem.Controls.Add(this.simpleButton1);
+            this.groupControlThem.Controls.Add(this.btnThem);
             this.groupControlThem.Controls.Add(this.labelControl2);
             this.groupControlThem.Controls.Add(this.radioGroup1);
             this.groupControlThem.Controls.Add(this.labelControl3);
@@ -138,14 +139,14 @@
             this.groupControlThem.TabIndex = 4;
             this.groupControlThem.Text = "Thêm người dùng";
             // 
-            // simpleButton3
+            // btnXoa
             // 
-            this.simpleButton3.ImageOptions.Image = global::QLKhoHang.Properties.Resources.tsbDelete;
-            this.simpleButton3.Location = new System.Drawing.Point(540, 166);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(75, 37);
-            this.simpleButton3.TabIndex = 5;
-            this.simpleButton3.Text = "Xóa";
+            this.btnXoa.ImageOptions.Image = global::QLKhoHang.Properties.Resources.tsbDelete;
+            this.btnXoa.Location = new System.Drawing.Point(540, 166);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 37);
+            this.btnXoa.TabIndex = 5;
+            this.btnXoa.Text = "Xóa";
             // 
             // groupControlDanhSach
             // 
@@ -231,10 +232,10 @@
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.TextEdit textEdit2;
         private DevExpress.XtraEditors.RadioGroup radioGroup1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnThem;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.GroupControl groupControlThem;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.GroupControl groupControlDanhSach;
         private System.Windows.Forms.DataGridView dataGridViewNguoiDung;
         private System.Windows.Forms.DataGridViewTextBoxColumn User;

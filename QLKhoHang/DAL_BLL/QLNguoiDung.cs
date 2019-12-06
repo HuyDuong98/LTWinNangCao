@@ -28,5 +28,18 @@ namespace DAL_BLL
             });
             return kq.ToList<QL_NGUOIDUNG>();
         }
+        public bool ThemNguoiDung(QL_NGUOIDUNG user)
+        {
+            try
+            {
+                qlkho.QL_NGUOIDUNGs.InsertOnSubmit(user);
+                qlkho.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

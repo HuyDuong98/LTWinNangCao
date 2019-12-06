@@ -115,7 +115,10 @@ namespace DAL_BLL
             else { return false; }
         }
 
-       
+        public List<KHOHANG> LoadcboKhoHang()
+        {
+            return sp.KHOHANGs.Select(t => t).ToList<KHOHANG>();
+        }
 
         public List<LOAI_SAN_PHAM> LoadCboLoaiSP()
         {
