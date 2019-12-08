@@ -32,11 +32,11 @@ namespace DAL_BLL
             get { return _GIANHAP; }
             set { _GIANHAP = value; }
         }
-        string _MOTASP;
-        public string MOTASP
+        string _MOTA;
+        public string MOTA
         {
-            get { return _MOTASP; }
-            set { _MOTASP = value; }
+            get { return _MOTA; }
+            set { _MOTA = value; }
         }
         
     }

@@ -41,6 +41,7 @@ namespace QLKhoHang
             cboSP.DataSource = qlkho.LoadcboSanPham();
             cboSP.DisplayMember = "TEN_SP";
             cboSP.ValueMember = "MASP";
+            cboSP.SelectedIndex = 0;
         }
 
         // Load combo box nhân viên
@@ -49,6 +50,7 @@ namespace QLKhoHang
             cboNhanVien.DataSource = qlkho.LoadcboNhanVien();
             cboNhanVien.DisplayMember = "TENNV";
             cboNhanVien.ValueMember = "MANV";
+            cboNhanVien.SelectedIndex = 0;
         }
         
         private void btnThem_Click(object sender, EventArgs e)
@@ -58,6 +60,9 @@ namespace QLKhoHang
             btnSua.Enabled = true;
             btnThemPhieuNhap.Enabled = true;
             txtMaSoPhieu.Text = qlkho.KiemTraTrung();
+            txtDienGiai.Text = string.Empty;
+            btnThemSP.Enabled = false;
+            btnXoaSP.Enabled = false;
         }
 
         private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
@@ -70,29 +75,22 @@ namespace QLKhoHang
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (cboSP.SelectedItem == null)
+            
+            HANGTON ht = new HANGTON();
+            ht.MAKHO = cboKho.SelectedValue.ToString();
+            int dem = dataGridViewSP.RowCount;
+            for (int i = 0; i < dem; i++)
             {
-                MessageBox.Show("Bạn chưa chọn sản phẩm");
-                cboSP.Focus();
-                return;
+                ht.MASP = dataGridViewSP.Rows[i].Cells["MASP"].Value.ToString().Trim();
+                ht.SOLUONG = int.Parse(dataGridViewSP.Rows[i].Cells["SL"].Value.ToString().Trim());
+                pn.ThemSPvaoKho(ht);
             }
-            if (panelPhieuNhap.Text == "")
-            {
-                MessageBox.Show("Bạn chưa chọn ngày");
-                panelPhieuNhap.Focus();
-                return;
-            }
-            if(cboNhanVien.SelectedItem == null)
-            {
-                MessageBox.Show("Bạn chưa chọn nhân viên");
-                cboNhanVien.Focus();
-                return;
-            }
+            MessageBox.Show("Đã lưu");
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            btnXoaSP.PerformClick();
         }
 
         private void btnIn_Click(object sender, EventArgs e)
@@ -103,13 +101,28 @@ namespace QLKhoHang
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-
+            DSHANGNHAP ds = new DSHANGNHAP();
+            int index = dataGridViewSP.CurrentCell.RowIndex;
+            ds.MAPN = dataGridViewSP.Rows[index].Cells["MAPN"].Value.ToString().Trim();
+            ds.MASP = dataGridViewSP.Rows[index].Cells["MASP"].Value.ToString().Trim();
+            ds.SL = int.Parse(dataGridViewSP.Rows[index].Cells["SL"].Value.ToString().Trim());
+            if (pn.SuaSoLuongSP(ds))
+            {
+                dataGridViewSP.DataSource = pn.LoadDSHangNhap(txtMaSoPhieu.Text.Trim());
+                MessageBox.Show("Sửa thành công");
+            }
+            else { MessageBox.Show("Sửa thất bại"); }
         }
         private void btnThemPhieuNhap_Click(object sender, EventArgs e)
         {
             if (cboNhanVien.SelectedValue == null)
             {
                 MessageBox.Show("Bạn chưa chọn người lập phiếu");
+                return;
+            }
+            if (cboKho.SelectedValue == null)
+            {
+                MessageBox.Show("Bạn chưa chọn kho");
                 return;
             }
             else
@@ -119,14 +132,15 @@ namespace QLKhoHang
                 p.MANV = cboNhanVien.SelectedValue.ToString();
                 p.NGAYNHAP = datePhieuNhap.Value;
                 p.NOIDUNG = txtDienGiai.Text;
+                p.MAKHO = cboKho.SelectedValue.ToString();
                 if (pn.ThemPhieuNhap(p))
                 {
                     btnThemSP.Enabled = true;
                     btnThemPhieuNhap.Enabled = false;
-                    MessageBox.Show("Bạn đã thêm phiếu "+p.MAPN);
+                    MessageBox.Show("Bạn đã thêm phiếu " + p.MAPN);
                 }
-                else 
-                { 
+                else
+                {
                     MessageBox.Show("Thêm thất bại");
                 }
                 return;
@@ -169,13 +183,60 @@ namespace QLKhoHang
 
         private void dataGridViewSP_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Tab && dataGridViewSP.CurrentCell.ColumnIndex == 1)
+
+        }
+
+        private void btnXoaSP_Click(object sender, EventArgs e)
+        {
+            DialogResult dlr = MessageBox.Show("Bạn có muốn xóa dữ liệu không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlr == DialogResult.Yes)
             {
-                e.Handled = true;
-                DataGridViewCell cell = dataGridViewSP.Rows[0].Cells[0];
-                dataGridViewSP.CurrentCell = cell;
-                dataGridViewSP.BeginEdit(true);
+                int index = dataGridViewSP.CurrentCell.RowIndex;
+                string masp = dataGridViewSP.Rows[index].Cells["MASP"].Value.ToString().Trim();
+                //MessageBox.Show(txtMaSoPhieu.Text + " " + masp);
+                if (pn.XoaSPTrongDSHangNhap(txtMaSoPhieu.Text.Trim(), masp))
+                {
+                    dataGridViewSP.DataSource = pn.LoadDSHangNhap(txtMaSoPhieu.Text.Trim());
+                    MessageBox.Show("Xóa thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công");
+                    return;
+                }
             }
+            else
+            {
+                return;
+            }
+        }
+
+        private void dataGridViewSP_SelectionChanged(object sender, EventArgs e)
+        {
+            btnXoaSP.Enabled = true;
+        }
+
+        private void dataGridViewSP_DataSourceChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridViewSP.Rows.Count; i++)
+            {
+                dataGridViewSP.Rows[i].HeaderCell.Value = (i + 1).ToString();
+
+            }
+
+        }
+
+        private void cboKho_DropDown(object sender, EventArgs e)
+        {
+            cboKho.DataSource = pn.LoadcboKho();
+            cboKho.DisplayMember = "TENKHO";
+            cboKho.ValueMember = "MAKHO";
+            cboKho.SelectedIndex = 0;
+        }
+
+        private void dataGridViewSP_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -71,12 +71,7 @@ namespace QLKhoHang
                 MessageBox.Show("Bạn chưa nhập giá bán sỉ của sản phẩm");
                 return;
             }
-            if (cboKho.SelectedValue == null)
-            {
-                cboKho.Focus();
-                MessageBox.Show("Bạn chưa chọn kho hàng");
-                return;
-            }
+
             SAN_PHAM p = new SAN_PHAM();
             p.MASP = txtMaSP.Text.Trim();
             p.TEN_SP = txtTenSP.Text;
@@ -89,7 +84,6 @@ namespace QLKhoHang
             p.GIABANSI = double.Parse(txtGiaBanSi.Text.Trim());
             p.GIABANLE = double.Parse(txtGiaBanLe.Text.Trim());
             p.MOTASP = txtGhiChu.Text;
-            p.MAKHO = cboKho.SelectedValue.ToString().Trim();
             if (spdal.ThemSanPham(p))
             {
                 dataGV_SanPham.DataSource = spdal.Load_DL();
@@ -210,13 +204,6 @@ namespace QLKhoHang
         {
             ExportToExcel p = new ExportToExcel();
             p.export2Excel(dataGV_SanPham, @"D:\", "SanPham");
-        }
-
-        private void cboKho_DropDown(object sender, EventArgs e)
-        {
-            cboKho.DataSource = spdal.LoadcboKhoHang();
-            cboKho.DisplayMember = "TENKHO";
-            cboKho.ValueMember = "MAKHO";
         }
 
         private void dataGV_SanPham_DataSourceChanged_1(object sender, EventArgs e)

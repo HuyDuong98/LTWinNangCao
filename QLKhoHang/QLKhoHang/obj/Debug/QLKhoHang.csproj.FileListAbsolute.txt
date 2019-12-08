@@ -2,7 +2,6 @@ C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\bin\Debug\Q
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\bin\Debug\QLKhoHang.exe
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\bin\Debug\QLKhoHang.pdb
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\bin\Debug\DAL_BLL.dll
-C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\bin\Debug\DAL_BLL.pdb
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmDangNhap.resources
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmDoiMatKhau.resources
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.FrmMain.resources
@@ -29,3 +28,5 @@ C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\Q
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmDSPhieuChuyen.resources
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmDSPhieuNhap.resources
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmDSPhieuXuat.resources
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmKhoHang.resources
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\bin\Debug\DAL_BLL.pdb

@@ -41,6 +41,7 @@ namespace QLKhoHang
         string ncc = "Nhà cung cấp";
         string ttkh = "Thông tin khách hàng";
         string nv = "Nhân viên";
+        string kho = "Kho hàng";
         // các btn của quản lý kho
         string nk = "Nhập kho";
         string xk = "Xuất kho";
@@ -86,8 +87,8 @@ namespace QLKhoHang
         {
             deleteArrayButton();
             grDanhMuc.Text = "Danh mục";
-            string[] a = new string[] { ttsp, lsp, nsx, ncc, ttkh, nv };
-            CreateArrayButton(6,a);
+            string[] a = new string[] { ttsp, lsp,kho, nsx, ncc, ttkh, nv };
+            CreateArrayButton(7,a);
         }
 
         private void btnKho_Click(object sender, EventArgs e)
@@ -286,6 +287,16 @@ namespace QLKhoHang
             if (sd.Text == ttkm)
             {
                 frmThemNguoiDung frm = new frmThemNguoiDung();
+                GoiShow(frm);
+            }
+            if (sd.Text == kho)
+            {
+                frmKhoHang frm = new frmKhoHang();
+                GoiShow(frm);
+            }
+            if (sd.Text == dsnk)
+            {
+                frmDSPhieuNhap frm = new frmDSPhieuNhap();
                 GoiShow(frm);
             }
         }

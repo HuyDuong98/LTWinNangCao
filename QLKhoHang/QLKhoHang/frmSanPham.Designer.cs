@@ -45,8 +45,6 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnNCC = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.cboKho = new System.Windows.Forms.ComboBox();
             this.txtGiaBanLe = new QLKhoHang.txtChiNhapSo(this.components);
             this.txtGiaBanSi = new QLKhoHang.txtChiNhapSo(this.components);
             this.txtGiaNhap = new QLKhoHang.txtChiNhapSo(this.components);
@@ -271,8 +269,6 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.cboKho);
             this.groupControl1.Controls.Add(this.txtGiaBanLe);
             this.groupControl1.Controls.Add(this.txtGiaBanSi);
             this.groupControl1.Controls.Add(this.txtGiaNhap);
@@ -303,23 +299,6 @@
             this.groupControl1.TabIndex = 18;
             this.groupControl1.Text = "Thông tin sản phẩm";
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(843, 31);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(18, 13);
-            this.labelControl1.TabIndex = 27;
-            this.labelControl1.Text = "Kho";
-            // 
-            // cboKho
-            // 
-            this.cboKho.FormattingEnabled = true;
-            this.cboKho.Location = new System.Drawing.Point(867, 28);
-            this.cboKho.Name = "cboKho";
-            this.cboKho.Size = new System.Drawing.Size(131, 21);
-            this.cboKho.TabIndex = 26;
-            this.cboKho.DropDown += new System.EventHandler(this.cboKho_DropDown);
-            // 
             // txtGiaBanLe
             // 
             this.txtGiaBanLe.Location = new System.Drawing.Point(388, 98);
@@ -348,7 +327,7 @@
             // 
             this.txtTenSP.Location = new System.Drawing.Point(388, 28);
             this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.Size = new System.Drawing.Size(162, 21);
+            this.txtTenSP.Size = new System.Drawing.Size(326, 21);
             this.txtTenSP.TabIndex = 19;
             // 
             // lblGhiChu
@@ -471,7 +450,7 @@
             // 
             // lblLoaiSP
             // 
-            this.lblLoaiSP.Location = new System.Drawing.Point(585, 31);
+            this.lblLoaiSP.Location = new System.Drawing.Point(763, 31);
             this.lblLoaiSP.Name = "lblLoaiSP";
             this.lblLoaiSP.Size = new System.Drawing.Size(68, 13);
             this.lblLoaiSP.TabIndex = 7;
@@ -489,7 +468,7 @@
             // cboLoaiSP
             // 
             this.cboLoaiSP.FormattingEnabled = true;
-            this.cboLoaiSP.Location = new System.Drawing.Point(659, 28);
+            this.cboLoaiSP.Location = new System.Drawing.Point(837, 28);
             this.cboLoaiSP.Name = "cboLoaiSP";
             this.cboLoaiSP.Size = new System.Drawing.Size(161, 21);
             this.cboLoaiSP.TabIndex = 4;
@@ -742,8 +721,6 @@
         private System.Windows.Forms.ComboBox cboLoaiSP;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnNCC;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.ComboBox cboKho;
         private System.Windows.Forms.DataGridViewTextBoxColumn MASP;
         private System.Windows.Forms.DataGridViewTextBoxColumn HinhAnh;
         private System.Windows.Forms.DataGridViewTextBoxColumn KHOHANG;
