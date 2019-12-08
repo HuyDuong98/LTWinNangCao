@@ -692,7 +692,7 @@
             this.Controls.Add(this.barDockControl12);
             this.Controls.Add(this.barDockControl10);
             this.Controls.Add(this.barDockControl9);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý kho hàng";

@@ -93,16 +93,17 @@ namespace DAL_BLL
             try
             {
 
-                DSHANGNHAP k = qlkho.DSHANGNHAPs.Where(t => t.MAPN == ds.MAPN).Where(t=>t.MASP== ds.MASP).FirstOrDefault();
+                DSHANGNHAP k = qlkho.DSHANGNHAPs.Where(t => t.MAPN == ds.MAPN).Where(t => t.MASP == ds.MASP).FirstOrDefault();
                 ds.SL = k.SL + 1;
                 int n = (int)ds.SL;
                 string ma = ds.MASP.ToString();
-                ds.ThanhTien = ThanhTien(n,ma);
+                ds.ThanhTien = ThanhTien(n, ma);
                 k.SL = ds.SL;
                 k.ThanhTien = ds.ThanhTien;
                 qlkho.SubmitChanges();
                 return true;
-            }catch{return false;}
+            }
+            catch { return false; }
         }
         public bool SuaSoLuongSP(DSHANGNHAP ds)
         {

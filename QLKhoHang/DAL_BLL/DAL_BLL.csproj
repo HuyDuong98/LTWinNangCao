@@ -58,13 +58,16 @@
     <Compile Include="DoiMatKhau.cs" />
     <Compile Include="DSDANGNHAP.cs" />
     <Compile Include="DSHANGNHAP.cs" />
+    <Compile Include="DSHANGXUAT.cs" />
     <Compile Include="ExportToExcel.cs" />
+    <Compile Include="HANGTON.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="Kho.cs" />
     <Compile Include="NhaCungCap.cs" />
     <Compile Include="NhanVien.cs" />
     <Compile Include="NhaSanXuat.cs" />
     <Compile Include="PhieuNhap.cs" />
+    <Compile Include="phieuxuat.cs" />
     <Compile Include="PHIEU_NHAP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

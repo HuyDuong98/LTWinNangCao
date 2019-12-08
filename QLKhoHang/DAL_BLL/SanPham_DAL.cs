@@ -26,6 +26,18 @@ namespace DAL_BLL
                 return MaLoaiSP();
             }
         }
+        public string MaPhieuXuat()
+        {
+            string ma = "PX" + LayChuoiNgayHT() + BienK();
+            var p = sp.PHIEU_XUATs.Where(t => t.MAPX == ma).FirstOrDefault();
+            if (p == null)
+            {
+                return ma;
+            }
+            else {
+                return MaPhieuXuat();
+            }
+        }
         public string MaSP()
         {
             int k = BienK();
