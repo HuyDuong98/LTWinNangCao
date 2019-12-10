@@ -32,5 +32,17 @@ namespace DAL_BLL
             get { return _GIABANLE; }
             set { _GIABANLE = value; }
         }
-    }
+        string _MAKHO;
+        public string MAKHO
+        {
+            get { return _MAKHO; }
+            set { _MAKHO = value; }
+        }
+        int _SLTon;
+        public int SLTon
+        {
+            get { return _SLTon; }
+            set { _SLTon = value; }
+        }
+        }
 }

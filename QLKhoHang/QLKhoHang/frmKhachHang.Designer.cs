@@ -91,17 +91,17 @@
             // 
             // btnTiemKiem
             // 
-            this.btnTiemKiem.Location = new System.Drawing.Point(476, 11);
+            this.btnTiemKiem.ImageOptions.Image = global::QLKhoHang.Properties.Resources.tsbSearch;
+            this.btnTiemKiem.Location = new System.Drawing.Point(704, 7);
             this.btnTiemKiem.Name = "btnTiemKiem";
-            this.btnTiemKiem.Size = new System.Drawing.Size(75, 23);
+            this.btnTiemKiem.Size = new System.Drawing.Size(32, 32);
             this.btnTiemKiem.TabIndex = 12;
-            this.btnTiemKiem.Text = "simpleButton1";
             this.btnTiemKiem.Click += new System.EventHandler(this.btnTiemKiem_Click);
             // 
             // txtTimKiem
             // 
             this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTimKiem.Location = new System.Drawing.Point(557, 13);
+            this.txtTimKiem.Location = new System.Drawing.Point(522, 13);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(179, 20);
             this.txtTimKiem.TabIndex = 11;

@@ -19,13 +19,6 @@ namespace QLKhoHang
         {
             InitializeComponent();
         }
-        private void dataGVPhieuNhap_DataSourceChanged(object sender, EventArgs e)
-        {
-            for (int i = 0; i < dataGVPhieuNhap.Rows.Count; i++)
-            {
-                dataGVPhieuNhap.Rows[i].HeaderCell.Value = (i + 1).ToString();
-            }
-        }
 
         private void cboKho_DropDown(object sender, EventArgs e)
         {
@@ -66,6 +59,22 @@ namespace QLKhoHang
             else
             {
                 return;
+            }
+        }
+
+        private void dataGVPhieuNhap_DataSourceChanged_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGVPhieuNhap.Rows.Count; i++)
+            {
+                dataGVPhieuNhap.Rows[i].HeaderCell.Value = (i + 1).ToString();
+            }
+        }
+
+        private void dataGVDSHangNhap_DataSourceChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGVDSHangNhap.Rows.Count; i++)
+            {
+                dataGVDSHangNhap.Rows[i].HeaderCell.Value = (i + 1).ToString();
             }
         }
     }

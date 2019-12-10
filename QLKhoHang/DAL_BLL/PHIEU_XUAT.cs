@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace DAL_BLL
 {
-    public partial class HANGTON
+    public partial class PHIEU_XUAT
     {
-        string _TEN_SP;
-        public string TEN_SP
+        string _TENNV;
+        public string TENNV
         {
-            get { return _TEN_SP; }
-            set {_TEN_SP= value;}
+            get { return _TENNV; }
+            set { _TENNV = value; }
         }
     }
 }

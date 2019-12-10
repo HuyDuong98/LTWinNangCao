@@ -15,6 +15,7 @@ namespace QLKhoHang
     public partial class frmNhanVien : DevExpress.XtraEditors.XtraForm
     {
         NhanVien nv = new NhanVien();
+        DangNhap_DAL dn = new DangNhap_DAL();
         public frmNhanVien()
         {
             InitializeComponent();
@@ -31,6 +32,14 @@ namespace QLKhoHang
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
+            if (dn.MaNhomPer(DangNhap_DAL.UserName))
+            {
+                pnControl.Enabled = true;
+            }
+            else
+            {
+                pnControl.Enabled = false;
+            }
             dataGridViewNV.DataSource = nv.LoadDLNhanVien();
         }
 

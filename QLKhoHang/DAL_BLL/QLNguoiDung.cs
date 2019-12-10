@@ -41,5 +41,40 @@ namespace DAL_BLL
                 return false;
             }
         }
+        public bool PhanQuyenUser(QL_PHANQUYEN pq)
+        {
+            try
+            {
+                qlkho.QL_PHANQUYENs.InsertOnSubmit(pq);
+                qlkho.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool XoaPhanQuyenUser(string ma)
+        {
+            try
+            {
+                QL_PHANQUYEN p = qlkho.QL_PHANQUYENs.Where(t => t.TENDANGNHAP == ma).FirstOrDefault();
+                qlkho.QL_PHANQUYENs.DeleteOnSubmit(p);
+                qlkho.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+        }
+        public bool XoaNguoiDung(string ma)
+        {
+            try
+            {
+                QL_NGUOIDUNG p = qlkho.QL_NGUOIDUNGs.Where(t => t.TENDANGNHAP == ma).FirstOrDefault();
+                qlkho.QL_NGUOIDUNGs.DeleteOnSubmit(p);
+                qlkho.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+        }
     }
 }

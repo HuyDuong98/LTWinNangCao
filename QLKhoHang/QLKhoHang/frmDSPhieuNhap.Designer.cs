@@ -39,6 +39,15 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.dataGVPhieuNhap = new QLKhoHang.dataGridViewSTT(this.components);
+            this.MAPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAYNHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOIDUNG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MAKHO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NHAN_VIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KHOHANG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.dataGVDSHangNhap = new QLKhoHang.dataGridViewSTT(this.components);
             this.TEN_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,24 +61,15 @@
             this.DVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GIANHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MOTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGVPhieuNhap = new QLKhoHang.dataGridViewSTT(this.components);
-            this.MAPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NGAYNHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOIDUNG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MAKHO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NHAN_VIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KHOHANG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).BeginInit();
             this.pnControl.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVPhieuNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVDSHangNhap)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGVPhieuNhap)).BeginInit();
             this.SuspendLayout();
             // 
             // pnControl
@@ -194,6 +194,85 @@
             this.groupControl1.TabIndex = 17;
             this.groupControl1.Text = "Danh sách phiếu";
             // 
+            // dataGVPhieuNhap
+            // 
+            this.dataGVPhieuNhap.BackgroundColor = System.Drawing.Color.White;
+            this.dataGVPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGVPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MAPN,
+            this.MANV,
+            this.NGAYNHAP,
+            this.NOIDUNG,
+            this.MAKHO,
+            this.NHAN_VIEN,
+            this.KHOHANG,
+            this.TENNV});
+            this.dataGVPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGVPhieuNhap.Location = new System.Drawing.Point(2, 20);
+            this.dataGVPhieuNhap.Name = "dataGVPhieuNhap";
+            this.dataGVPhieuNhap.Size = new System.Drawing.Size(883, 160);
+            this.dataGVPhieuNhap.TabIndex = 0;
+            this.dataGVPhieuNhap.DataSourceChanged += new System.EventHandler(this.dataGVPhieuNhap_DataSourceChanged_1);
+            this.dataGVPhieuNhap.SelectionChanged += new System.EventHandler(this.dataGVPhieuNhap_SelectionChanged);
+            // 
+            // MAPN
+            // 
+            this.MAPN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MAPN.DataPropertyName = "MAPN";
+            this.MAPN.HeaderText = "Số phiếu";
+            this.MAPN.Name = "MAPN";
+            // 
+            // MANV
+            // 
+            this.MANV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MANV.DataPropertyName = "MANV";
+            this.MANV.HeaderText = "Mã nv";
+            this.MANV.Name = "MANV";
+            this.MANV.Visible = false;
+            // 
+            // NGAYNHAP
+            // 
+            this.NGAYNHAP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NGAYNHAP.DataPropertyName = "NGAYNHAP";
+            this.NGAYNHAP.HeaderText = "Ngày nhập";
+            this.NGAYNHAP.Name = "NGAYNHAP";
+            // 
+            // NOIDUNG
+            // 
+            this.NOIDUNG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NOIDUNG.DataPropertyName = "NOIDUNG";
+            this.NOIDUNG.HeaderText = "Nội dung";
+            this.NOIDUNG.Name = "NOIDUNG";
+            // 
+            // MAKHO
+            // 
+            this.MAKHO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MAKHO.DataPropertyName = "MAKHO";
+            this.MAKHO.HeaderText = "Mã kho";
+            this.MAKHO.Name = "MAKHO";
+            this.MAKHO.Visible = false;
+            // 
+            // NHAN_VIEN
+            // 
+            this.NHAN_VIEN.DataPropertyName = "NHAN_VIEN";
+            this.NHAN_VIEN.HeaderText = "Nhân viên";
+            this.NHAN_VIEN.Name = "NHAN_VIEN";
+            this.NHAN_VIEN.Visible = false;
+            // 
+            // KHOHANG
+            // 
+            this.KHOHANG.DataPropertyName = "KHOHANG";
+            this.KHOHANG.HeaderText = "Kho hàng";
+            this.KHOHANG.Name = "KHOHANG";
+            this.KHOHANG.Visible = false;
+            // 
+            // TENNV
+            // 
+            this.TENNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TENNV.DataPropertyName = "TENNV";
+            this.TENNV.HeaderText = "Người lập phiếu";
+            this.TENNV.Name = "TENNV";
+            // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.dataGVDSHangNhap);
@@ -225,6 +304,7 @@
             this.dataGVDSHangNhap.Name = "dataGVDSHangNhap";
             this.dataGVDSHangNhap.Size = new System.Drawing.Size(883, 213);
             this.dataGVDSHangNhap.TabIndex = 0;
+            this.dataGVDSHangNhap.DataSourceChanged += new System.EventHandler(this.dataGVDSHangNhap_DataSourceChanged);
             // 
             // TEN_SP
             // 
@@ -303,85 +383,6 @@
             this.MOTA.HeaderText = "Mô tả";
             this.MOTA.Name = "MOTA";
             // 
-            // dataGVPhieuNhap
-            // 
-            this.dataGVPhieuNhap.BackgroundColor = System.Drawing.Color.White;
-            this.dataGVPhieuNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGVPhieuNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MAPN,
-            this.MANV,
-            this.NGAYNHAP,
-            this.NOIDUNG,
-            this.MAKHO,
-            this.NHAN_VIEN,
-            this.KHOHANG,
-            this.TENNV});
-            this.dataGVPhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGVPhieuNhap.Location = new System.Drawing.Point(2, 20);
-            this.dataGVPhieuNhap.Name = "dataGVPhieuNhap";
-            this.dataGVPhieuNhap.Size = new System.Drawing.Size(883, 160);
-            this.dataGVPhieuNhap.TabIndex = 0;
-            this.dataGVPhieuNhap.DataSourceChanged += new System.EventHandler(this.dataGVPhieuNhap_DataSourceChanged);
-            this.dataGVPhieuNhap.SelectionChanged += new System.EventHandler(this.dataGVPhieuNhap_SelectionChanged);
-            // 
-            // MAPN
-            // 
-            this.MAPN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MAPN.DataPropertyName = "MAPN";
-            this.MAPN.HeaderText = "Số phiếu";
-            this.MAPN.Name = "MAPN";
-            // 
-            // MANV
-            // 
-            this.MANV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MANV.DataPropertyName = "MANV";
-            this.MANV.HeaderText = "Mã nv";
-            this.MANV.Name = "MANV";
-            this.MANV.Visible = false;
-            // 
-            // NGAYNHAP
-            // 
-            this.NGAYNHAP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NGAYNHAP.DataPropertyName = "NGAYNHAP";
-            this.NGAYNHAP.HeaderText = "Ngày nhập";
-            this.NGAYNHAP.Name = "NGAYNHAP";
-            // 
-            // NOIDUNG
-            // 
-            this.NOIDUNG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NOIDUNG.DataPropertyName = "NOIDUNG";
-            this.NOIDUNG.HeaderText = "Nội dung";
-            this.NOIDUNG.Name = "NOIDUNG";
-            // 
-            // MAKHO
-            // 
-            this.MAKHO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MAKHO.DataPropertyName = "MAKHO";
-            this.MAKHO.HeaderText = "Mã kho";
-            this.MAKHO.Name = "MAKHO";
-            this.MAKHO.Visible = false;
-            // 
-            // NHAN_VIEN
-            // 
-            this.NHAN_VIEN.DataPropertyName = "NHAN_VIEN";
-            this.NHAN_VIEN.HeaderText = "Nhân viên";
-            this.NHAN_VIEN.Name = "NHAN_VIEN";
-            this.NHAN_VIEN.Visible = false;
-            // 
-            // KHOHANG
-            // 
-            this.KHOHANG.DataPropertyName = "KHOHANG";
-            this.KHOHANG.HeaderText = "Kho hàng";
-            this.KHOHANG.Name = "KHOHANG";
-            this.KHOHANG.Visible = false;
-            // 
-            // TENNV
-            // 
-            this.TENNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TENNV.DataPropertyName = "TENNV";
-            this.TENNV.HeaderText = "Người lập phiếu";
-            this.TENNV.Name = "TENNV";
-            // 
             // frmDSPhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,10 +399,10 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVPhieuNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGVDSHangNhap)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGVPhieuNhap)).EndInit();
             this.ResumeLayout(false);
 
         }

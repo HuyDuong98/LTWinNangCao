@@ -20,8 +20,17 @@ namespace QLKhoHang
             InitializeComponent();
         }
         SanPham_DAL spdal = new SanPham_DAL();
+        DangNhap_DAL dn = new DangNhap_DAL();
         private void frmSanPham_Load(object sender, EventArgs e)
         {
+            if (dn.MaNhomPer(DangNhap_DAL.UserName))
+            {
+                pnControl.Enabled = true;
+            }
+            else
+            {
+                pnControl.Enabled = false;
+            }
             dataGV_SanPham.DataSource = spdal.Load_DL();
            
         }
@@ -109,7 +118,7 @@ namespace QLKhoHang
             if (dlr == DialogResult.Yes)
             {
                 int index = dataGV_SanPham.CurrentCell.RowIndex;
-                string ma = dataGV_SanPham.Rows[index].Cells[0].Value.ToString().Trim();
+                string ma = dataGV_SanPham.Rows[index].Cells["MASP"].Value.ToString().Trim();
                 if (spdal.XoaSanPham(ma))
                 {
                     dataGV_SanPham.DataSource = spdal.Load_DL();

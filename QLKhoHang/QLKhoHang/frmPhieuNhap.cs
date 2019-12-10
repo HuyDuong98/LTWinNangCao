@@ -63,6 +63,8 @@ namespace QLKhoHang
             txtDienGiai.Text = string.Empty;
             btnThemSP.Enabled = false;
             btnXoaSP.Enabled = false;
+            cboNhanVien.Enabled = true;
+            cboKho.Enabled = true;
         }
 
         private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
@@ -75,17 +77,27 @@ namespace QLKhoHang
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            
             HANGTON ht = new HANGTON();
-            ht.MAKHO = cboKho.SelectedValue.ToString();
             int dem = dataGridViewSP.RowCount;
-            for (int i = 0; i < dem; i++)
+            MessageBox.Show(dem+"");
+            if (dataGridViewSP.DataSource == null)
             {
-                ht.MASP = dataGridViewSP.Rows[i].Cells["MASP"].Value.ToString().Trim();
-                ht.SOLUONG = int.Parse(dataGridViewSP.Rows[i].Cells["SL"].Value.ToString().Trim());
-                pn.ThemSPvaoKho(ht);
+                MessageBox.Show("Chưa có sản phẩm");
+                return;
             }
-            MessageBox.Show("Đã lưu");
+            else
+            {
+                for (int i = 0; i < dem; i++)
+                {
+                    ht.MAKHO = cboKho.SelectedValue.ToString().Trim();
+                    ht.MASP = dataGridViewSP.Rows[i].Cells["MASP"].Value.ToString().Trim();
+                    ht.SOLUONG = int.Parse(dataGridViewSP.Rows[i].Cells["SL"].Value.ToString());
+                    pn.ThemSPvaoKho(ht);
+                    //MessageBox.Show(ht.MAKHO + "_" + ht.MASP + "_" + ht.SOLUONG);
+                }
+                MessageBox.Show("Đã lưu");
+                btnThem.PerformClick();
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -136,6 +148,8 @@ namespace QLKhoHang
                 if (pn.ThemPhieuNhap(p))
                 {
                     btnThemSP.Enabled = true;
+                    cboKho.Enabled = false;
+                    cboNhanVien.Enabled = false;
                     btnThemPhieuNhap.Enabled = false;
                     MessageBox.Show("Bạn đã thêm phiếu " + p.MAPN);
                 }

@@ -17,6 +17,7 @@ namespace QLKhoHang
     public partial class frmLoaiSanPham : DevExpress.XtraEditors.XtraForm
     {
         SanPham_DAL qlkho = new SanPham_DAL();
+        
         public frmLoaiSanPham()
         {
             InitializeComponent();
@@ -24,7 +25,15 @@ namespace QLKhoHang
 
         private void frmLoaiSanPham_Load(object sender, EventArgs e)
         {
-            
+            DangNhap_DAL dn = new DangNhap_DAL();
+            if (dn.MaNhomPer(DangNhap_DAL.UserName))
+            {
+                pnControl.Enabled = true;
+            }
+            else
+            {
+                pnControl.Enabled = false;
+            }
             dataLoaiSP.DataSource = qlkho.LoadDLLoaiSP();   
         }
 

@@ -24,6 +24,15 @@ namespace QLKhoHang
 
         private void frmNhaSanXuat_Load(object sender, EventArgs e)
         {
+            DangNhap_DAL dn = new DangNhap_DAL();
+            if (dn.MaNhomPer(DangNhap_DAL.UserName))
+            {
+                pnControl.Enabled = true;
+            }
+            else
+            {
+                pnControl.Enabled = false;
+            }
             dataGridViewNSX.DataSource = nsx.LoadDLNSX();
         }
 

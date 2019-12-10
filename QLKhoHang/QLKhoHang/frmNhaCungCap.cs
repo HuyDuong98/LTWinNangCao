@@ -23,6 +23,15 @@ namespace QLKhoHang
         NhaCungCap ncc = new NhaCungCap();
         private void frmNhaCungCap_Load(object sender, EventArgs e)
         {
+            DangNhap_DAL dn = new DangNhap_DAL();
+            if (dn.MaNhomPer(DangNhap_DAL.UserName))
+            {
+                pnControl.Enabled = true;
+            }
+            else
+            {
+                pnControl.Enabled = false;
+            }
             dataGridViewNCC.DataSource = ncc.LoadDLNCC();
             //LoadSTTDataGirdView();
          

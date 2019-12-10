@@ -203,19 +203,24 @@ namespace DAL_BLL
             catch { return false; }
         }
 
-        public void ThemSPvaoKho(HANGTON k)
+        public bool ThemSPvaoKho(HANGTON k)
         {
+            try
+            {
                 HANGTON p = qlkho.HANGTONs.Where(t => t.MAKHO == k.MAKHO).Where(t => t.MASP == k.MASP).FirstOrDefault();
-                if (p == null)
-                {
-                    qlkho.HANGTONs.InsertOnSubmit(k);
-                    qlkho.SubmitChanges();
-                }
-                else
+                if (p != null)
                 {
                     p.SOLUONG = p.SOLUONG + k.SOLUONG;
                     qlkho.SubmitChanges();
                 }
+                else
+                {
+                    qlkho.HANGTONs.InsertOnSubmit(k);
+                    qlkho.SubmitChanges();
+                }
+                return true;
+            }
+            catch { return false; }
         }
 
     }

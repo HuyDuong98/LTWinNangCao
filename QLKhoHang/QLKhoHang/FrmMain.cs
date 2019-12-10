@@ -52,6 +52,7 @@ namespace QLKhoHang
         // các btn của quản lý đơn hàng
         string ddh = "Đơn đặt hàng";
         // các btn của thống kê báo cáo
+        string bcnxt = "Thông kê sản phẩm theo kho";
         string bcnk = "Báo cáo nhập kho";
         string bcxk = "Báo cáo xuất kho";
         string bctk = "Báo cáo tồn kho";
@@ -111,8 +112,8 @@ namespace QLKhoHang
         {
             deleteArrayButton();
             grDanhMuc.Text = "Thống kê - báo cáo";
-            string[] a = new string[] { bcnk,bcxk,bctk};
-            CreateArrayButton(3, a);
+            string[] a = new string[] {bcnxt, bcnk,bcxk,bctk};
+            CreateArrayButton(4, a);
         }
         // tạo mảng menu con
         public void CreateArrayButton(int soHang,string[] ar)
@@ -297,6 +298,11 @@ namespace QLKhoHang
             if (sd.Text == dsnk)
             {
                 frmDSPhieuNhap frm = new frmDSPhieuNhap();
+                GoiShow(frm);
+            }
+            if (sd.Text == dsxk)
+            {
+                frmDSPhieuXuat frm = new frmDSPhieuXuat();
                 GoiShow(frm);
             }
         }

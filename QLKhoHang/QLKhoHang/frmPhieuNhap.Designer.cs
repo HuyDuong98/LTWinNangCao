@@ -41,9 +41,16 @@
             this.qLKHODataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLKHODataSet = new QLKhoHang.QLKHODataSet();
             this.pnControl = new DevExpress.XtraEditors.PanelControl();
+            this.btnIn = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.panelPhieuNhap = new System.Windows.Forms.GroupBox();
             this.btnThemPhieuNhap = new DevExpress.XtraEditors.SimpleButton();
             this.datePhieuNhap = new System.Windows.Forms.DateTimePicker();
+            this.cboKho = new System.Windows.Forms.ComboBox();
+            this.lblKho = new DevExpress.XtraEditors.LabelControl();
             this.qLPHANQUYENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qL_PHANQUYENTableAdapter = new QLKhoHang.QLKHODataSetTableAdapters.QL_PHANQUYENTableAdapter();
             this.sAN_PHAMTableAdapter = new QLKhoHang.QLKHODataSetTableAdapters.SAN_PHAMTableAdapter();
@@ -53,13 +60,6 @@
             this.lblSanPham = new DevExpress.XtraEditors.LabelControl();
             this.grView = new DevExpress.XtraEditors.GroupControl();
             this.dataGridViewSP = new System.Windows.Forms.DataGridView();
-            this.cboKho = new System.Windows.Forms.ComboBox();
-            this.lblKho = new DevExpress.XtraEditors.LabelControl();
-            this.btnIn = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.MAPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SAN_PHAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,6 +87,7 @@
             // 
             // cboNhanVien
             // 
+            this.cboNhanVien.Enabled = false;
             this.cboNhanVien.FormattingEnabled = true;
             this.cboNhanVien.Location = new System.Drawing.Point(462, 20);
             this.cboNhanVien.Name = "cboNhanVien";
@@ -183,6 +184,75 @@
             this.pnControl.Size = new System.Drawing.Size(1084, 45);
             this.pnControl.TabIndex = 13;
             // 
+            // btnIn
+            // 
+            this.btnIn.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnIn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnIn.Enabled = false;
+            this.btnIn.Image = global::QLKhoHang.Properties.Resources.printer;
+            this.btnIn.Location = new System.Drawing.Point(172, 0);
+            this.btnIn.Margin = new System.Windows.Forms.Padding(0);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(43, 45);
+            this.btnIn.TabIndex = 10;
+            this.btnIn.UseVisualStyleBackColor = false;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnSua.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSua.Enabled = false;
+            this.btnSua.Image = global::QLKhoHang.Properties.Resources.tsbRefresh;
+            this.btnSua.Location = new System.Drawing.Point(129, 0);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(43, 45);
+            this.btnSua.TabIndex = 9;
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnXoa.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnXoa.Enabled = false;
+            this.btnXoa.Image = global::QLKhoHang.Properties.Resources.tsbDelete;
+            this.btnXoa.Location = new System.Drawing.Point(86, 0);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(0);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(43, 45);
+            this.btnXoa.TabIndex = 8;
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnLuu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnLuu.Enabled = false;
+            this.btnLuu.Image = global::QLKhoHang.Properties.Resources.tsbSave;
+            this.btnLuu.Location = new System.Drawing.Point(43, 0);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(43, 45);
+            this.btnLuu.TabIndex = 7;
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnThem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnThem.Image = global::QLKhoHang.Properties.Resources.tsbAddNew;
+            this.btnThem.Location = new System.Drawing.Point(0, 0);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(0);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(43, 45);
+            this.btnThem.TabIndex = 6;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
             // panelPhieuNhap
             // 
             this.panelPhieuNhap.Controls.Add(this.btnThemPhieuNhap);
@@ -221,6 +291,24 @@
             this.datePhieuNhap.Name = "datePhieuNhap";
             this.datePhieuNhap.Size = new System.Drawing.Size(119, 21);
             this.datePhieuNhap.TabIndex = 6;
+            // 
+            // cboKho
+            // 
+            this.cboKho.Enabled = false;
+            this.cboKho.FormattingEnabled = true;
+            this.cboKho.Location = new System.Drawing.Point(910, 20);
+            this.cboKho.Name = "cboKho";
+            this.cboKho.Size = new System.Drawing.Size(139, 21);
+            this.cboKho.TabIndex = 4;
+            this.cboKho.DropDown += new System.EventHandler(this.cboKho_DropDown);
+            // 
+            // lblKho
+            // 
+            this.lblKho.Location = new System.Drawing.Point(867, 23);
+            this.lblKho.Name = "lblKho";
+            this.lblKho.Size = new System.Drawing.Size(18, 13);
+            this.lblKho.TabIndex = 0;
+            this.lblKho.Text = "Kho";
             // 
             // qLPHANQUYENBindingSource
             // 
@@ -311,92 +399,6 @@
             this.dataGridViewSP.DataSourceChanged += new System.EventHandler(this.dataGridViewSP_DataSourceChanged);
             this.dataGridViewSP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSP_CellContentClick);
             this.dataGridViewSP.SelectionChanged += new System.EventHandler(this.dataGridViewSP_SelectionChanged);
-            // 
-            // cboKho
-            // 
-            this.cboKho.FormattingEnabled = true;
-            this.cboKho.Location = new System.Drawing.Point(910, 20);
-            this.cboKho.Name = "cboKho";
-            this.cboKho.Size = new System.Drawing.Size(139, 21);
-            this.cboKho.TabIndex = 4;
-            this.cboKho.DropDown += new System.EventHandler(this.cboKho_DropDown);
-            // 
-            // lblKho
-            // 
-            this.lblKho.Location = new System.Drawing.Point(867, 23);
-            this.lblKho.Name = "lblKho";
-            this.lblKho.Size = new System.Drawing.Size(18, 13);
-            this.lblKho.TabIndex = 0;
-            this.lblKho.Text = "Kho";
-            // 
-            // btnIn
-            // 
-            this.btnIn.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btnIn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnIn.Enabled = false;
-            this.btnIn.Image = global::QLKhoHang.Properties.Resources.printer;
-            this.btnIn.Location = new System.Drawing.Point(172, 0);
-            this.btnIn.Margin = new System.Windows.Forms.Padding(0);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(43, 45);
-            this.btnIn.TabIndex = 10;
-            this.btnIn.UseVisualStyleBackColor = false;
-            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btnSua.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnSua.Enabled = false;
-            this.btnSua.Image = global::QLKhoHang.Properties.Resources.tsbRefresh;
-            this.btnSua.Location = new System.Drawing.Point(129, 0);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(43, 45);
-            this.btnSua.TabIndex = 9;
-            this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btnXoa.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnXoa.Enabled = false;
-            this.btnXoa.Image = global::QLKhoHang.Properties.Resources.tsbDelete;
-            this.btnXoa.Location = new System.Drawing.Point(86, 0);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(0);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(43, 45);
-            this.btnXoa.TabIndex = 8;
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btnLuu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnLuu.Enabled = false;
-            this.btnLuu.Image = global::QLKhoHang.Properties.Resources.tsbSave;
-            this.btnLuu.Location = new System.Drawing.Point(43, 0);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(43, 45);
-            this.btnLuu.TabIndex = 7;
-            this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btnThem.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnThem.Image = global::QLKhoHang.Properties.Resources.tsbAddNew;
-            this.btnThem.Location = new System.Drawing.Point(0, 0);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(0);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(43, 45);
-            this.btnThem.TabIndex = 6;
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // MAPN
             // 

@@ -114,12 +114,16 @@ namespace QLKhoHang
             else
             {
                 DSHANGXUAT ds = new DSHANGXUAT();
-                ds.MAPX = txtMaPhieu.Text.Trim();
-                ds.MASP = cboSP.SelectedValue.ToString();
+                ds.SLTon = px.SLHangTonKho(cboKho.SelectedValue.ToString(), cboSP.SelectedValue.ToString());
+                MessageBox.Show(ds.SLTon.ToString());
                 if (px.KTTonTaiSPTrongPhieuXuat(txtMaPhieu.Text.Trim(), cboSP.SelectedValue.ToString()))
                 {
+                    ds.MAPX = txtMaPhieu.Text.Trim();
+                    ds.MASP = cboSP.SelectedValue.ToString();
+                    ds.MAKHO = cboKho.SelectedValue.ToString();
                     ds.SoLuong = 1;
-                    if (px.ThemSPvaoDSHangXuat(ds))
+                    
+                    if (px.ThemSPvaoDSHangXuat(ds,cboKho.SelectedValue.ToString()))
                     {
                         dataGVDSHangXuat.DataSource = px.LoadDSHangXuat(txtMaPhieu.Text.Trim());
                     }

@@ -61,6 +61,7 @@
             this.MAUSAC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GIABANLE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -250,9 +251,9 @@
             // cboSP
             // 
             this.cboSP.FormattingEnabled = true;
-            this.cboSP.Location = new System.Drawing.Point(76, 20);
+            this.cboSP.Location = new System.Drawing.Point(86, 20);
             this.cboSP.Name = "cboSP";
-            this.cboSP.Size = new System.Drawing.Size(210, 21);
+            this.cboSP.Size = new System.Drawing.Size(200, 21);
             this.cboSP.TabIndex = 4;
             this.cboSP.DropDown += new System.EventHandler(this.cboSP_DropDown);
             // 
@@ -344,6 +345,7 @@
             this.MAUSAC,
             this.MASP,
             this.SoLuong,
+            this.SLTon,
             this.ThanhTien,
             this.DVT,
             this.GIABANLE});
@@ -360,21 +362,18 @@
             this.MAPX.DataPropertyName = "MAPX";
             this.MAPX.HeaderText = "Mã phiếu xuất";
             this.MAPX.Name = "MAPX";
-            this.MAPX.Visible = false;
             // 
             // PHIEU_XUAT
             // 
             this.PHIEU_XUAT.DataPropertyName = "PHIEU_XUAT";
             this.PHIEU_XUAT.HeaderText = "Phiếu xuất";
             this.PHIEU_XUAT.Name = "PHIEU_XUAT";
-            this.PHIEU_XUAT.Visible = false;
             // 
             // SAN_PHAM
             // 
             this.SAN_PHAM.DataPropertyName = "SAN_PHAM";
             this.SAN_PHAM.HeaderText = "Sản phẩm";
             this.SAN_PHAM.Name = "SAN_PHAM";
-            this.SAN_PHAM.Visible = false;
             // 
             // TEN_SP
             // 
@@ -396,7 +395,6 @@
             this.MASP.DataPropertyName = "MASP";
             this.MASP.HeaderText = "Mã sản phẩm";
             this.MASP.Name = "MASP";
-            this.MASP.Visible = false;
             // 
             // SoLuong
             // 
@@ -404,6 +402,12 @@
             this.SoLuong.DataPropertyName = "SoLuong";
             this.SoLuong.HeaderText = "Số lượng";
             this.SoLuong.Name = "SoLuong";
+            // 
+            // SLTon
+            // 
+            this.SLTon.DataPropertyName = "SLTon";
+            this.SLTon.HeaderText = "Có thể xuất";
+            this.SLTon.Name = "SLTon";
             // 
             // ThanhTien
             // 
@@ -488,6 +492,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MAUSAC;
         private System.Windows.Forms.DataGridViewTextBoxColumn MASP;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SLTon;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn DVT;
         private System.Windows.Forms.DataGridViewTextBoxColumn GIABANLE;
