@@ -77,5 +77,11 @@ namespace QLKhoHang
         {
             dataGVPhieuXuat.DataSource = px.LoadPhieuXuatTheoKho(cboKho.SelectedValue.ToString());
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            frmPhieuXuat frm = new frmPhieuXuat();
+            frm.ShowDialog();
+        }
     }
 }

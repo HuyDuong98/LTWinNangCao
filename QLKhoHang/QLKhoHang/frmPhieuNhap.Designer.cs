@@ -97,6 +97,7 @@
             // 
             // cboSP
             // 
+            this.cboSP.Enabled = false;
             this.cboSP.FormattingEnabled = true;
             this.cboSP.Location = new System.Drawing.Point(86, 6);
             this.cboSP.Name = "cboSP";
@@ -487,8 +488,8 @@
             this.Controls.Add(this.panelPhieuNhap);
             this.Controls.Add(this.pnControl);
             this.Name = "frmPhieuNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phiếu nhập";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPhieuNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSoPhieu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource)).EndInit();

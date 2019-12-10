@@ -77,5 +77,10 @@ namespace QLKhoHang
                 dataGVDSHangNhap.Rows[i].HeaderCell.Value = (i + 1).ToString();
             }
         }
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            frmPhieuNhap frm = new frmPhieuNhap();
+            frm.ShowDialog();
+        }
     }
 }

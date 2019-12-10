@@ -55,6 +55,7 @@
             this.SDTKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EMAILKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIACHIKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).BeginInit();
             this.pnControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTimKiem.Properties)).BeginInit();
@@ -68,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grDSKH)).BeginInit();
             this.grDSKH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKH)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnControl
@@ -75,8 +77,7 @@
             this.pnControl.Appearance.BackColor = System.Drawing.Color.PaleTurquoise;
             this.pnControl.Appearance.Options.UseBackColor = true;
             this.pnControl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pnControl.Controls.Add(this.btnTiemKiem);
-            this.pnControl.Controls.Add(this.txtTimKiem);
+            this.pnControl.Controls.Add(this.panel1);
             this.pnControl.Controls.Add(this.btnIn);
             this.pnControl.Controls.Add(this.btnSua);
             this.pnControl.Controls.Add(this.btnXoa);
@@ -92,7 +93,7 @@
             // btnTiemKiem
             // 
             this.btnTiemKiem.ImageOptions.Image = global::QLKhoHang.Properties.Resources.tsbSearch;
-            this.btnTiemKiem.Location = new System.Drawing.Point(704, 7);
+            this.btnTiemKiem.Location = new System.Drawing.Point(207, 7);
             this.btnTiemKiem.Name = "btnTiemKiem";
             this.btnTiemKiem.Size = new System.Drawing.Size(32, 32);
             this.btnTiemKiem.TabIndex = 12;
@@ -101,7 +102,7 @@
             // txtTimKiem
             // 
             this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTimKiem.Location = new System.Drawing.Point(522, 13);
+            this.txtTimKiem.Location = new System.Drawing.Point(22, 12);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(179, 20);
             this.txtTimKiem.TabIndex = 11;
@@ -334,6 +335,16 @@
             this.DIACHIKH.HeaderText = "Địa chỉ";
             this.DIACHIKH.Name = "DIACHIKH";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnTiemKiem);
+            this.panel1.Controls.Add(this.txtTimKiem);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(523, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(251, 45);
+            this.panel1.TabIndex = 13;
+            // 
             // frmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,6 +370,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grDSKH)).EndInit();
             this.grDSKH.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKH)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -391,5 +403,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DIACHIKH;
         private DevExpress.XtraEditors.SimpleButton btnTiemKiem;
         private DevExpress.XtraEditors.TextEdit txtTimKiem;
+        private System.Windows.Forms.Panel panel1;
     }
 }

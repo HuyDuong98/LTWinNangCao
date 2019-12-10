@@ -59,12 +59,13 @@
             this.SAN_PHAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TEN_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MAUSAC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIABANLE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SLTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIABANLE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MAKHO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).BeginInit();
             this.pnControl.SuspendLayout();
             this.panelNhap.SuspendLayout();
@@ -105,6 +106,7 @@
             this.btnIn.Size = new System.Drawing.Size(43, 45);
             this.btnIn.TabIndex = 10;
             this.btnIn.UseVisualStyleBackColor = false;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnSua
             // 
@@ -144,6 +146,7 @@
             this.btnLuu.Size = new System.Drawing.Size(43, 45);
             this.btnLuu.TabIndex = 7;
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
@@ -343,12 +346,13 @@
             this.SAN_PHAM,
             this.TEN_SP,
             this.MAUSAC,
+            this.DVT,
             this.MASP,
+            this.GIABANLE,
             this.SoLuong,
             this.SLTon,
             this.ThanhTien,
-            this.DVT,
-            this.GIABANLE});
+            this.MAKHO});
             this.dataGVDSHangXuat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGVDSHangXuat.Location = new System.Drawing.Point(2, 20);
             this.dataGVDSHangXuat.Name = "dataGVDSHangXuat";
@@ -362,18 +366,21 @@
             this.MAPX.DataPropertyName = "MAPX";
             this.MAPX.HeaderText = "Mã phiếu xuất";
             this.MAPX.Name = "MAPX";
+            this.MAPX.Visible = false;
             // 
             // PHIEU_XUAT
             // 
             this.PHIEU_XUAT.DataPropertyName = "PHIEU_XUAT";
             this.PHIEU_XUAT.HeaderText = "Phiếu xuất";
             this.PHIEU_XUAT.Name = "PHIEU_XUAT";
+            this.PHIEU_XUAT.Visible = false;
             // 
             // SAN_PHAM
             // 
             this.SAN_PHAM.DataPropertyName = "SAN_PHAM";
             this.SAN_PHAM.HeaderText = "Sản phẩm";
             this.SAN_PHAM.Name = "SAN_PHAM";
+            this.SAN_PHAM.Visible = false;
             // 
             // TEN_SP
             // 
@@ -389,12 +396,27 @@
             this.MAUSAC.HeaderText = "Màu sắc";
             this.MAUSAC.Name = "MAUSAC";
             // 
+            // DVT
+            // 
+            this.DVT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DVT.DataPropertyName = "DVT";
+            this.DVT.HeaderText = "DVT";
+            this.DVT.Name = "DVT";
+            // 
             // MASP
             // 
             this.MASP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.MASP.DataPropertyName = "MASP";
             this.MASP.HeaderText = "Mã sản phẩm";
             this.MASP.Name = "MASP";
+            this.MASP.Visible = false;
+            // 
+            // GIABANLE
+            // 
+            this.GIABANLE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GIABANLE.DataPropertyName = "GIABANLE";
+            this.GIABANLE.HeaderText = "Giá bán";
+            this.GIABANLE.Name = "GIABANLE";
             // 
             // SoLuong
             // 
@@ -408,6 +430,7 @@
             this.SLTon.DataPropertyName = "SLTon";
             this.SLTon.HeaderText = "Có thể xuất";
             this.SLTon.Name = "SLTon";
+            this.SLTon.Visible = false;
             // 
             // ThanhTien
             // 
@@ -416,19 +439,12 @@
             this.ThanhTien.HeaderText = "Thành tiền";
             this.ThanhTien.Name = "ThanhTien";
             // 
-            // DVT
+            // MAKHO
             // 
-            this.DVT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DVT.DataPropertyName = "DVT";
-            this.DVT.HeaderText = "DVT";
-            this.DVT.Name = "DVT";
-            // 
-            // GIABANLE
-            // 
-            this.GIABANLE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GIABANLE.DataPropertyName = "GIABANLE";
-            this.GIABANLE.HeaderText = "Giá bán";
-            this.GIABANLE.Name = "GIABANLE";
+            this.MAKHO.DataPropertyName = "MAKHO";
+            this.MAKHO.HeaderText = "Mã kho";
+            this.MAKHO.Name = "MAKHO";
+            this.MAKHO.Visible = false;
             // 
             // frmPhieuXuat
             // 
@@ -441,6 +457,7 @@
             this.Controls.Add(this.panelNhap);
             this.Controls.Add(this.pnControl);
             this.Name = "frmPhieuXuat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phiếu xuất";
             this.Load += new System.EventHandler(this.frmPhieuXuat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).EndInit();
@@ -490,11 +507,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SAN_PHAM;
         private System.Windows.Forms.DataGridViewTextBoxColumn TEN_SP;
         private System.Windows.Forms.DataGridViewTextBoxColumn MAUSAC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DVT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MASP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GIABANLE;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn SLTon;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DVT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GIABANLE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAKHO;
     }
 }

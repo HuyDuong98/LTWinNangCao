@@ -336,6 +336,14 @@ namespace DAL_BLL
 				return this.GetTable<SAN_PHAM>();
 			}
 		}
+		
+		public System.Data.Linq.Table<TKKHO_VIEW> TKKHO_VIEWs
+		{
+			get
+			{
+				return this.GetTable<TKKHO_VIEW>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DSHANGXUAT")]
@@ -6025,6 +6033,177 @@ namespace DAL_BLL
 		{
 			this.SendPropertyChanging();
 			entity.SAN_PHAM = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TKKHO_VIEW")]
+	public partial class TKKHO_VIEW
+	{
+		
+		private string _TEN_SP;
+		
+		private string _DVT;
+		
+		private System.Nullable<int> _SLNHAP;
+		
+		private System.Nullable<int> _SLXUAT;
+		
+		private System.Nullable<int> _SLTON;
+		
+		private string _MAKHO;
+		
+		private System.Nullable<double> _GIANHAP;
+		
+		private System.Nullable<double> _GIABANLE;
+		
+		private System.Nullable<double> _GIABANSI;
+		
+		public TKKHO_VIEW()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TEN_SP", DbType="NVarChar(500)")]
+		public string TEN_SP
+		{
+			get
+			{
+				return this._TEN_SP;
+			}
+			set
+			{
+				if ((this._TEN_SP != value))
+				{
+					this._TEN_SP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DVT", DbType="NVarChar(50)")]
+		public string DVT
+		{
+			get
+			{
+				return this._DVT;
+			}
+			set
+			{
+				if ((this._DVT != value))
+				{
+					this._DVT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SLNHAP", DbType="Int")]
+		public System.Nullable<int> SLNHAP
+		{
+			get
+			{
+				return this._SLNHAP;
+			}
+			set
+			{
+				if ((this._SLNHAP != value))
+				{
+					this._SLNHAP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SLXUAT", DbType="Int")]
+		public System.Nullable<int> SLXUAT
+		{
+			get
+			{
+				return this._SLXUAT;
+			}
+			set
+			{
+				if ((this._SLXUAT != value))
+				{
+					this._SLXUAT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SLTON", DbType="Int")]
+		public System.Nullable<int> SLTON
+		{
+			get
+			{
+				return this._SLTON;
+			}
+			set
+			{
+				if ((this._SLTON != value))
+				{
+					this._SLTON = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAKHO", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string MAKHO
+		{
+			get
+			{
+				return this._MAKHO;
+			}
+			set
+			{
+				if ((this._MAKHO != value))
+				{
+					this._MAKHO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIANHAP", DbType="Float")]
+		public System.Nullable<double> GIANHAP
+		{
+			get
+			{
+				return this._GIANHAP;
+			}
+			set
+			{
+				if ((this._GIANHAP != value))
+				{
+					this._GIANHAP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIABANLE", DbType="Float")]
+		public System.Nullable<double> GIABANLE
+		{
+			get
+			{
+				return this._GIABANLE;
+			}
+			set
+			{
+				if ((this._GIABANLE != value))
+				{
+					this._GIABANLE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIABANSI", DbType="Float")]
+		public System.Nullable<double> GIABANSI
+		{
+			get
+			{
+				return this._GIABANSI;
+			}
+			set
+			{
+				if ((this._GIABANSI != value))
+				{
+					this._GIABANSI = value;
+				}
+			}
 		}
 	}
 }

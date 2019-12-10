@@ -96,8 +96,8 @@ namespace QLKhoHang
         {
             deleteArrayButton();
             grDanhMuc.Text = "Quản lý kho hàng";
-            string[] a = new string[] { nk, xk, ck, dsnk, dsxk, dsck};
-            CreateArrayButton(6,a);
+            string[] a = new string[] { nk, xk, dsnk, dsxk};
+            CreateArrayButton(4,a);
         }
 
         private void btnDonHang_Click(object sender, EventArgs e)
@@ -145,7 +145,7 @@ namespace QLKhoHang
         frmDoiMatKhau frmDMK = new frmDoiMatKhau();
 
         // gọi các form từ menu con
-        private void GoiShow(Form frm)
+        public void GoiShow(Form frm)
         {
             XtraTabPage tab = new XtraTabPage();
             tab.Text = frm.Text;
@@ -303,6 +303,11 @@ namespace QLKhoHang
             if (sd.Text == dsxk)
             {
                 frmDSPhieuXuat frm = new frmDSPhieuXuat();
+                GoiShow(frm);
+            }
+            if (sd.Text == bcnxt)
+            {
+                frmThongKeTheoKho frm = new frmThongKeTheoKho();
                 GoiShow(frm);
             }
         }

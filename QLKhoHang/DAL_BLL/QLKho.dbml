@@ -273,4 +273,17 @@
       <Association Name="NHA_SAN_XUAT_SAN_PHAM" Member="NHA_SAN_XUAT" ThisKey="MANSX" OtherKey="MANSX" Type="NHA_SAN_XUAT" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.TKKHO_VIEW" Member="TKKHO_VIEWs">
+    <Type Name="TKKHO_VIEW">
+      <Column Name="TEN_SP" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DVT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SLNHAP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SLXUAT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SLTON" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MAKHO" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="GIANHAP" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GIABANLE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GIABANSI" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

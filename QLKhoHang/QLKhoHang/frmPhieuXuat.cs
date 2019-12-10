@@ -87,6 +87,7 @@ namespace QLKhoHang
                     btnThemPheu.Enabled = false;
                     cboKho.Enabled = false;
                     cboNhanVien.Enabled = false;
+                    cboSP.Enabled = true;
                 }
                 else
                 {
@@ -114,20 +115,20 @@ namespace QLKhoHang
             else
             {
                 DSHANGXUAT ds = new DSHANGXUAT();
-                ds.SLTon = px.SLHangTonKho(cboKho.SelectedValue.ToString(), cboSP.SelectedValue.ToString());
-                MessageBox.Show(ds.SLTon.ToString());
+                ds.MAPX = txtMaPhieu.Text.Trim();
+                ds.MASP = cboSP.SelectedValue.ToString();
+                ds.MAKHO = cboKho.SelectedValue.ToString();
                 if (px.KTTonTaiSPTrongPhieuXuat(txtMaPhieu.Text.Trim(), cboSP.SelectedValue.ToString()))
                 {
-                    ds.MAPX = txtMaPhieu.Text.Trim();
-                    ds.MASP = cboSP.SelectedValue.ToString();
-                    ds.MAKHO = cboKho.SelectedValue.ToString();
                     ds.SoLuong = 1;
-                    
-                    if (px.ThemSPvaoDSHangXuat(ds,cboKho.SelectedValue.ToString()))
+                    if (px.ThemSPvaoDSHangXuat(ds))
                     {
                         dataGVDSHangXuat.DataSource = px.LoadDSHangXuat(txtMaPhieu.Text.Trim());
                     }
-                    else { return; }
+                    else 
+                    {
+                         return;
+                    }
                 }
                 else
                 {
@@ -138,6 +139,36 @@ namespace QLKhoHang
                     else { return; }
                 }
             }
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            HANGTON ht = new HANGTON();
+            int dem = dataGVDSHangXuat.RowCount;
+            if (dataGVDSHangXuat.DataSource == null)
+            {
+                MessageBox.Show("Chưa có sản phẩm");
+                return;
+            }
+            else
+            {
+                for (int i = 0; i < dem; i++)
+                {
+                    ht.MAKHO = cboKho.SelectedValue.ToString().Trim();
+                    ht.MASP = dataGVDSHangXuat.Rows[i].Cells["MASP"].Value.ToString().Trim();
+                    ht.SOLUONG = int.Parse(dataGVDSHangXuat.Rows[i].Cells["SoLuong"].Value.ToString());
+                    px.TruSPcoTrongKho(ht);
+                    //MessageBox.Show(ht.MAKHO + "_" + ht.MASP + "_" + ht.SOLUONG);
+                }
+                MessageBox.Show("Đã lưu");
+                btnThem.PerformClick();
+            }
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            ExportToExcel p = new ExportToExcel();
+            p.export2Excel(dataGVDSHangXuat, @"D:\", "DS_HangXuat");
         }
 
     }

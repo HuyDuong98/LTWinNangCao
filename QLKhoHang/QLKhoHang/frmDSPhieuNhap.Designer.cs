@@ -183,6 +183,7 @@
             this.btnThem.Size = new System.Drawing.Size(43, 45);
             this.btnThem.TabIndex = 6;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupControl1
             // 

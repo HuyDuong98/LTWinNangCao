@@ -25,7 +25,6 @@ namespace DAL_BLL
             var ds = (from px in qlkho.DSHANGXUATs
                       join p in qlkho.PHIEU_XUATs on px.MAPX equals p.MAPX
                       join t in qlkho.KHOHANGs on p.MAKHO equals t.MAKHO
-        
                       select new
                       {
                            MAKHO = t.MAKHO,
@@ -78,11 +77,10 @@ namespace DAL_BLL
             });
             return kq.Where(t=>t.MAKHO == makho).ToList<HANGTON>();
         }
-        public bool ThemSPvaoDSHangXuat(DSHANGXUAT ds, string makho)
+        public bool ThemSPvaoDSHangXuat(DSHANGXUAT ds)
         {
             try
             {
-                HANGTON p = qlkho.HANGTONs.Where(t => t.MAKHO == makho).Where(t => t.MASP == ds.MASP).FirstOrDefault();
                 ds.ThanhTien = pn.ThanhTien(1, ds.MASP);
                 qlkho.DSHANGXUATs.InsertOnSubmit(ds);
                 qlkho.SubmitChanges();
@@ -98,12 +96,13 @@ namespace DAL_BLL
         {
             try
             {
-                DSHANGXUAT k = qlkho.DSHANGXUATs.Where(t => t.MAPX == ds.MAPX).Where(t => t.MASP == ds.MASP).FirstOrDefault();
-                ds.SoLuong = k.SoLuong + 1;
+                var k = qlkho.DSHANGXUATs.Where(t => t.MAPX == ds.MAPX).Where(t => t.MASP == ds.MASP).FirstOrDefault();
+                ds.SoLuong =k.SoLuong + 1;
                 int n = (int)ds.SoLuong;
                 string ma = ds.MASP.ToString();
-                k.ThanhTien = pn.ThanhTien(n, ma);
-                k.SoLuong = n;
+                ds.ThanhTien = pn.ThanhTien(n, ma);
+                qlkho.DSHANGXUATs.DeleteOnSubmit(k);
+                qlkho.DSHANGXUATs.InsertOnSubmit(ds);
                 qlkho.SubmitChanges();
                 return true;
             }
@@ -170,6 +169,18 @@ namespace DAL_BLL
 
             });
             return kq.Where(t => t.MAKHO == ma).ToList<PHIEU_XUAT>();
+        }
+        public bool TruSPcoTrongKho(HANGTON ht)
+        {
+            try
+            {
+                var p = qlkho.HANGTONs.Where(t => t.MAKHO == ht.MAKHO).Where(i => i.MASP == ht.MASP).FirstOrDefault();
+                ht.SOLUONG = p.SOLUONG - ht.SOLUONG;
+                qlkho.HANGTONs.DeleteOnSubmit(p);
+                qlkho.HANGTONs.InsertOnSubmit(ht);
+                return true;
+            }
+            catch { return false; }
         }
 
     }

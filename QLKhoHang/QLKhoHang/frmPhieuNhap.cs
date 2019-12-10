@@ -79,7 +79,7 @@ namespace QLKhoHang
         {
             HANGTON ht = new HANGTON();
             int dem = dataGridViewSP.RowCount;
-            MessageBox.Show(dem+"");
+            //MessageBox.Show(dem+"");
             if (dataGridViewSP.DataSource == null)
             {
                 MessageBox.Show("Chưa có sản phẩm");
@@ -87,9 +87,9 @@ namespace QLKhoHang
             }
             else
             {
+                ht.MAKHO = cboKho.SelectedValue.ToString().Trim();
                 for (int i = 0; i < dem; i++)
                 {
-                    ht.MAKHO = cboKho.SelectedValue.ToString().Trim();
                     ht.MASP = dataGridViewSP.Rows[i].Cells["MASP"].Value.ToString().Trim();
                     ht.SOLUONG = int.Parse(dataGridViewSP.Rows[i].Cells["SL"].Value.ToString());
                     pn.ThemSPvaoKho(ht);
@@ -157,7 +157,6 @@ namespace QLKhoHang
                 {
                     MessageBox.Show("Thêm thất bại");
                 }
-                return;
             }  
         }
         private void btnThemSP_Click(object sender, EventArgs e)

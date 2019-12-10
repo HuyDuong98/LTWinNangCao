@@ -84,6 +84,8 @@
     <Compile Include="QLNguoiDung.cs" />
     <Compile Include="QL_NGUOIDUNG.cs" />
     <Compile Include="SanPham_DAL.cs" />
+    <Compile Include="TKKHO_VIEW.cs" />
+    <Compile Include="tkTheoKho.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
