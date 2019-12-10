@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using DAL_BLL;
 using DevExpress.XtraTab;
 using DevExpress.XtraTab.ViewInfo;
+using DevExpress.XtraReports.UI;
 namespace QLKhoHang
 {
     public partial class FrmMain : DevExpress.XtraEditors.XtraForm
@@ -53,7 +54,8 @@ namespace QLKhoHang
         string ddh = "Đơn đặt hàng";
         // các btn của thống kê báo cáo
         string bcnxt = "Thông kê sản phẩm theo kho";
-        string bcnk = "Báo cáo nhập kho";
+        string tkbd = "Thống kê theo biểu đồ";
+        string rpdm = "Report theo mục";
         string bcxk = "Báo cáo xuất kho";
         string bctk = "Báo cáo tồn kho";
         private void ThongBaoDangNhap() {
@@ -112,8 +114,8 @@ namespace QLKhoHang
         {
             deleteArrayButton();
             grDanhMuc.Text = "Thống kê - báo cáo";
-            string[] a = new string[] {bcnxt, bcnk,bcxk,bctk};
-            CreateArrayButton(4, a);
+            string[] a = new string[] { bcnxt, rpdm, tkbd };
+            CreateArrayButton(3, a);
         }
         // tạo mảng menu con
         public void CreateArrayButton(int soHang,string[] ar)
@@ -308,6 +310,11 @@ namespace QLKhoHang
             if (sd.Text == bcnxt)
             {
                 frmThongKeTheoKho frm = new frmThongKeTheoKho();
+                GoiShow(frm);
+            }
+            if(sd.Text== rpdm)
+            {
+                frmReportTheoMuc frm = new frmReportTheoMuc();
                 GoiShow(frm);
             }
         }

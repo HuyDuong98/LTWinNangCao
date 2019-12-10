@@ -183,6 +183,16 @@ namespace QLKhoHang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_business_report_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-business-report-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_combo_chart_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-combo-chart-50", resourceCulture);

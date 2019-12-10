@@ -37,21 +37,35 @@
       <HintPath>..\DAL_BLL\bin\Debug\DAL_BLL.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.ExpressApp.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Persistent.Base.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Export, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.SpellChecker.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v17.1" />
     <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v17.1" />
     <Reference Include="DevExpress.Printing.v17.1.Core" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraSpellChecker.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -92,6 +106,12 @@
       <DependentUpon>dataGridViewSTT.cs</DependentUpon>
     </Compile>
     <Compile Include="ExportToExcel.cs" />
+    <Compile Include="frmChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChart.Designer.cs">
+      <DependentUpon>frmChart.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChuyenKho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +202,12 @@
     <Compile Include="frmPhieuXuat.Designer.cs">
       <DependentUpon>frmPhieuXuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportTheoMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportTheoMuc.Designer.cs">
+      <DependentUpon>frmReportTheoMuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +245,48 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLKHODataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ReportBieuDo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportBieuDo.Designer.cs">
+      <DependentUpon>ReportBieuDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportNhapKho.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportNhapKho.Designer.cs">
+      <DependentUpon>ReportNhapKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpDSHangXuat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpDSHangXuat.Designer.cs">
+      <DependentUpon>rpDSHangXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpDSNhap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpDSNhap.Designer.cs">
+      <DependentUpon>rpDSNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpNhanVien.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpNhanVien.Designer.cs">
+      <DependentUpon>rpNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpPhieuXuat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpPhieuXuat.Designer.cs">
+      <DependentUpon>rpPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpSanPham.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpSanPham.Designer.cs">
+      <DependentUpon>rpSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="txtChiNhapSo.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -227,6 +295,9 @@
     </Compile>
     <EmbeddedResource Include="dataGridViewSTT.resx">
       <DependentUpon>dataGridViewSTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChart.resx">
+      <DependentUpon>frmChart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChuyenKho.resx">
       <DependentUpon>frmChuyenKho.cs</DependentUpon>
@@ -273,6 +344,9 @@
     <EmbeddedResource Include="frmPhieuXuat.resx">
       <DependentUpon>frmPhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportTheoMuc.resx">
+      <DependentUpon>frmReportTheoMuc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSanPham.resx">
       <DependentUpon>frmSanPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,6 +373,27 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportBieuDo.resx">
+      <DependentUpon>ReportBieuDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportNhapKho.resx">
+      <DependentUpon>ReportNhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpDSHangXuat.resx">
+      <DependentUpon>rpDSHangXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpDSNhap.resx">
+      <DependentUpon>rpDSNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpNhanVien.resx">
+      <DependentUpon>rpNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpPhieuXuat.resx">
+      <DependentUpon>rpPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpSanPham.resx">
+      <DependentUpon>rpSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="txtChiNhapSo.resx">
       <DependentUpon>txtChiNhapSo.cs</DependentUpon>
     </EmbeddedResource>
@@ -437,6 +532,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-business-report-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

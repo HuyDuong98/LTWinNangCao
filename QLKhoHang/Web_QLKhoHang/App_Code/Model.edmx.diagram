@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1dc924ee49da4535b0b016ff9791b777" Name="Diagram1">
+        <EntityTypeShape EntityType="QLKHOModel.CHITIETDDH" Width="1.5" PointX="7.5" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.CHITIETHD" Width="1.5" PointX="7.5" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.CONG_TY" Width="1.5" PointX="12.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.DM_MANHINH" Width="1.5" PointX="12.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.DONDATHANG" Width="1.5" PointX="5.25" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.DSHANGCHUYENKHO" Width="1.5" PointX="7.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.DSHANGNHAP" Width="1.5" PointX="10.5" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.DSHANGXUAT" Width="1.5" PointX="10.5" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.HANGTON" Width="1.5" PointX="10.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.HOA_DON" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.KHACH_HANG" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.KHOHANG" Width="1.5" PointX="6" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.KHU_VUC" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.LOAI_SAN_PHAM" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.NHA_CUNG_CAP" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.NHA_SAN_XUAT" Width="1.5" PointX="3" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.NHAN_VIEN" Width="1.5" PointX="6" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.PHIEU_CHUYEN" Width="1.5" PointX="5.25" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.PHIEU_NHAP" Width="1.5" PointX="8.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.PHIEU_XUAT" Width="1.5" PointX="8.25" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.QL_NGUOIDUNG" Width="1.5" PointX="12.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.QL_NGUOIDUNGNHOMNGUOIDUNG" Width="1.5" PointX="15" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.QL_NHOMNGUOIDUNG" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.QL_PHANQUYEN" Width="1.5" PointX="15" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.SAN_PHAM" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.sysdiagram" Width="1.5" PointX="12.75" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKHOModel.TKKHO_VIEW" Width="1.5" PointX="14.75" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="QLKHOModel.FK_CHITIETD_CHITIETDD_SAN_PHAM" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_CHITIETHD_HOA_DON" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_CHITIETHD_SAN_PHAM" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_QL_NGUOI_QL_NGUOID_DM_MANHI" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_DONDATHA_RELATIONS_KHACH_HA" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_DSHANGCHUYENKHO_PHIEU_CHUYEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_DSHANGCHUYENKHO_SAN_PHAM" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_DSHANGNHAP_PHIEU_NHAP" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_DSHANGNHAP_SAN_PHAM" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_DSHANGXUAT_PHIEU_XUAT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_DSHANGXUAT_SAN_PHAM" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_HANGTON_KHOHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_HANGTON_SAN_PHAM" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_HOA__ON_MUA_KHACH_HA" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_PHIEU_CHUYEN_KHOHANG4" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_PHIEU_CHUYEN_KHOHANG5" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_PHIEU_NHAP_KHOHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_PHIEU_XUAT_KHOHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_NHA_CUNG_CHIEM_KHU_VUC" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_SAN_PHAM_CO_LOAI_SAN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_SAN_PHAM_CUNG_CAP_NHA_CUNG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_SAN_PHAM_LAM_RA_NHA_SAN_" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_PHIEU_CHUYEN_NHAN_VIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_PHIEU_NH_NHAP_NHAN_VIE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_PHIEU_XUAT_NHAN_VIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_QL_PHANQ_QL_PHANQU_QL_NGUOI" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_QL_NGUOI_QL_NGUOID_QL_NHOMN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKHOModel.FK_QL_PHANQ_QL_PHANQU_QL_NHOMN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

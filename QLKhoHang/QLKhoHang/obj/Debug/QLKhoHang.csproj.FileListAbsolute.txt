@@ -1,7 +1,6 @@
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\bin\Debug\QLKhoHang.exe.config
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\bin\Debug\QLKhoHang.exe
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\bin\Debug\QLKhoHang.pdb
-C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\bin\Debug\DAL_BLL.dll
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmDangNhap.resources
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmDoiMatKhau.resources
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.FrmMain.resources
@@ -31,3 +30,13 @@ C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\Q
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmKhoHang.resources
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmThongKeTheoKho.resources
 C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\bin\Debug\DAL_BLL.pdb
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\bin\Debug\DAL_BLL.dll
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.ReportBieuDo.resources
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.ReportNhapKho.resources
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmReportTheoMuc.resources
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.rpDSHangXuat.resources
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.rpDSNhap.resources
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.rpNhanVien.resources
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.rpPhieuXuat.resources
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.rpSanPham.resources
+C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\QLKhoHang\QLKhoHang\obj\Debug\QLKhoHang.frmChart.resources

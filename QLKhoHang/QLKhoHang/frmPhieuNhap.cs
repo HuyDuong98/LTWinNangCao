@@ -77,9 +77,6 @@ namespace QLKhoHang
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            HANGTON ht = new HANGTON();
-            int dem = dataGridViewSP.RowCount;
-            //MessageBox.Show(dem+"");
             if (dataGridViewSP.DataSource == null)
             {
                 MessageBox.Show("Chưa có sản phẩm");
@@ -87,16 +84,16 @@ namespace QLKhoHang
             }
             else
             {
-                ht.MAKHO = cboKho.SelectedValue.ToString().Trim();
+                int dem = dataGridViewSP.RowCount;
                 for (int i = 0; i < dem; i++)
                 {
+                    HANGTON ht = new HANGTON();
+                    ht.MAKHO = cboKho.SelectedValue.ToString();
                     ht.MASP = dataGridViewSP.Rows[i].Cells["MASP"].Value.ToString().Trim();
-                    ht.SOLUONG = int.Parse(dataGridViewSP.Rows[i].Cells["SL"].Value.ToString());
+                    ht.SOLUONG = int.Parse(dataGridViewSP.Rows[i].Cells["SL"].Value.ToString().Trim());
                     pn.ThemSPvaoKho(ht);
-                    //MessageBox.Show(ht.MAKHO + "_" + ht.MASP + "_" + ht.SOLUONG);
                 }
                 MessageBox.Show("Đã lưu");
-                btnThem.PerformClick();
             }
         }
 
@@ -151,6 +148,7 @@ namespace QLKhoHang
                     cboKho.Enabled = false;
                     cboNhanVien.Enabled = false;
                     btnThemPhieuNhap.Enabled = false;
+                    cboSP.Enabled = true;
                     MessageBox.Show("Bạn đã thêm phiếu " + p.MAPN);
                 }
                 else

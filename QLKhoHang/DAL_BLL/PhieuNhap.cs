@@ -205,7 +205,7 @@ namespace DAL_BLL
 
         public void ThemSPvaoKho(HANGTON k)
         {
-            var p = qlkho.HANGTONs.Where(t => t.MAKHO == k.MAKHO).Where(t => t.MASP == k.MASP).FirstOrDefault();
+            HANGTON p = qlkho.HANGTONs.Where(t => t.MAKHO == k.MAKHO).Where(t => t.MASP == k.MASP).FirstOrDefault();
             if (p == null)
             {
                 qlkho.HANGTONs.InsertOnSubmit(k);
@@ -213,9 +213,7 @@ namespace DAL_BLL
             }
             else
             {
-                k.SOLUONG = p.SOLUONG + k.SOLUONG;
-                qlkho.HANGTONs.DeleteOnSubmit(p);
-                qlkho.HANGTONs.InsertOnSubmit(k);
+                p.SOLUONG = p.SOLUONG + k.SOLUONG;
                 qlkho.SubmitChanges();
             }
         }

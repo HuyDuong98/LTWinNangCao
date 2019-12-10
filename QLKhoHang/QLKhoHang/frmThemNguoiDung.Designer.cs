@@ -37,14 +37,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.radiobtNv = new System.Windows.Forms.RadioButton();
             this.radiobtAdmin = new System.Windows.Forms.RadioButton();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.groupControlDanhSach = new DevExpress.XtraEditors.GroupControl();
             this.dataGridViewNguoiDung = new System.Windows.Forms.DataGridView();
             this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HOATDONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhanQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenTaiKhoan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlThem)).BeginInit();
@@ -73,7 +73,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(543, 23);
+            this.labelControl3.Location = new System.Drawing.Point(535, 36);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(57, 13);
             this.labelControl3.TabIndex = 0;
@@ -114,7 +114,7 @@
             // 
             this.panel1.Controls.Add(this.radiobtNv);
             this.panel1.Controls.Add(this.radiobtAdmin);
-            this.panel1.Location = new System.Drawing.Point(628, 23);
+            this.panel1.Location = new System.Drawing.Point(620, 36);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(341, 33);
             this.panel1.TabIndex = 7;
@@ -140,6 +140,27 @@
             this.radiobtAdmin.TabStop = true;
             this.radiobtAdmin.Text = "Admin";
             this.radiobtAdmin.UseVisualStyleBackColor = true;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Enabled = false;
+            this.btnXoa.ImageOptions.Image = global::QLKhoHang.Properties.Resources.tsbDelete;
+            this.btnXoa.Location = new System.Drawing.Point(239, 114);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 37);
+            this.btnXoa.TabIndex = 5;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.ImageOptions.Image = global::QLKhoHang.Properties.Resources.tsbAddNew;
+            this.btnThem.Location = new System.Drawing.Point(158, 114);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 37);
+            this.btnThem.TabIndex = 4;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupControlDanhSach
             // 
@@ -194,27 +215,6 @@
             this.PhanQuyen.DataPropertyName = "TENNHOM";
             this.PhanQuyen.HeaderText = "Quyền truy cập";
             this.PhanQuyen.Name = "PhanQuyen";
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Enabled = false;
-            this.btnXoa.ImageOptions.Image = global::QLKhoHang.Properties.Resources.tsbDelete;
-            this.btnXoa.Location = new System.Drawing.Point(239, 114);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 37);
-            this.btnXoa.TabIndex = 5;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.ImageOptions.Image = global::QLKhoHang.Properties.Resources.tsbAddNew;
-            this.btnThem.Location = new System.Drawing.Point(158, 114);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 37);
-            this.btnThem.TabIndex = 4;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // frmThemNguoiDung
             // 
