@@ -84,7 +84,6 @@
             this.GiaBanSi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaBanLe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MAKHO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MoTaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnControl)).BeginInit();
@@ -504,7 +503,6 @@
             this.GiaBanSi,
             this.GiaBanLe,
             this.DVT,
-            this.MAKHO,
             this.MoTaSP});
             this.dataGV_SanPham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGV_SanPham.Location = new System.Drawing.Point(2, 20);
@@ -631,13 +629,6 @@
             this.DVT.HeaderText = "Đơn vị tính";
             this.DVT.Name = "DVT";
             // 
-            // MAKHO
-            // 
-            this.MAKHO.DataPropertyName = "MAKHO";
-            this.MAKHO.HeaderText = "Kho";
-            this.MAKHO.Name = "MAKHO";
-            this.MAKHO.ReadOnly = true;
-            // 
             // MoTaSP
             // 
             this.MoTaSP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -736,7 +727,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaBanSi;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaBanLe;
         private System.Windows.Forms.DataGridViewTextBoxColumn DVT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MAKHO;
         private System.Windows.Forms.DataGridViewTextBoxColumn MoTaSP;
     }
 }

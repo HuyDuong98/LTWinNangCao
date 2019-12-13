@@ -49,6 +49,7 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.dataGVDSHangXuat = new QLKhoHang.dataGridViewSTT(this.components);
             this.TEN_SP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MAPHIEU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -270,6 +271,7 @@
             this.dataGVDSHangXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGVDSHangXuat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TEN_SP,
+            this.SLTon,
             this.MAPHIEU,
             this.MASP,
             this.SL,
@@ -293,6 +295,13 @@
             this.TEN_SP.DataPropertyName = "TEN_SP";
             this.TEN_SP.HeaderText = "Sản phẩm";
             this.TEN_SP.Name = "TEN_SP";
+            // 
+            // SLTon
+            // 
+            this.SLTon.DataPropertyName = "SLTon";
+            this.SLTon.HeaderText = "Số lượng tồn";
+            this.SLTon.Name = "SLTon";
+            this.SLTon.Visible = false;
             // 
             // MAPHIEU
             // 
@@ -409,6 +418,7 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private dataGridViewSTT dataGVDSHangXuat;
         private System.Windows.Forms.DataGridViewTextBoxColumn TEN_SP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SLTon;
         private System.Windows.Forms.DataGridViewTextBoxColumn MAPHIEU;
         private System.Windows.Forms.DataGridViewTextBoxColumn MASP;
         private System.Windows.Forms.DataGridViewTextBoxColumn SL;

@@ -174,10 +174,12 @@ namespace DAL_BLL
         {
             try
             {
-                var p = qlkho.HANGTONs.Where(t => t.MAKHO == ht.MAKHO).Where(i => i.MASP == ht.MASP).FirstOrDefault();
-                ht.SOLUONG = p.SOLUONG - ht.SOLUONG;
+                HANGTON p = qlkho.HANGTONs.Where(t => t.MAKHO == ht.MAKHO).Where(i => i.MASP == ht.MASP).FirstOrDefault();
+                int sl = (int)p.SOLUONG - (int)ht.SOLUONG;
+                ht.SOLUONG = sl;
                 qlkho.HANGTONs.DeleteOnSubmit(p);
                 qlkho.HANGTONs.InsertOnSubmit(ht);
+                qlkho.SubmitChanges();
                 return true;
             }
             catch { return false; }

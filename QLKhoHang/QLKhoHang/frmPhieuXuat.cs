@@ -143,7 +143,7 @@ namespace QLKhoHang
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            HANGTON ht = new HANGTON();
+            
             int dem = dataGVDSHangXuat.RowCount;
             if (dataGVDSHangXuat.DataSource == null)
             {
@@ -154,6 +154,7 @@ namespace QLKhoHang
             {
                 for (int i = 0; i < dem; i++)
                 {
+                    HANGTON ht = new HANGTON();
                     ht.MAKHO = cboKho.SelectedValue.ToString().Trim();
                     ht.MASP = dataGVDSHangXuat.Rows[i].Cells["MASP"].Value.ToString().Trim();
                     ht.SOLUONG = int.Parse(dataGVDSHangXuat.Rows[i].Cells["SoLuong"].Value.ToString());
@@ -169,6 +170,11 @@ namespace QLKhoHang
         {
             ExportToExcel p = new ExportToExcel();
             p.export2Excel(dataGVDSHangXuat, @"D:\", "DS_HangXuat");
+        }
+
+        private void dataGVDSHangXuat_SelectionChanged(object sender, EventArgs e)
+        {
+            btnXoaSP.Enabled = true;
         }
 
     }

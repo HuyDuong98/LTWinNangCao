@@ -1,5 +1,0 @@
-C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\DAL\bin\Debug\DAL.dll
-C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\DAL\bin\Debug\DAL.pdb
-C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\DAL\obj\Debug\DAL.dll
-C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\DAL\obj\Debug\DAL.pdb
-C:\Users\Huy Duong\Documents\GitHub\LTWinNangCao\WindowsFormsApplication1\DAL\bin\Debug\DAL.dll.config

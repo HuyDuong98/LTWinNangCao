@@ -359,6 +359,7 @@
             this.dataGVDSHangXuat.Size = new System.Drawing.Size(945, 264);
             this.dataGVDSHangXuat.TabIndex = 0;
             this.dataGVDSHangXuat.DataSourceChanged += new System.EventHandler(this.dataGVDSHangXuat_DataSourceChanged);
+            this.dataGVDSHangXuat.SelectionChanged += new System.EventHandler(this.dataGVDSHangXuat_SelectionChanged);
             // 
             // MAPX
             // 
